@@ -1,0 +1,9 @@
+h1{
+    background-color: #FF33DA;
+}
+
+.header{
+    width: 100vw;
+    height: 50vh;
+    border: solid 2px black;
+}
