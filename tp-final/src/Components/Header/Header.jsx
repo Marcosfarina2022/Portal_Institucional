@@ -4,7 +4,7 @@ import  logoCLA  from "../../Imgenes/LogoCLA.png";
 
 const Header = () => {
 return(<>
-    <div className='header'> 
+    <header className='header'> 
         <div className='logo-titulo'> {/*Este loco no es el que va a quedar*/}
             <div className='div-logo'>
                 <img className='logo' src={logoCLA} alt="Logo" />           
@@ -14,7 +14,7 @@ return(<>
             </div>
         </div>
         <NavBar/>
-    </div>
+    </header>
 </>)
 }
 
