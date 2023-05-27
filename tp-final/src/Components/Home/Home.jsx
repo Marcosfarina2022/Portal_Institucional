@@ -1,14 +1,18 @@
-import Content from "../Content/Content";
-import Footer from "../Footer/Footer";
+
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Content from "../Content/Content";
+import './Home.css'
 
 
 const Home = () =>{
- return ( <>
- <Header></Header>
- <Content></Content>
- <Footer></Footer>
- </>) 
+ return ( 
+    <div className="home">
+    <div><Header></Header></div>
+    <div><Content></Content></div>
+    <div><Footer></Footer></div>
+
+    </div>) 
 }  
 
 export default Home  
