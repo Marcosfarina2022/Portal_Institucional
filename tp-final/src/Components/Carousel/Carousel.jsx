@@ -2,15 +2,16 @@ import Carousel from 'react-bootstrap/Carousel';
 import CLA2 from '../../Imgenes/CLA2.jpg';
 import CLA3 from '../../Imgenes/CLA3.jpg';
 import imgNoti from '../../Imgenes/noticia1.jpg';
+import './Carousel.css'
 
 
 
 function Carrusel() {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <Carousel className='carousell'>
+      <Carousel.Item className='divImg'>
         <img
-          className="d-block w-100 fluid "
+          className="d-block w-100 "
           src={imgNoti}
           alt="First slide"
         />
@@ -19,9 +20,9 @@ function Carrusel() {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='divImg'>
         <img
-          className="d-block w-100 fluid"
+          className="d-block w-100"
           src={CLA2}
           alt="Second slide"
         />
@@ -31,9 +32,9 @@ function Carrusel() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='divImg'>
         <img
-          className="d-block w-100 fluid"
+          className="d-block w-100"
           src={CLA3}
           alt="Third slide"
         />

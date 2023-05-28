@@ -1,0 +1,8 @@
+.divImg{
+    width: 100%;
+    height: 500px;
+}
+.carousell{
+    display: flex;
+    justify-content: center;
+}
