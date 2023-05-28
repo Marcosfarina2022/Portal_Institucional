@@ -1,6 +1,6 @@
 import NavBar from '../NavBar/NavBar';
 import './Header.css'; 
-import  logoCLA  from "../../Imgenes/LogoCLA.png";
+import  logoCLA  from "../../Imgenes/LogoCLA2.png";
 
 const Header = () => {
 return(<>
@@ -13,7 +13,9 @@ return(<>
             <h1>Club Las Aguilas</h1>    
             </div>
         </div>
-        <NavBar/>
+        
+            <NavBar/>
+        
     </header>
 </>)
 }
