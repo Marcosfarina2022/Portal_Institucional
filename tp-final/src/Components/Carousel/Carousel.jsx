@@ -11,7 +11,7 @@ function Carrusel() {
     <Carousel className='carousell'>
       <Carousel.Item className='divImg'>
         <img
-          className="d-block w-100 "
+          className="d-block w-100"
           src={imgNoti}
           alt="First slide"
         />

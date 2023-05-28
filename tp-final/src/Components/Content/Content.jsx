@@ -1,13 +1,13 @@
 import imgNoti from '../../Imgenes/noticia1.jpg'
-import Carrusel from "../Carousel/Carousel";
+import Carousel from "../Carousel/Carousel";
 import './Content.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Content = () =>{
 return(<>
     <div className="content">
-        <div className="carousel">
-            <Carrusel/>
+        <div className="div-carousel">
+            <Carousel/>
         
         </div>
         <div className="resumenNoticias">
