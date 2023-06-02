@@ -21,7 +21,7 @@ function Footer() {
                 <div class='div-redes'>
                     <div>SEGUINOS</div>
 
-                    <div>
+                    <div class="div-icons">
                         <div><a target="_blank" href="https://www.facebook.com/clublasaguilasushuaia/?locale=es_LA" title="Facebook">
                             <FaFacebook /></a></div>
                         <div>                        <a target="_blank" href="https://www.instagram.com/clublasaguilas/" title="Instagram">
