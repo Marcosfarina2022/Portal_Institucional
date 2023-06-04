@@ -9,7 +9,7 @@ import './Home.css'
 const Home = () =>{
  return ( 
     <div className="home">
-    <div><Header></Header></div>
+    {/* <div><Header></Header></div> lo comento porque se duplica al navegar */}
     <div><Content></Content></div>
     <div><Footer></Footer></div>
 
