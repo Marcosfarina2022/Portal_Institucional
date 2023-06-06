@@ -22,12 +22,12 @@ function Footer() {
                     <div>SEGUINOS</div>
 
                     <div className="div-icons">
-                        <div><a target="_blank" href="https://www.facebook.com/clublasaguilasushuaia/?locale=es_LA" title="Facebook">
+                        <div><a  href="https://www.facebook.com/clublasaguilasushuaia/?locale=es_LA" title="Facebook">
                             <FaFacebook /></a></div>
-                        <div>                        <a target="_blank" href="https://www.instagram.com/clublasaguilas/" title="Instagram">
+                        <div>                        <a  href="https://www.instagram.com/clublasaguilas/" title="Instagram">
                             <FaInstagram /></a></div>
                         <div>
-                            <a target="_blank" href="https://www.youtube.com/@clublasaguilas-analisisdev8566" title="Youtube">
+                            <a  href="https://www.youtube.com/@clublasaguilas-analisisdev8566" title="Youtube">
                                 <FaYoutube /></a></div>
 
 
