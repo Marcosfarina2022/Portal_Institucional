@@ -1,5 +1,5 @@
 import './Footer.css'
-import logoClaBlanco from "../../Imgenes/logoClaBlanco.png";
+import  logoCLA  from "../../Imgenes/LogoCLA2.png";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
             <div className="flex-container">
 
                 <div className='div-logo'>
-                    <img className='logo' src={logoClaBlanco} alt="Logo" />
+                <img className='logo' href={"/"} src={logoCLA} alt="Logo"/>
                 </div>
 
                 <div className='div-contacto'>
