@@ -10,7 +10,7 @@ import './Carousel.css'
 
 function Carrusel() {
   return (
-    <Carousel className='carousell'>
+    <Carousel className='carousell'fade>
       <Carousel.Item className='divImg'>
         <img
           className="d-block w-100"
@@ -28,7 +28,6 @@ function Carrusel() {
           src={imagen2}
           alt="Second slide"
         />
-
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -40,7 +39,6 @@ function Carrusel() {
           src={imagen3}
           alt="Third slide"
         />
-
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

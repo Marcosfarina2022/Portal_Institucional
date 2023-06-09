@@ -1,0 +1,30 @@
+sponsors-container {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+  }
+  
+  .sponsor-thumbnail {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 5%;
+  }
+  
+  .sponsor-thumbnail:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos adicionales para el texto de los patrocinadores */
+  .sponsor-name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
