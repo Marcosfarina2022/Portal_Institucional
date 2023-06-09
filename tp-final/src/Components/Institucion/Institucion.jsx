@@ -1,6 +1,12 @@
+import LineaDeTiempo from "../LineaDeTiempo/LineaDeTiempo";
+import "./Institucion.css";
+
 
 const Institución = () => {
-    return(<h1>ESTA ES LA INSTITUCION </h1>)
+    return(<div className="lineaDeTiempo">
+        <LineaDeTiempo/>
+    </div>
+    )
 }
 
 export default Institución
