@@ -1,7 +1,10 @@
 import './sponsors.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ImagenSponsor1 from '../../Imgenes/imagenesSponsors/sponsor1.png';
+import logoMacro from '../../Imgenes/imagenesSponsors/logoBancoMacro.svg';
+import logoTanteSara from '../../Imgenes/imagenesSponsors/logoTanteSara.svg';
+import logoPopper from '../../Imgenes/imagenesSponsors/logoPopperSports.svg';
+import logoCerveza from '../../Imgenes/imagenesSponsors/logoCervezaImperial.svg';
 
 
 /*const Sponsors = () =>{
@@ -19,21 +22,27 @@ const sponsorsData = [
     {
       id: 1,
       name: 'Patrocinador 1',
-      image: ImagenSponsor1,
+      image: logoMacro,
       link: '/patrocinador1',
     },
     {
       id: 2,
       name: 'Patrocinador 2',
-      image: 'ruta/patrocinador2.jpg',
+      image: logoTanteSara,
       link: '/patrocinador2',
     },
     {
       id: 3,
       name: 'Patrocinador 3',
-      image: 'ruta/patrocinador3.jpg',
+      image: logoPopper,
       link: '/patrocinador3',
     },
+    {
+      id: 3,
+      name: 'Patrocinador 4',
+      image: logoCerveza,
+      link: '/patrocinador4',
+    }
   ];
   
   function Sponsors() {
@@ -46,7 +55,7 @@ const sponsorsData = [
               <img
                 className="sponsor-thumbnail"
                 src={sponsor.image}
-                alt={sponsor.visa}
+                alt={sponsor.patrocinadores}
               />
             </Link>
           ))}
