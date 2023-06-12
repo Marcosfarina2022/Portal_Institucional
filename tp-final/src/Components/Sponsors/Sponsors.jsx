@@ -21,27 +21,31 @@ export default Sponsors;*/
 const sponsorsData = [
     {
       id: 1,
-      name: 'Patrocinador 1',
+      name: 'Banco Macro',
       image: logoMacro,
-      link: '/patrocinador1',
+      alt: ' Banco Macro',
+      link: 'https://www.macro.com.ar/',
     },
     {
       id: 2,
-      name: 'Patrocinador 2',
+      name: 'Tante Sara',
       image: logoTanteSara,
-      link: '/patrocinador2',
+      alt: 'Tante Sara',
+      link: 'https://tantesaraonline.com/',
     },
     {
       id: 3,
-      name: 'Patrocinador 3',
+      name: 'Popper Sports',
       image: logoPopper,
-      link: '/patrocinador3',
+      alt: ' Popper Sports',
+      link: 'https://paseodelfuego.com.ar/',
     },
     {
       id: 3,
-      name: 'Patrocinador 4',
+      name: 'Cerveza Imperial',
       image: logoCerveza,
-      link: '/patrocinador4',
+      alt: ' Cerveza Quilmes',
+      link: 'https://cervezaimperial.com.ar/',
     }
   ];
   
@@ -51,7 +55,12 @@ const sponsorsData = [
         <h2>Nuestros Patrocinadores</h2>
         <div className="sponsors-grid">
           {sponsorsData.map((sponsor) => (
-            <Link key={sponsor.id} to={sponsor.link}>
+            <Link 
+                key={sponsor.id} 
+                to={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                >
               <img
                 className="sponsor-thumbnail"
                 src={sponsor.image}
