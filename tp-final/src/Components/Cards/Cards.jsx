@@ -63,7 +63,7 @@ const Cards= () => {
       </Col>
       <Col md={4}>
         {/*Sidebar*/}
-        <Card>
+        <Card className='margenSidebar'>
           <Card.Body>
             <Card.Title>Sidebar</Card.Title>
             <Card.Img variant="top" src={sidebar1}/>
