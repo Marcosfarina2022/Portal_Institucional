@@ -6,7 +6,7 @@ function Footer() {
     return (
         <footer className="footer">
 
-            <div className="flex-container">
+            <div className="div-footer">
 
                 <div className='div-logo'>
                 <img className='logo' href={"/"} src={logoCLA} alt="Logo"/>

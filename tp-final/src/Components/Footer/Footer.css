@@ -1,14 +1,12 @@
-
-.flex-container {
+.div-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     height: 10%;
-    background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254,22,121,1) 80%);
+    background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254, 22, 121, 1) 80%);
     background-position: center center;
     background-size: cover;
-    padding: 5px;  
+    padding: 5px;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -25,6 +23,7 @@
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    
 }
 
 .div-redes {
@@ -32,20 +31,24 @@
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 25%;
-    gap: 10px;
+    gap: 15px;
 
 }
 
 .div-icons {
-
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: center;
+    
 
 }
 
+.div-icons div {
+    width: 15%;
+}
+
+
 .div-copyright {
-    background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254,22,121,1) 80%);
+    background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254, 22, 121, 1) 80%);
     color: rgba(120, 115, 115, 0.769);
 }
