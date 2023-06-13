@@ -1,6 +1,7 @@
 import './Footer.css'
 import  logoCLA  from "../../Imgenes/LogoCLA2.png";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -9,7 +10,10 @@ function Footer() {
             <div className="div-footer">
 
                 <div className='div-logo'>
-                <img className='logo' href={"/"} src={logoCLA} alt="Logo"/>
+                <Link to="/">
+                    <img className='logo' href={"/"} src={logoCLA} alt="Logo"/>  
+                </Link>   
+                {/* <img className='logo' href={"/"} src={logoCLA} alt="Logo"/> */}
                 </div>
 
                 <div className='div-contacto'>
@@ -23,11 +27,11 @@ function Footer() {
 
                     <div className="div-icons">
                         <div><a target="_blank" rel="noreferrer" href="https://www.facebook.com/clublasaguilasushuaia/?locale=es_LA" title="Facebook">
-                            <FaFacebook /></a></div>
+                            <FaFacebook color='black' /></a></div>
                         <div><a target="_blank" rel="noreferrer" href="https://www.instagram.com/clublasaguilas/" title="Instagram">
-                            <FaInstagram /></a></div>
+                            <FaInstagram color='black' /></a></div>
                         <div><a target="_blank" rel="noreferrer" href="https://www.youtube.com/@clublasaguilas-analisisdev8566" title="Youtube">
-                            <FaYoutube /></a></div>
+                            <FaYoutube color='black'/></a></div>
                     </div>
                 </div>
             </div>
