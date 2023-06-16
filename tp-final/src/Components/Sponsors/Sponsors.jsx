@@ -6,18 +6,6 @@ import logoTanteSara from '../../Imgenes/imagenesSponsors/logoTanteSara.svg';
 import logoPopper from '../../Imgenes/imagenesSponsors/logoPopperSports.svg';
 import logoCerveza from '../../Imgenes/imagenesSponsors/logoCervezaImperial.svg';
 
-
-/*const Sponsors = () =>{
-
-    return(
-        <div>
-            Acá van los sponsors
-        </div>
-
-    );
-}
-export default Sponsors;*/
-// Datos de los patrocinadores
 const sponsorsData = [
     {
       id: 1,
