@@ -1,0 +1,16 @@
+.box {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(254,22,121,1) 82%);
+}
+
+.px-4 {
+    border-radius: 25px;
+    box-shadow: 3px 3px rgba(245, 245, 245, 0.692), -1em 0 .4em rgba(0, 0, 0, 0.418);
+}
+
+.logo {
+    width: 145px;
+    height: 145px;
+}
+
+
