@@ -7,12 +7,13 @@ import Image3 from '../../Imgenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
 import './cards.css';
 import { Col, Row, Image, Nav } from 'react-bootstrap';
+import Sponsors from '../Sponsors/Sponsors';
 
 const Cards= () => {
   return (<> 
     <Row className='contenedor'>
-      <Col md={8}>
-        <Row>
+      <Col md={7}>
+        <Row className='cardFila1'>
           <Col md={6}>
             {/*Card numero 1*/}
             <Card style={{ width: '22rem' }}>
@@ -50,7 +51,7 @@ const Cards= () => {
           </Col>
           <Col md={6}>
             {/*Card numero 4*/}
-            <Card style={{ width: '22rem' }}>
+            <Card style={{ width:'22rem' }}>
               <Card.Body>
               <Card.Img variant="top" src={Image3} className="img-fluid"/>
                 <Card.Title>Noticia 4</Card.Title>
@@ -58,15 +59,19 @@ const Cards= () => {
                 <Button variant="primary">Leer más...</Button>
               </Card.Body>
             </Card>
+            <Row>
+            <Sponsors/>
+            </Row>
           </Col>
         </Row>
       </Col>
       <Col md={4}>
         {/*Sidebar*/}
-        <Card>
+        {/*className='margenSidebar img-fluid '*/}
+        <Card style={{ height: '35rem' , width: '26rem'}}className='sidebar'>
           <Card.Body>
             <Card.Title>Sidebar</Card.Title>
-            <Card.Img variant="top" src={sidebar1}/>
+            <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid"/>
             <Card.Text>Contenido del sidebar.</Card.Text>
             <Button variant="primary">Leer más...</Button>
           </Card.Body>

@@ -7,7 +7,6 @@ const Content = () => {
   return (
     <div>
     <Cards></Cards>
-    <Sponsors></Sponsors>
     </div>
   );
 }
