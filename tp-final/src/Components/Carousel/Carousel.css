@@ -1,4 +1,4 @@
-.divImg{
+/*.divImg{
     margin: auto;
     width: 100%;
     height: 500px;
@@ -11,4 +11,24 @@
 .divImg img{
     width: 20%;
     height: 100%;
-}
+}*/
+.carousell {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+  }
+  
+  .caption h3 {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .caption p {
+    color: #fff;
+    font-size: 16px;
+  }
