@@ -9,7 +9,8 @@ const Home = () =>{
  return ( 
     <div className="home">
     <Carousel/>
-    <div><Content></Content></div>
+    <div>
+    <Content></Content></div>
     </div>) 
 }  
 
