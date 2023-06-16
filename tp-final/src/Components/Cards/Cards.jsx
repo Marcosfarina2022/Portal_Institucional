@@ -7,7 +7,6 @@ import Image3 from '../../Imgenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
 import './cards.css';
 import { Col, Row, Image, Nav } from 'react-bootstrap';
-import Sponsors from '../Sponsors/Sponsors';
 
 const Cards= () => {
   return (<> 
@@ -59,9 +58,6 @@ const Cards= () => {
                 <Button variant="primary">Leer más...</Button>
               </Card.Body>
             </Card>
-            <Row>
-            <Sponsors/>
-            </Row>
           </Col>
         </Row>
       </Col>
