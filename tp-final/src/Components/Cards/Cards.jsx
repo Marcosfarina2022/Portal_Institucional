@@ -1,12 +1,13 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import VidedoPlayer from '../Video/Video';
 import Image1 from '../../Imgenes/imgNoticias/1.svg';
 import Image2 from '../../Imgenes/imgNoticias/2.svg';
 import Image3 from '../../Imgenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
-import './cards.css';
 import { Col, Row, Image, Nav } from 'react-bootstrap';
+import './cards.css';
 
 const Cards= () => {
   return (<> 
@@ -72,7 +73,7 @@ const Cards= () => {
             <Button variant="primary">Leer más...</Button>
           </Card.Body>
         </Card>
-      </Col>
+      </Col> <VidedoPlayer/>
     </Row>
   </>)
 }
