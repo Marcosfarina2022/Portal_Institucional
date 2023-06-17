@@ -40,7 +40,7 @@ const sponsorsData = [
   function Sponsors() {
     return (
       <div className="sponsors-container">
-        <h2>Nuestros Patrocinadores</h2>
+        <h2 className='tituloPat'>Nuestros Patrocinadores</h2>
         <div className="sponsors-grid">
           {sponsorsData.map((sponsor) => (
             <Link 
