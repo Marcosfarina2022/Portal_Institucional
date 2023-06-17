@@ -3,14 +3,15 @@ import ReactPlayer from 'react-player';
 
 const VideoPlayer = () => {
   return (
-    <div className='video' style={{ maxWidth: '500px', maxHeight: '400px', position: 'relative' }}>
+    <div className='video' style={{ width: 'auto', height: '400px' }}>
       <ReactPlayer
-        url='https://www.instagram.com/p/CrYhuq9Mj5R/'
+        url='https://www.youtube.com/watch?v=_4QqLyc3HnI'
         className='react-player'
         width='100%'
         height='100%'
         controls
         playing
+        volume={0.8}
       />
     </div>
   );
