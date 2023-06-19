@@ -1,4 +1,4 @@
-sponsors-container {
+.sponsors-container {
   text-align: center;
   margin: 20px;
   }
@@ -10,7 +10,6 @@ sponsors-container {
   .sponsors-grid {
     display: flex;
     justify-content: center;
-    background: linear-gradient(rgb(247, 113, 165), rgb(76, 120, 158));
   }
   
   .sponsor-thumbnail {
