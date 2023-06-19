@@ -7,39 +7,39 @@ import './NavBar.css'
 
 
 const NavBar = () => {
-  return (<>
-    <Navbar expand="lg" variant="dark" className='bg-nav'>
+  return (
+    <Navbar expand="lg" variant="ligth" className='bg-nav'>
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100">
-          <LinkContainer to="/inicio">
-              <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
+            <LinkContainer to="/inicio">
+              <Nav.Link href="#inicio" className='color rounded'>Inicio</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Disciplinas" id="basic-nav-dropdown" className='color'>
+            <NavDropdown title="Disciplinas" id="basic-nav-dropdown" className='color rounded'>
               <NavDropdown.Item href="#action/3.1" className='color'>Rugby</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.2" className='color'>
                 Hockey</NavDropdown.Item>
             </NavDropdown>
             <LinkContainer to="/noticias">
-              <Nav.Link href="#noticia" className='color'>Noticias</Nav.Link>
+              <Nav.Link href="#noticia" className='color rounded'>Noticias</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/galeria">
-              <Nav.Link href="#galeria" className='color'>Galeria</Nav.Link>
+              <Nav.Link href="#galeria" className='color rounded'>Galeria</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/institucion">
-             <Nav.Link href="#institucion" className='color'>Institución</Nav.Link>
+              <Nav.Link href="#institucion" className='color rounded'>Institución</Nav.Link>
             </LinkContainer>
-           <LinkContainer to="/contacto">
-              <Nav.Link href="#contacto" className='color'>Contacto</Nav.Link>
+            <LinkContainer to="/contacto">
+              <Nav.Link href="#contacto" className='color rounded'>Contacto</Nav.Link>
             </LinkContainer>
-            <Nav.Link href="#registro" className='color'>Registrarse</Nav.Link>
+            <Nav.Link href="#registro" className='color rounded'>Registrarse</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  </>)
+  )
 }
 
 export default NavBar;
