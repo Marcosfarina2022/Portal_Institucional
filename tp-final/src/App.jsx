@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import Home from './Components/Home/Home';
 import { BrowserRouter  , Routes, Route } from 'react-router-dom';
 import Galeria from './Components/Galeria/Galeria';
@@ -8,9 +7,11 @@ import Header from './Components/Header/Header';
 import Institución from './Components/Institucion/Institucion';
 import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
+import './App.css';
 
 function App() {
   return (
+    
     <BrowserRouter>
       <div className="App">
         <Header/>
@@ -25,6 +26,7 @@ function App() {
       <Footer/>
       </div>
     </BrowserRouter>
+    
   );
 }
 

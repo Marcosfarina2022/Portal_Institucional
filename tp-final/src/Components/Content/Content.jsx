@@ -5,9 +5,8 @@ import Sponsors from "../Sponsors/Sponsors";
 
 const Content = () => {
   return (
-    <div>
-    <Cards></Cards>
-    <Sponsors></Sponsors>
+    <div className='contenedor'>
+    
     </div>
   );
 }
