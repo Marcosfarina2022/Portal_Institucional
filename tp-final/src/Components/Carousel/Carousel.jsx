@@ -16,7 +16,7 @@ function Carrusel() {
         />
         <Carousel.Caption className="caption">
           <h3>Te damos la bienvenida a nuestro hermoso club</h3>
-          <p>Si quieres conocer sobre nosotros, puedes visitar nuestro apartado "Institución", donde podrás recorrer nuestra historia desde el comienzo.</p>
+          <p>Si quieres conocer sobre nosotros, puedes visitar nuestro apartado "Institución", donde podrás conocer nuestra historia desde el comienzo.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,8 +37,8 @@ function Carrusel() {
           alt="Third slide"
         />
         <Carousel.Caption className="caption">
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h3>¿Queres ser parte de nuestro club?</h3>
+          <p> De esta forma podrás defender con orgullo nuestros colores</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
