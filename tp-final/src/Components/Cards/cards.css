@@ -15,3 +15,15 @@
 .styloSideBar{
     height: 700px;
 }
+.card-body {
+    background-color: rgba(61, 6, 31, 0.183);
+  }
+.card{
+    border-color:rgb(21, 54, 83);
+    border-style:hidden;
+    border-radius: 4px;
+}
+.colorBoton{
+    background-color:rgba(93, 14, 84, 0.766);
+
+}
