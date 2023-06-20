@@ -1,6 +1,10 @@
+import Content from "../Content/Content"
 
 const Noticias = () => {
-    return(<h1>ACA ESTAN LAS NOTICIAS</h1>)
+    return(
+    
+    <Content/>
+    )
 }
 
 export default Noticias

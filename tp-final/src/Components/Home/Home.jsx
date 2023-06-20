@@ -2,6 +2,8 @@
 import Content from "../Content/Content";
 import Carousel from "../Carousel/Carousel";
 import './Home.css'
+import Sponsors from "../Sponsors/Sponsors";
+import Cards from "../Cards/Cards";
 
 
 
@@ -10,7 +12,9 @@ const Home = () =>{
     <div className="home">
     <Carousel/>
     <div>
-    <Content></Content></div>
+    <Cards/>
+    <Sponsors/>
+    </div>
     </div>) 
 }  
 

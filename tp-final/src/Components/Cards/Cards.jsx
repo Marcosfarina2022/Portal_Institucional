@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import VideoPlayer from '../Video/Video';
 import { Col, Row } from 'react-bootstrap';
 import './cards.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Image1 from '../../Imgenes/imgNoticias/1.svg';
 import Image2 from '../../Imgenes/imgNoticias/2.svg';
 import Image3 from '../../Imgenes/imgNoticias/3.svg';
@@ -45,7 +45,7 @@ const Cards = () => {
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.text}</Card.Text>
-                  <Button variant="primary">Leer más...</Button>
+                  <Button variant="dark" className='colorBoton'>Leer más...</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -59,7 +59,7 @@ const Cards = () => {
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.text}</Card.Text>
-                  <Button variant="primary">Leer más...</Button>
+                  <Button variant="dark" className='colorBoton'>Leer más...</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -73,7 +73,7 @@ const Cards = () => {
             <Card.Title>Sidebar</Card.Title>
             <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid" />
             <Card.Text>Contenido del sidebar.</Card.Text>
-            <Button variant="primary">Leer más...</Button>
+            <Button variant="dark" className='colorBoton'>Leer más...</Button>
           </Card.Body>
         </Card>
         <div style={{ width: '26rem', height:'auto', margin: '10px', marginTop:'25px' }}>
