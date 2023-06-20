@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
+import { Dropdown, Button } from 'react-bootstrap';
 import './noticias.css';
 
 const Noticias = () => {
-  const [categoria, setCategoria] = useState('todas'); // Estado para almacenar la categoría seleccionada //
-
+  const [categoria, setCategoria] = useState('todas');
   const noticias = [
-    {categoria: 'juveniles' , titulo: 'Noticia 1' },
-    { titulo: 'Noticia 2', categoria: 'infantiles' },
-    { titulo: 'Noticia 3', categoria: 'femeninos' },
-    { titulo: 'Noticia 4', categoria: 'adultos' },
-    { titulo: 'Noticia 5', categoria: 'categoria1' },
-    { titulo: 'Noticia 6', categoria: 'categoria3' },
+    { categoria: 'Infantiles', titulo: 'Noticia 1' },
+    { categoria: 'Femenina', titulo: 'Noticia 2' },
+    { categoria: 'Juvenil', titulo: 'Noticia 3' },
+    { categoria: 'Adulto', titulo: 'Noticia 4' },
+    { categoria: 'Veterano', titulo: 'Noticia 5' },
+    { categoria: 'Hockey', titulo: 'Noticia 6' },
     // ...
   ];
+  const categorias = ['todas', 'Infantiles', 'Femenina', 'Juvenil', 'Adulto', 'Veterano', 'Hockey'];
 
-  const categorias = ['todas', 'categoria1', 'categoria2', 'categoria3'];
-
-  // Función para filtrar las noticias según la categoría seleccionada //
   const filtrarNoticias = (noticias, categoria) => {
     if (categoria === 'todas') {
       return noticias;
@@ -29,29 +27,23 @@ const Noticias = () => {
 
   return (
     <div className="noticias-container">
-      <h1 className="titulo">Noticias</h1>
-      <div className="categorias">
-        <button
-          className={`categoria ${categoria === 'todas' ? 'categoria-activa' : ''}`}
-          onClick={() => setCategoria('todas')}
-        >
-          Todas
-        </button>
-        {categorias.map(cat => (
-          <button
-            key={cat}
-            className={`categoria ${categoria === cat ? 'categoria-activa' : ''}`}
-            onClick={() => setCategoria(cat)}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      <div className="contenedor-titulo-boton">
+      <Dropdown onSelect={setCategoria}>
+          <Dropdown.Toggle as={Button} variant="primary" id="dropdown-categoria" className="boton-todas">
+            {categoria}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            {categorias.map(cat => (
+              <Dropdown.Item key={cat} eventKey={cat}>{cat}</Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown><h1 className="titulo">Últimas Noticias del Club</h1>
+       </div>
       <div className="noticias-grid">
         {noticiasFiltradas.map(noticia => (
           <div key={noticia.titulo} className="noticias-item">
-            <h2 className="noticias-titulo">{noticia.titulo}</h2>
-            <p className="noticias-categoria">Categoría: {noticia.categoria}</p>
+            <h2 className="noticias-categoria">{noticia.categoria}</h2>
+            <p className="noticias-titulo">{noticia.titulo}</p>
           </div>
         ))}
       </div>
