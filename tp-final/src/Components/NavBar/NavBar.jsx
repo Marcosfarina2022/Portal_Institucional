@@ -8,12 +8,12 @@ import './NavBar.css'
 
 const NavBar = () => {
   return (<>
-    <Navbar expand="lg" variant="dark" className='bg-nav'>
+    <Navbar expand="lg" className='bg-nav'>
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100">
-          <LinkContainer to="/inicio">
+          <LinkContainer to="/">
               <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Disciplinas" id="basic-nav-dropdown" className='color'>
