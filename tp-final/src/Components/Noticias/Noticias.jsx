@@ -37,7 +37,7 @@ const Noticias = () => {
               <Dropdown.Item key={cat} eventKey={cat}>{cat}</Dropdown.Item>
             ))}
           </Dropdown.Menu>
-        </Dropdown><h1 className="titulo">Últimas Noticias del Club</h1>
+        </Dropdown><h1 className="tituloNoticias">Últimas Noticias del Club</h1>
        </div>
       <div className="noticias-grid">
         {noticiasFiltradas.map(noticia => (
