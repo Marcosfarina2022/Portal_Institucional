@@ -8,7 +8,7 @@ import './NavBar.css'
 
 const NavBar = () => {
 
-  return (<>
+  return (
     <Navbar expand="lg" className='bg-nav'>
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
