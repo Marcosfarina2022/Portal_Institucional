@@ -2,87 +2,87 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import VideoPlayer from '../Video/Video';
+import { Col, Row } from 'react-bootstrap';
+import './cards.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Image1 from '../../Imgenes/imgNoticias/1.svg';
 import Image2 from '../../Imgenes/imgNoticias/2.svg';
 import Image3 from '../../Imgenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
-import { Col, Row, Image, Nav } from 'react-bootstrap';
-import './cards.css';
 
 const Cards = () => {
+  const cardData = [
+    {
+      image: Image1,
+      title: 'Águilas Jr',
+      text: 'Nuestra escuela de rugby para niños ofrece una experiencia deportiva divertida y educativa.',
+    },
+    {
+      image: Image2,
+      title: 'Hockey Femenino',
+      text: 'El equipo de hockey femenino del club ha tenido una destacada participación en los últimos torneos.',
+    },
+    {
+      image: Image3,
+      title: 'Noticia 3',
+      text: 'Contenido de la noticia 3.',
+    },
+    {
+      image: Image3,
+      title: 'Noticia 4',
+      text: 'Contenido de la noticia 4.',
+    },
+  ];
+
   return (
-    <>
-      <Row className='contenedor'>
-        <Col md={7}>
-          <Row className='cardFila1'>
-            <Col md={6}>
-              {/*Card numero 1*/}
+    <Row className='contenedor'>
+      <Col md={7}>
+        <Row className='cardFila1'>
+          {cardData.slice(0, 2).map((card, index) => (
+            <Col md={6} key={index}>
               <Card style={{ width: '22rem' }}>
                 <Card.Body>
-                  <Card.Img variant="top" src={Image1} className="img-fluid" />
-                  <Card.Title>Águilas Jr</Card.Title>
-                  <Card.Text>Nuestra escuela de rugby para niños ofrece una experiencia deportiva divertida y educativa.</Card.Text>
-                  <Button variant="primary">Leer más...</Button>
+                  <Card.Img variant="top" src={card.image} className="img-fluid" />
+                  <Card.Title>{card.title}</Card.Title>
+                  <Card.Text>{card.text}</Card.Text>
+                  <Button variant="dark" className='colorBoton'>Leer más...</Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={6}>
-              {/*Card numero 2*/}
+          ))}
+        </Row>
+        <Row className='cardFila2'>
+          {cardData.slice(2, 4).map((card, index) => (
+            <Col md={6} key={index}>
               <Card style={{ width: '22rem' }}>
                 <Card.Body>
-                  <Card.Img variant="top" src={Image2} className="img-fluid" />
-                  <Card.Title>Hockey Femenino</Card.Title>
-                  <Card.Text>El equipo de hockey femenino del club ha tenido una destacada participación en los últimos torneos.</Card.Text>
-                  <Button variant="primary">Leer más...</Button>
+                  <Card.Img variant="top" src={card.image} className="img-fluid" />
+                  <Card.Title>{card.title}</Card.Title>
+                  <Card.Text>{card.text}</Card.Text>
+                  <Button variant="dark" className='colorBoton'>Leer más...</Button>
                 </Card.Body>
               </Card>
             </Col>
-          </Row>
-          <Row className='cardFila2'>
-            <Col md={6}>
-              {/*Card numero 3*/}
-              <Card style={{ width: '22rem' }}>
-                <Card.Body>
-                  <Card.Img variant="top" src={Image3} className="img-fluid" />
-                  <Card.Title>Noticia 3</Card.Title>
-                  <Card.Text>Contenido de la noticia 3.</Card.Text>
-                  <Button variant="primary">Leer más...</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6}>
-              {/*Card numero 4*/}
-              <Card style={{ width: '22rem' }}>
-                <Card.Body>
-                  <Card.Img variant="top" src={Image3} className="img-fluid" />
-                  <Card.Title>Noticia 4</Card.Title>
-                  <Card.Text>Contenido de la noticia 4.</Card.Text>
-                  <Button variant="primary">Leer más...</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Col>
-        <Col md={4}>
-          {/*Sidebar*/}
-          <Card style={{ height: '35rem', width: '26rem' }} className='sidebar'>
-            <Card.Body>
-              <Card.Title>Sidebar</Card.Title>
-              <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid" />
-              <Card.Text>Contenido del sidebar.</Card.Text>
-              <Button variant="primary">Leer más...</Button>
-            </Card.Body>
-          </Card>
-          <Row className='mt-4' >
-            <div>
-              {/* VideoPlayer */}
-              <VideoPlayer />
-            </div>
-          </Row>
-        </Col>
-      </Row>
-    </>
-  )
+          ))}
+        </Row>
+      </Col>
+      <Col md={4}>
+        {/*Sidebar*/}
+        <Card style={{ height: '35rem', width: '26rem', margin: '10px' }} className='sidebar'>
+          <Card.Body>
+            <Card.Title>Sidebar</Card.Title>
+            <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid" />
+            <Card.Text>Contenido del sidebar.</Card.Text>
+            <Button variant="dark" className='colorBoton'>Leer más...</Button>
+          </Card.Body>
+        </Card>
+        <div style={{ width: '26rem', height:'auto', margin: '10px', marginTop:'25px' }}>
+          {/* VideoPlayer */}
+          <VideoPlayer />
+        </div>
+      </Col>
+    </Row>
+  );
 }
 
 export default Cards;

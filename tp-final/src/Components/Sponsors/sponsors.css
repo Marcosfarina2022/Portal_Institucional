@@ -1,33 +1,61 @@
-sponsors-container {
-  text-align: center;
-  margin: 20px;
-  }
-  .tituloPat{
-    font-weight: bolder;
-    color: aliceblue;
+.sponsors-container {
+  padding: 20px;
+}
 
-  }
-  .sponsors-grid {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(rgb(247, 113, 165), rgb(76, 120, 158));
-  }
+.text {
+  position: relative;
+  padding: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.171);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+
+}
+
+#title, .descripcion {
+  font-size: 24px;
+  font-weight: bold;
+  color: #acacac;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.descripcion {
+  font-size: 14px !important;
+  font-style: oblique;
   
-  .sponsor-thumbnail {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 100%;
-    cursor: pointer;
-    margin: 25px;
-  }
-  
-  .sponsor-thumbnail:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Estilos adicionales para el texto de los patrocinadores */
-  .sponsor-name {
-    margin-top: 10px;
-    font-weight: bold;
-  }
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.sponsors-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.sponsors-image {
+  width: 100px;
+  height: 100px;
+}
+
+.sponsors-description {
+  font-size: small;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}

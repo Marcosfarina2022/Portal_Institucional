@@ -13,23 +13,21 @@ function Footer() {
                 <Link to="/">
                     <img className='logoFooter' href={"/inicio"} src={logoCLA} alt="Logo"/>  
                 </Link>   
-                {/* <img className='logo' href={"/"} src={logoCLA} alt="Logo"/> */}
                 </div>
 
                 <div className='div-contacto'>
                     <div>Club familiar de Rugby y Hockey más austral del mundo.</div>
-
-                    <div className="footer-email">Contáctanos: <a href="mailto:clasaguilas@gmail.com">clasaguilas@gmail.com</a></div>
+                    <Link to="/contacto">Contáctanos</Link> 
                 </div>
 
                 <div className='div-redes'>
-                    <div>SEGUINOS</div>
+                    <div>Nuestro club en redes</div>
 
                     <div className="div-icons">
-                        <div><a target="_blank" rel="noreferrer" href="https://www.facebook.com/clublasaguilasushuaia/?locale=es_LA" title="Facebook">
-                            <FaFacebook color='black' /></a></div>
                         <div><a target="_blank" rel="noreferrer" href="https://www.instagram.com/clublasaguilas/" title="Instagram">
                             <FaInstagram color='black' /></a></div>
+                        <div><a target="_blank" rel="noreferrer" href="https://www.facebook.com/clublasaguilasushuaia/?locale=es_LA" title="Facebook">
+                            <FaFacebook color='black' /></a></div>
                         <div><a target="_blank" rel="noreferrer" href="https://www.youtube.com/@clublasaguilas-analisisdev8566" title="Youtube">
                             <FaYoutube color='black'/></a></div>
                     </div>
