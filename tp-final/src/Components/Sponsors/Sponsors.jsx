@@ -49,7 +49,6 @@ function Sponsors() {
         <div id="title">
           Nos apoyan
         </div>
-
         <div className="descripcion">
           Agradecemos de corazón a todos aquellos que nos acompañan día a día en nuestra trayectoria.
           Su apoyo y compromiso son fundamentales para nuestro éxito. Nos sentimos honrados y agradecidos
@@ -57,8 +56,8 @@ function Sponsors() {
           Gracias por formar parte de nuestra comunidad y por ser parte de nuestro crecimiento y desarrollo.
           Juntos, seguiremos construyendo un camino lleno de éxitos y logros. ¡Gracias por estar siempre a nuestro lado!
         </div>
-      
-        </div> 
+      </div>
+
       <div className="sponsors-grid">
         {sponsorsData.map((sponsor) => (
           <Link
@@ -73,7 +72,6 @@ function Sponsors() {
               alt={sponsor.alt}
               className="sponsors-image"
             />
-            
             <div className="sponsors-description">{sponsor.description}</div>
           </Link>
         ))}
