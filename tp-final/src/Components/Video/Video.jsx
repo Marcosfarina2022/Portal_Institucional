@@ -6,7 +6,7 @@ const VideoPlayer = () => {
     <div
       style={{
         width: 'auto',
-        height: '400px', 
+        height: '400px',
         paddingBottom: '56.25%',
         position: 'relative',
         borderRadius: '10px',
@@ -25,7 +25,6 @@ const VideoPlayer = () => {
           borderRadius: '10px'
         }}
         controls
-        playing
         volume={0.4}
       />
     </div>
