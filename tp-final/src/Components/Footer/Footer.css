@@ -2,37 +2,47 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 10%;
     background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254, 22, 121, 1) 80%);
-    background-position: center center;
-    background-size: cover;
-    padding: 5px;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.div-logo-footer {
+    display: flex;
+    width: 25%;
+}
+
+.div-logo-footer img{
+    width: 40%;
 }
 
 
-
 .div-contacto {
-    flex-grow: 1;
+    width: 50%;
     flex-direction: column;
-    font-size: xx-large;
+    font-size: x-large;
     color: black;
     
 }
 
+.div-contacto div {
+    padding-bottom: 10px;    
+}
+
 .div-redes {
-    font-size: xx-large;
-    flex-grow: 1;
+    width: 25%;
+    font-size: x-large;
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .div-icons {
     display: flex;
     justify-content: center;
     font-size: xx-large;
+    padding-top: 10px;
 }
 
 .div-icons div :hover{
@@ -41,7 +51,7 @@
     }
 
 .div-icons div {
-    width: 15%;
+    width: 20%;
 }
 
 .footer-email a{
@@ -54,6 +64,27 @@
 
 
 .div-copyright {
+    height: auto !important;
     background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254, 22, 121, 1) 80%);
-    color: rgba(120, 115, 115, 0.769);
+    color: rgba(120, 115, 115, 0.769);   
+}
+
+@media (max-width: 768px) {
+    .div-footer {
+        flex-direction: column;
+    }
+    .div-contacto {
+        width: 100%;
+        
+    }
+    .div-redes {
+        width: 100%;
+        justify-content: center;
+    }
+    .div-icons div {
+        width: 10%;
+    }
+    .div-logo-footer {
+        width: 35%;
+    }
 }
