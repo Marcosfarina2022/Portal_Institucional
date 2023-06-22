@@ -1,6 +1,7 @@
 .lineaDeTiempo {
-    background: black url(../../Imgenes/LogoCLA2.png) center fixed no-repeat;
-    background-size: contain;
+    background: black url(../../Imgenes/LogoCLA2.png) center no-repeat;
+    height: 70vh;
+    overflow-y: scroll;
     
 }
 
