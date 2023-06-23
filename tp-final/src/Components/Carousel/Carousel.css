@@ -1,39 +1,40 @@
 .carousell {
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    border-radius: 15px; 
-   }
-  
-  .caption {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .caption h3 {
-    color: #ffffff; /* Cambia el color a blanco */
-  font-size: 24px;
-  }
-  
-  .caption p {
-    color: #ffffff; /* Cambia el color a blanco */
-  font-size: 16px;
-  }
-  .carousel-item {
-    height: 400px; /* Ajusta la altura según tus necesidades */
-  }
-  
-  .carousel-item img {
-    object-fit:fill; /* Ajusta la forma en que la imagen se ajusta al contenedor */
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    border-radius: 15px;
-  }
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  border-radius: 15px;
+}
 
-/* Estilos para las imágenes dentro del carrusel */
-.carousell img {
-  /*estilos*/
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.caption h3,
+.caption p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.caption h3 {
+  font-size: 24px;
+}
+
+.carousel-item {
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carousel-item img {
+  object-fit: fill;
+  height: 100%;
+  border-radius: 15px;
   transition: transform 0.5s ease;
 }
 
-/* Estilos al pasar el cursor sobre las imágenes */
+.carousell img {
+  transition: transform 0.5s ease;
+}
+
 .carousell img:hover {
-  transform: scale(1.5); /* Escala la imagen al 110% */
+  transform: scale(1.5);
 }

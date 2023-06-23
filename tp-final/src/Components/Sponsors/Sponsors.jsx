@@ -72,7 +72,6 @@ function Sponsors() {
               alt={sponsor.alt}
               className="sponsors-image"
             />
-            <div className="sponsors-description">{sponsor.description}</div>
           </Link>
         ))}
       </div>
