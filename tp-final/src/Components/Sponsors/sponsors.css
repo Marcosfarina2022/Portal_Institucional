@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(67, 66, 67, 0.171);
+  background-color:rgba(93, 14, 84, 0.3);
   backdrop-filter: blur(8px);
   border-radius: 10px;
 }
@@ -37,7 +37,7 @@
   font-style: oblique;
 }
 #title:hover, .descripcion:hover {
-  color: rgba(111, 34, 102, 0.766);
+  color: rgb(239, 229, 236);
 
 }
 
@@ -74,6 +74,6 @@
 }
 
 .sponsors-item:hover .sponsors-description {
-  color: rgba(111, 34, 102, 0.766);
+  color: rgba(220, 211, 219, 0.724);
   transform: scale(1.1);
 }

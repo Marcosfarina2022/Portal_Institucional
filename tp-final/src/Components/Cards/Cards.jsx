@@ -20,7 +20,7 @@ const Cards = () => {
     {
       image: Image2,
       title: 'Hockey Femenino',
-      text: 'El equipo de hockey femenino del club ha tenido una destacada participación en los últimos torneos.',
+      text: 'El equipo de hockey femenino del club ha tenido una destacada participación...',
     },
     {
       image: Image3,
@@ -40,7 +40,7 @@ const Cards = () => {
         <Row className='cardFila1'>
           {cardData.slice(0, 2).map((card, index) => (
             <Col md={6} key={index}>
-              <Card style={{ width: '22rem' }}>
+              <Card style={{ width: '23rem' }}>
                 <Card.Body>
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
@@ -54,7 +54,7 @@ const Cards = () => {
         <Row className='cardFila2'>
           {cardData.slice(2, 4).map((card, index) => (
             <Col md={6} key={index}>
-              <Card style={{ width: '22rem' }}>
+              <Card style={{ width: '23rem' }}>
                 <Card.Body>
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
