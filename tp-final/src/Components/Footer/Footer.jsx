@@ -14,14 +14,12 @@ function Footer() {
                     <img className='logoFooter' href={"/inicio"} src={logoCLA} alt="Logo"/>  
                 </Link>   
                 </div>
-
-                <div className='div-contacto'>
-                    <div>Club familiar de Rugby y Hockey más austral del mundo.</div>
-                    <Link to="/contacto">Contáctanos</Link> 
+                <div className='div-eslogan'>
+                     <div>Club familiar de Rugby y Hockey más austral del mundo.</div>
                 </div>
 
                 <div className='div-redes'>
-                    <div>Nuestro club en redes</div>
+                    <div className='div-redes-club'>Nuestro club en redes</div>
 
                     <div className="div-icons">
                         <div><a target="_blank" rel="noreferrer" href="https://www.instagram.com/clublasaguilas/" title="Instagram">
@@ -33,8 +31,13 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            <div className='sub-footer'>
             <div className="div-copyright">
                 <p>&copy; 2023 - MentesDeMentes</p>
+                </div>
+                <div className='div-contacto'>
+                    <Link className='link-contacto' to="/contacto">Contáctanos</Link> 
+                 </div>
             </div>
         </footer>
     );

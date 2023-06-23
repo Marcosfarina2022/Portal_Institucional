@@ -6,52 +6,54 @@
     align-items: center;
     justify-content: center;
     padding-top: 5px;
-    padding-bottom: 5px;
+    font-weight: bolder;
 }
 
 .div-logo-footer {
     display: flex;
-    width: 25%;
+    width: 5%;
 }
 
 .div-logo-footer img{
-    width: 40%;
-}
-
-
-.div-contacto {
     width: 50%;
-    flex-direction: column;
-    font-size: x-large;
-    color: black;
-    
 }
 
-.div-contacto div {
-    padding-bottom: 10px;    
+
+
+.div-eslogan {
+    width: 65%;
+    text-align:start;
 }
+
 
 .div-redes {
-    width: 25%;
-    font-size: x-large;
+    width: 30%;
+    font-size: medium;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.div-redes-club{
+    width: 50%;
+    text-align: end;
+    font-size: medium;
 }
 
 .div-icons {
+    text-align:start;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    font-size: xx-large;
-    padding-top: 10px;
+    justify-content:center;
+    font-size: large;
 }
 
 .div-icons div :hover{
-    font-size: 45px;
+    font-size: 20px;
     color: blue !important;
-    }
+}
 
 .div-icons div {
-    width: 20%;
+    width: 25%;
 }
 
 .footer-email a{
@@ -62,29 +64,63 @@
     color: blue !important;
 }
 
+.sub-footer{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254, 22, 121, 1) 80%);
+    padding-bottom: 5px;
+}
+.div-contacto {
+    width: 30%;
+    font-size:medium;
+    color: black;
+    text-align: center;  
+    font-weight: bolder;  
+}
+
+.link-contacto{
+    text-decoration: none;    
+}
 
 .div-copyright {
-    height: auto !important;
-    background: linear-gradient(80deg, rgb(243, 239, 239) 0%, rgba(254, 22, 121, 1) 80%);
-    color: rgba(120, 115, 115, 0.769);   
+    width: 70%;
+    display: flex;
+    color: rgba(120, 115, 115, 0.769);  
+    justify-content: flex-start; 
+    font-size: small;
+ 
 }
+
 
 @media (max-width: 768px) {
     .div-footer {
         flex-direction: column;
     }
     .div-contacto {
-        width: 100%;
-        
+        width: 50%;
+        text-align: start;
     }
     .div-redes {
         width: 100%;
         justify-content: center;
     }
     .div-icons div {
-        width: 10%;
+        width: 30%;
+        text-align: center;
+    }
+    .div-icons {
+        justify-content: flex-start;
     }
     .div-logo-footer {
-        width: 35%;
+        width: 25%;
     }
+    .div-eslogan {
+        text-align:center;
+    }
+    .div-redes-club{
+        width: 50%;
+        text-align: end;
+    }
+
 }
