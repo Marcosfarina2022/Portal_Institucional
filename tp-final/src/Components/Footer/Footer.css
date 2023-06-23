@@ -19,6 +19,20 @@
 }
 
 
+.div-logoFooter {
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+}
+
+
+.logoFooter{
+    justify-content: start;
+    width: 100%;
+    height: 50%;
+}
+
 .div-contacto {
     width: 50%;
     flex-direction: column;

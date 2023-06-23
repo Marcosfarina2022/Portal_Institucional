@@ -11,7 +11,7 @@ function Footer() {
 
                 <div className='div-logo-footer'>
                 <Link to="/">
-                    <img className='logo' href={"/"} src={logoCLA} alt="Logo"/>  
+                    <img className='logoFooter' href={"/inicio"} src={logoCLA} alt="Logo"/>  
                 </Link>   
                 </div>
 

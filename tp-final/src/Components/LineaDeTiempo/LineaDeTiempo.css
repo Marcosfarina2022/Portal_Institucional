@@ -1,9 +1,10 @@
 #lineaDeTiempo {
     content: "";
-    position: absolute;
+    position: relative;
     background: white;
     width: 1px;
     left: 50%;
+    height: 100%;
    
 }
 
