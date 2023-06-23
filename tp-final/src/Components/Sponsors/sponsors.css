@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(71, 0, 71, 0.441);
+  background-color:rgba(247, 115, 166, 0.424) ;
   backdrop-filter: blur(4px);
   border-radius: 10px;
 }
@@ -31,7 +31,7 @@
 #title, .descripcion{
   font-size: 24px;
   font-weight: bold;
-  color: rgba(81, 9, 73, 0.766);
+  color: rgb(3, 3, 73);
   margin-bottom: 10px;
   position: relative;
   z-index: 1;
@@ -39,7 +39,6 @@
 
 .descripcion {
   font-size: 14px;
-  font-style: oblique;
 }
 
 .sponsors-grid {
