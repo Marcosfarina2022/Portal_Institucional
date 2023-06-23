@@ -1,15 +1,21 @@
 .sponsors-container {
   padding: 20px;
+  transform: scale(1.2);
+  animation: zoomInAnimation 8s ease-in-out infinite alternate;
 }
 
+@keyframes zoomInAnimation {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .text {
   position: relative;
   padding: 10px;
   
-}
-.text:hover{
-  transform: scale(0.9);
-  opacity: 0.8;
 }
 .text-overlay {
   position: absolute;
@@ -17,28 +23,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:rgba(93, 14, 84, 0.3);
-  backdrop-filter: blur(8px);
+  background-color: rgba(71, 0, 71, 0.441);
+  backdrop-filter: blur(4px);
   border-radius: 10px;
 }
 
-#title,
-.descripcion {
+#title, .descripcion{
   font-size: 24px;
   font-weight: bold;
-  color: #acacac;
+  color: rgba(81, 9, 73, 0.766);
   margin-bottom: 10px;
   position: relative;
   z-index: 1;
 }
 
 .descripcion {
-  font-size: 14px !important;
+  font-size: 14px;
   font-style: oblique;
-}
-#title:hover, .descripcion:hover {
-  color: rgb(239, 229, 236);
-
 }
 
 .sponsors-grid {
@@ -58,6 +59,7 @@
   transform: scale(1.1);
   opacity: 0.7;
 }
+
 .sponsors-image {
   width: 100px;
   height: 100px;
@@ -65,15 +67,3 @@
   transition: border-color 0.3s ease;
 }
 
-.sponsors-description {
-  font-size: small;
-  font-weight: bold;
-  color:rgba(93, 14, 84, 0.766);
-  text-align: center;
-  transition: color 0.3s ease;
-}
-
-.sponsors-item:hover .sponsors-description {
-  color: rgba(220, 211, 219, 0.724);
-  transform: scale(1.1);
-}
