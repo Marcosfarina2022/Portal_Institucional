@@ -21,7 +21,6 @@ const sponsorsData = [
     image: logoTanteSara,
     alt: 'Tante Sara',
     link: 'https://tantesaraonline.com/',
-    description: 'Un restaurante familiar con deliciosos platos caseros.',
   },
   {
     id: 3,
@@ -29,7 +28,6 @@ const sponsorsData = [
     image: logoPopper,
     alt: 'Popper Sports',
     link: 'https://paseodelfuego.com.ar/',
-    description: 'Una tienda especializada en artículos deportivos de calidad.',
   },
   {
     id: 4,
@@ -37,7 +35,6 @@ const sponsorsData = [
     image: logoCerveza,
     alt: 'Cerveza Imperial',
     link: 'https://cervezaimperial.com.ar/',
-    description: 'Una cervecería artesanal que ofrece variedades únicas.',
   }
 ];
 
