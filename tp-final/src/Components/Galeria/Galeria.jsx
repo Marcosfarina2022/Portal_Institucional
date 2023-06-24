@@ -26,10 +26,11 @@ const imagesMasculino = [
 const Galeria = () => {
     return (
       <div className="slider-container">
+        <h2>Te damos la bienvenida a nuestra galería</h2>
         <div className="slider">
           {imagesFemenino.map((image) => (
             <motion.div className="item" key={image.id} whileHover={{ scale: 1.1 }}>
-              <img src={image.src} alt={image.alt} className="imagenCarousel" />
+              <img src={image.src} alt={image.alt}/>
             </motion.div>
           ))}
         </div>
