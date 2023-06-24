@@ -1,7 +1,7 @@
 
 .bg-nav{
     display: flex;
-    width: 70%;
+    width: 60%;
     font-weight: bolder;
     align-items: center;
     
@@ -11,7 +11,6 @@
 }
 
 .color:hover {
-    color:bisque;
     font-weight: bolder;
     background-color: rgba(138, 62, 138, 0.697);
     border: 1px solid rgba(0, 0, 0, 0.1);
