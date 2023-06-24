@@ -8,7 +8,7 @@ import logoCLA from '../../Imgenes/imagenes-Header-Footer/logoCla.svg';
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
+      <Container> 
         <Row className="align-items-center">
              <Col xs={12} sm={4}>
              <div className='logo-titulo'>
