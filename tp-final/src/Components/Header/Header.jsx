@@ -8,11 +8,6 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
 return(<>
-    <div>
-        <div className='divRegistro'>
-        <a href="Crea tu cuenta" className='colorEnlace'>Creá tu cuenta</a>
-        <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresá</a>
-        </div>
     <header className='header'>
         <div className='logo-titulo'>
             <div className='div-logo'>
@@ -25,10 +20,15 @@ return(<>
             </div>
         </div>
         
-          <NavBar/>
+        <NavBar/>
         
+        <div className='divRegistro'>
+            <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
+            <a href="Crea tu cuenta" className='colorEnlace'>Registrarse</a>
+        </div>
+          
     </header>
-    </div>
+    <div className="glow"></div>
 </>)
 }
 
