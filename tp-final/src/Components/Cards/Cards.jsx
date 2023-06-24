@@ -35,7 +35,7 @@ const Cards = () => {
   ];
 
   return (
-    <Row className='contenedor'>
+    <div className='contenedor'>
       <Col md={7}>
         <Row className='cardFila1'>
           {cardData.slice(0, 2).map((card, index) => (
@@ -81,7 +81,7 @@ const Cards = () => {
           <VideoPlayer />
         </div>
       </Col>
-    </Row>
+    </div>
   );
 }
 
