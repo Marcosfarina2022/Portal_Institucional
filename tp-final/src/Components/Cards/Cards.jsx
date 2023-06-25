@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import VideoPlayer from '../Video/Video';
 import { Col, Row } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import './cards.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image1 from '../../Imgenes/imgNoticias/1.svg';
@@ -35,12 +36,11 @@ const Cards = () => {
   ];
 
   return (
-    <div className='contenedor'>
-      <Col md={7}>
-        <Row className='cardFila1'>
+    <Container fluid>
+      <Row className='row-contenedor'>
+      <Col md={3}>        
           {cardData.slice(0, 2).map((card, index) => (
-            <Col md={6} key={index}>
-              <Card style={{ width: '23rem' }}>
+              <Card key={index}>
                 <Card.Body>
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
@@ -48,13 +48,11 @@ const Cards = () => {
                   <Button variant="dark" className='colorBoton'>Leer más...</Button>
                 </Card.Body>
               </Card>
-            </Col>
           ))}
-        </Row>
-        <Row className='cardFila2'>
+      </Col>    
+      <Col md={3}>
           {cardData.slice(2, 4).map((card, index) => (
-            <Col md={6} key={index}>
-              <Card style={{ width: '23rem' }}>
+              <Card key={index}>
                 <Card.Body>
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
@@ -62,26 +60,24 @@ const Cards = () => {
                   <Button variant="dark" className='colorBoton'>Leer más...</Button>
                 </Card.Body>
               </Card>
-            </Col>
           ))}
-        </Row>
       </Col>
-      <Col md={4}>
-        {/*Sidebar*/}
-        <Card style={{ height: '35rem', width: '26rem', margin: '10px' }} className='sidebar'>
-          <Card.Body>
-            <Card.Title>Sidebar</Card.Title>
+      
+      <Col md={3}>
+        <aside>
+        <Card className='card-aside'>
+          <Card.Body className='card-body-aside'>
             <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid" />
             <Card.Text>Contenido del sidebar.</Card.Text>
             <Button variant="dark" className='colorBoton'>Leer más...</Button>
           </Card.Body>
         </Card>
-        <div style={{ width: '26rem', height:'auto', margin: '10px', marginTop:'25px' }}>
           {/* VideoPlayer */}
           <VideoPlayer />
-        </div>
+        </aside>
       </Col>
-    </div>
+      </Row>
+    </Container>
   );
 }
 
