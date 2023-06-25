@@ -6,6 +6,7 @@ import Header from './Components/Header/Header';
 import Institución from './Components/Institucion/Institucion';
 import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
+import RegistrationForm from './Components/RegistrationForm/RegistrationForm'
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
          <Route path="/noticias" element={<Noticias />}/>
          <Route path="/institucion" element={<Institución />}/>
          <Route path="/contacto" element={<Contacto />}/>
+         <Route path="/registrar" element={<RegistrationForm/>}/>
       </Routes>  
       <Footer/>
       </div>
