@@ -38,7 +38,7 @@ const Cards = () => {
   return (
     <Container fluid>
       <Row className='row-contenedor'>
-      <Col md={3}>        
+      <Col>        
           {cardData.slice(0, 2).map((card, index) => (
               <Card key={index}>
                 <Card.Body>
@@ -50,7 +50,7 @@ const Cards = () => {
               </Card>
           ))}
       </Col>    
-      <Col md={3}>
+      <Col>
           {cardData.slice(2, 4).map((card, index) => (
               <Card key={index}>
                 <Card.Body>
@@ -63,7 +63,7 @@ const Cards = () => {
           ))}
       </Col>
       
-      <Col md={3}>
+      <Col>
         <aside>
         <Card className='card-aside'>
           <Card.Body className='card-body-aside'>
