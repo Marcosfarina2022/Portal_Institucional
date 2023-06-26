@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './RegistrationForm.css';
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imgenes/LogoCLA2.png";
+import { LinkContainer } from 'react-router-bootstrap';
+
 
 const RegistrationForm = () => {
  
@@ -56,12 +58,14 @@ const RegistrationForm = () => {
                       </div>
                     </Form>
                     <div className="mt-3">
+                    <LinkContainer to="/Ingresar">
                       <p className="mb-0  text-center">
-                        Ya dispones de un usuario??{' '}
+                        ¿Ya dispones de un usuario?{' '}
                         <a href="{''}" className="text-primary fw-bold">
-                          Sign In
+                          Ingresar
                         </a>
                       </p>
+                    </LinkContainer>
                     </div>
                   </div>
                 </div>

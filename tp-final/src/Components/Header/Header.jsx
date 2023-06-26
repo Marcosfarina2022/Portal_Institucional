@@ -2,6 +2,7 @@ import NavBar from '../NavBar/NavBar';
 import './Header.css'; 
 import  logoCLA  from "../../Imgenes/LogoCLA2.png";
 import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 
@@ -23,8 +24,12 @@ return(<>
         <NavBar/>
         
         <div className='divRegistro'>
-            <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
-            <a href="Crea tu cuenta" className='colorEnlace'>Registrarse</a>
+            <LinkContainer to="/ingresar">
+              <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
+            </LinkContainer>
+            <LinkContainer to="/registro">
+              <a href="#registro" className='colorEnlace'>Registrarse</a>
+            </LinkContainer>
         </div>
           
     </header>
