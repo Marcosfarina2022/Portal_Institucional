@@ -3,17 +3,16 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import VideoPlayer from '../Video/Video';
 import { Col, Row } from 'react-bootstrap';
-import './cards.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Image1 from '../../Imgenes/imgNoticias/1.svg';
+import imgInfantil1 from '../../Imgenes/imgNoticias/1.svg';
 import Image2 from '../../Imgenes/imgNoticias/2.svg';
 import Image3 from '../../Imgenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
+import './cards.css';
 
 const Cards = () => {
   const cardData = [
     {
-      image: Image1,
+      image: imgInfantil1,
       title: 'Águilas Jr',
       text: 'Nuestra escuela de rugby para niños ofrece una experiencia deportiva divertida y educativa.',
     },
