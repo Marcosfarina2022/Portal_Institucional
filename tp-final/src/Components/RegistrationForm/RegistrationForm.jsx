@@ -7,14 +7,19 @@ const RegistrationForm = () => {
  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword, setConfirPassword] = useState('');
+  const [password, setPassword,] = useState('');
+  const [confirPassword,setConfirPassword] = useState('');
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(confirPassword===password){
     console.log(`Nombre: ${name}`);
     console.log(`Email: ${email}`);
     console.log(`Contrasena: ${password}`);
+    }else{
+      alert("las contraseñas no coinciden")
+    }
   };
 
   return (
@@ -45,7 +50,7 @@ const RegistrationForm = () => {
                         <Form.Control type="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} />
                       </Form.Group>
 
-                      <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                         <Form.Label>Confirmar contraseña</Form.Label>
                         <Form.Control type="password" placeholder="Contraseña" onChange={(e) => setConfirPassword(e.target.value)} />
                       </Form.Group>
