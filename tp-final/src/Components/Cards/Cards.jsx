@@ -3,15 +3,17 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import VideoPlayer from '../Video/Video';
 import { Col, Row } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import './cards.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image1 from '../../Imgenes/imgNoticias/1.svg';
 import Image2 from '../../Imgenes/imgNoticias/2.svg';
 import Image3 from '../../Imgenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
-import './cards.css';
-
 const Cards = () => {
   const cardData = [
     {
-      image: imgInfantil1,
+      image: Image1,
       title: 'Águilas Jr',
       text: 'Nuestra escuela de rugby para niños ofrece una experiencia deportiva divertida y educativa.',
     },
@@ -31,10 +33,9 @@ const Cards = () => {
       text: 'Contenido de la noticia 4.',
     },
   ];
-
   return (
     <Container fluid>
-      <Row className='row-contenedor'>
+      <Row className='row-contenedor'>    
       <Col>        
           {cardData.slice(0, 2).map((card, index) => (
               <Card key={index}>
@@ -46,7 +47,7 @@ const Cards = () => {
                 </Card.Body>
               </Card>
           ))}
-      </Col>    
+      </Col>   
       <Col>
           {cardData.slice(2, 4).map((card, index) => (
               <Card key={index}>
@@ -59,7 +60,6 @@ const Cards = () => {
               </Card>
           ))}
       </Col>
-      
       <Col>
         <aside>
         <Card className='card-aside'>
@@ -77,5 +77,4 @@ const Cards = () => {
     </Container>
   );
 }
-
 export default Cards;
