@@ -1,4 +1,4 @@
-/*Favor no tocar código ajeno xD*/
+/*Favor no tocar el código xD*/
 
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
