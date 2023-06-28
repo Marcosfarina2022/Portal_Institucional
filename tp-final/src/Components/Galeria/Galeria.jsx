@@ -26,35 +26,36 @@ const Galeria = () => {
   ];
 
   const [model, setModel] = useState(false);
-  const [tempImgSrc, setTempImgSrc] = useState('');
+  const [tempImgSrc, setTempImgSrc] = useState(' ');
 
-  const openModal = (imgSrc) => {
-    setTempImgSrc(imgSrc);
-    setModel(true);
+  const getImg = (imgSrc) => {
+      setTempImgSrc(imgSrc);
+      setModel(true);
   };
-
   const closeModal = () => {
     setModel(false);
   };
-
   return (
     <>
-      {model && (
-        <div className='model'>
-          <img src={tempImgSrc} alt='imagen' />
-          <CloseIcon onClick={closeModal} />
-        </div>
-      )}
-      <h2>Galería</h2>
-      <div className='galeria'>
-        {fotos.map((item) => (
-          <div className='pics' key={item.id} onClick={() => openModal(item.imgSrc)}>
-            <img className='images' src={item.imgSrc} alt='imagen' style={{ width: '100%' }} />
-          </div>
-        ))}
-      </div>
-    </>
-  );
+       <div className={model ? 'model open' : 'model'}>
+                <img src={tempImgSrc} />
+                <CloseIcon onClick={() => setModel(false)} />
+            </div>
+            <h2>Galería</h2>
+            <div className='galeria'>
+                {fotos.map((item, index) => {
+                    return (
+                        <div className='pics' key={index} onClick={() => getImg(item.imgSrc)}>
+                            <img className='images' src={item.imgSrc} style={{ width: '100%' }} />
+                        </div>
+                    );
+                })}
+            </div>
+        </>
+
+
+    );
+
 };
 
 export default Galeria;
