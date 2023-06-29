@@ -23,11 +23,8 @@ return(<>
         <NavBar/>
         
         <div className='divRegistro'>
-            
-            <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
-            <Link to="/registrar">
-            <a href="/registrar" className='colorEnlace'>Registrarse</a>
-            </Link>
+            <Link to="/ingresar">Ingresar</Link>
+            <Link to="/registrar">Registrarse</Link>
         </div>
           
     </header>

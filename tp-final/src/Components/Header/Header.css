@@ -16,21 +16,19 @@ header{
 
 
 .divRegistro{
-    width: 15%;
+    display: flex;
+    flex-wrap: nowrap;
     height: 100%;
     margin-right: 5px;
-    display: flex;
     justify-content: space-around;
 }
 
-.creaCuenta{
-    margin-left: 3%;
-}
-.colorEnlace{
+.divRegistro a{
     color: #000000;
     font-weight: bolder;
     text-decoration: none;
 }
+    
 
 .div-logo img{
     justify-content: start;
@@ -52,7 +50,7 @@ header{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    width: 35%;
+
 }
 
 .logo{
@@ -77,4 +75,12 @@ header{
     100%{
         background-position: 0 0;
     }
+}
+
+@media screen {
+    .divRegistro{
+        
+        flex-wrap: wrap;
+    }
+    
 }
