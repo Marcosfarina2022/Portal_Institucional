@@ -6,7 +6,6 @@ import Header from './Components/Header/Header';
 import Institución from './Components/Institucion/Institucion';
 import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
-import RegistrationForm from './Components/RegistrationForm/RegistrationForm'
 import './App.css';
 import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
 import FormLogin from './Components/FormLogin/FormLogin';
