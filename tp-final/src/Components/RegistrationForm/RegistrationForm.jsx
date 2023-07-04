@@ -30,10 +30,10 @@ const RegistrationForm = () => {
         <Row className="vh-100 d-flex justify-content-center align-items-center">
           <Col md={8} lg={6} xs={12}>
             <Card className="px-4">
-              <Card.Body >
+              <Card.Body className="card-body">
                 <div className="mb-3 mt-md-4">
                   <h2 className="fw-bold mb-2 text-center text-uppercase ">
-                  <img className='logo' src={logoCLA} alt="Logo" />
+                  <img src={logoCLA} alt="Logo" />
                   </h2>
                   <div className="mb-3">
                     <Form onSubmit={handleSubmit}>
