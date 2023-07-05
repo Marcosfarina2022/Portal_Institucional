@@ -11,15 +11,6 @@
   height: 100%;
 }
 
-.logo-titulo{
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  width: 40%;
-}
-
 .logo{
   animation: ilustracion 1s ease-in infinite alternate;
 }
