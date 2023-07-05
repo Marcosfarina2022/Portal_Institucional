@@ -16,15 +16,15 @@ const FormLogin = () => {
 
   return(
 
-    <div className='box-login'>
+    <div>
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={12}>
+          <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body className="card-body" >
                 <div className="mb-3 mt-md-4">
                   <h2 className="fw-bold mb-2 text-center text-uppercase ">
-                  <img src={logoCLA} alt="Logo" />
+                  <img className="img-registrationForm" src={logoCLA} alt="Logo" />
                   </h2>
                   <div className="mb-3">
                     <Form onSubmit={handleInputChange}>
