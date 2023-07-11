@@ -9,7 +9,7 @@ import Footer from './Components/Footer/Footer';
 import './App.css';
 import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
 import FormLogin from './Components/FormLogin/FormLogin';
-
+import SobreNosotros from './Components/SobreNosotros/SobreNosotros';
 function App() {
   return (
     
@@ -26,6 +26,7 @@ function App() {
          <Route path="/registro" element={<RegistrationForm />}/>
          <Route path="/ingresar" element={ <FormLogin />} />
          <Route path="/registrar" element={<RegistrationForm/>}/>
+         <Route path="/sobreNosotros" element={<SobreNosotros/>} />
       </Routes>  
       <Footer/>
       </div>
