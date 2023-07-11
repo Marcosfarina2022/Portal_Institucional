@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './RegistrationForm.css';
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
-import  logoCLA  from "../../Imgenes/LogoCLA2.png";
+import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 
 const RegistrationForm = () => {
  

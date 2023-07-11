@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import imagen1 from '../../Imgenes/imagen1.png';
-import imagen2 from '../../Imgenes/imagen2.png';
-import imagen3 from '../../Imgenes/imagen3.png';
+import imagen1 from '../../Imagenes/imagen1.png';
+import imagen2 from '../../Imagenes/imagen2.png';
+import imagen3 from '../../Imagenes/imagen3.png';
 import './Carousel.css';
 
 const captions = [

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import hockeyFem1 from '../../Imgenes/imagenesGaleria/imagenGaleria1.svg';
-import hockeyFem2 from '../../Imgenes/imagenesGaleria/imagenGaleria2.svg';
-import hockeyFem3 from '../../Imgenes/imagenesGaleria/imagenGaleria3.svg';
-import rugbyMas1 from '../../Imgenes/imagenesGaleria/imagenGaleria4.svg';
-import rugbyFem1 from '../../Imgenes/imagenesGaleria/imagenGaleria5.svg';
-import infan1 from '../../Imgenes/imagenesGaleria/imagenGaleria6.svg';
+import hockeyFem1 from '../../Imagenes/imagenesGaleria/imagenGaleria1.svg';
+import hockeyFem2 from '../../Imagenes/imagenesGaleria/imagenGaleria2.svg';
+import hockeyFem3 from '../../Imagenes/imagenesGaleria/imagenGaleria3.svg';
+import rugbyMas1 from '../../Imagenes/imagenesGaleria/imagenGaleria4.svg';
+import rugbyFem1 from '../../Imagenes/imagenesGaleria/imagenGaleria5.svg';
+import infan1 from '../../Imagenes/imagenesGaleria/imagenGaleria6.svg';
 import './galeria.css';
 
 const imagesInfantiles = [

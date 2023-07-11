@@ -6,10 +6,10 @@ import { Col, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import './cards.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image1 from '../../Imgenes/imgNoticias/1.svg';
-import Image2 from '../../Imgenes/imgNoticias/2.svg';
-import Image3 from '../../Imgenes/imgNoticias/3.svg';
-import sidebar1 from '../../Imgenes/imgNoticias/sidebar1.svg';
+import Image1 from '../../Imagenes/imgNoticias/1.svg';
+import Image2 from '../../Imagenes/imgNoticias/2.svg';
+import Image3 from '../../Imagenes/imgNoticias/3.svg';
+import sidebar1 from '../../Imagenes/imgNoticias/sidebar1.svg';
 
 const Cards = () => {
   const cardData = [

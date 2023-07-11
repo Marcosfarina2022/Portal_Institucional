@@ -6,8 +6,8 @@ const VideoPlayer = () => {
     <div
       style={{
         width: 'auto',
-        height: '407px',
-        paddingBottom: '56.25%',
+        height: '400px',
+        paddingBottom: '50.25%',
         position: 'relative',
         borderRadius: '10px',
         overflow: 'hidden'

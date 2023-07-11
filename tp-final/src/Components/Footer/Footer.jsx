@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css';
-import logoCLA from '../../Imgenes/imagenes-Header-Footer/logoCla.svg';
+import logoCLA from '../../Imagenes/imagenes-Header-Footer/logoCla.svg';
 
 const Footer = () => {
   return (

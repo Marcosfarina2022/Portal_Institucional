@@ -1,6 +1,6 @@
 import NavBar from '../NavBar/NavBar';
 import './Header.css'; 
-import  logoCLA  from "../../Imgenes/LogoCLA2.png";
+import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { Link } from 'react-router-dom';
 
 
