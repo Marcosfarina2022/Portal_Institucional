@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dropdown, Button } from 'react-bootstrap';
-import './noticias.css';
+import { BrowserRouter  ,Routes, Route , Link } from 'react-router-dom';
+import './noticias.css'
 
 const Noticias = () => {
   const [categoria, setCategoria] = useState('todas');
@@ -52,3 +53,5 @@ const Noticias = () => {
 };
 
 export default Noticias;
+
+

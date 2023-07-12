@@ -1,7 +1,7 @@
+
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import './galeria.css';
-
 import hockeyFem1 from '../../Imgenes/imagenesGaleria/hockeyClub.jpeg';
 import hockeyFem2 from '../../Imgenes/imagenesGaleria/hockeyClub2.jpeg';
 import hockeyFem3 from '../../Imgenes/imagenesGaleria/hockeyClub3.jpeg';

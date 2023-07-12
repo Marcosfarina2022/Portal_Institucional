@@ -4,7 +4,6 @@ import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imgenes/LogoCLA2.png";
 import { LinkContainer } from 'react-router-bootstrap';
 
-
 const RegistrationForm = () => {
  
   const [name, setName] = useState('');
