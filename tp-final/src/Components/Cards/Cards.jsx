@@ -38,7 +38,7 @@ const Cards = () => {
       <Col>        
           {cardData.slice(0, 2).map((card, index) => (
               <Card key={index}>
-                <Card.Body>
+                <Card.Body className="cardbodyInicio">
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.text}</Card.Text>
@@ -50,7 +50,7 @@ const Cards = () => {
       <Col>
           {cardData.slice(2, 4).map((card, index) => (
               <Card key={index}>
-                <Card.Body>
+                <Card.Body className="cardbodyInicio">
                   <Card.Img variant="top" src={card.image} className="img-fluid" />
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.text}</Card.Text>
@@ -62,7 +62,7 @@ const Cards = () => {
       <Col>
         <aside>
         <Card className='card-aside'>
-          <Card.Body className='card-body-aside'>
+          <Card.Body className='card-body-aside cardbodyInicio'>
             <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid" />
             <Card.Text>Contenido del sidebar.</Card.Text>
             <Button variant="dark" className='colorBoton'>Leer más...</Button>
