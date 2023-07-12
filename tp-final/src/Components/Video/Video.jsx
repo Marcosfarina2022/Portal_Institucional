@@ -10,7 +10,8 @@ const VideoPlayer = () => {
         paddingBottom: '50.25%',
         position: 'relative',
         borderRadius: '10px',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        marginBottom:'3%',
       }}
     >
       <ReactPlayer
