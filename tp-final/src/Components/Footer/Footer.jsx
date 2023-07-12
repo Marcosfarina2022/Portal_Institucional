@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import logoCLA from '../../Imagenes/imagenes-Header-Footer/logoCla.svg';
 import './Footer.css';
 
+
 const Footer = () => {
   return (
     <footer className="footer">
