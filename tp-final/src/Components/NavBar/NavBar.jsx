@@ -12,7 +12,7 @@ const NavBar = () => {
     <Navbar expand="lg" className='bg-nav'>
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse expand="lg" id="basic-navbar-nav">
           <Nav className="justify-content-around w-100">
 
           <LinkContainer to="/">

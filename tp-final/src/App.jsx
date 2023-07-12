@@ -6,9 +6,10 @@ import Header from './Components/Header/Header';
 import Institución from './Components/Institucion/Institucion';
 import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
-import RegistrationForm from './Components/RegistrationForm/RegistrationForm'
 import './App.css';
-
+import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
+import FormLogin from './Components/FormLogin/FormLogin';
+import SobreNosotros from './Components/SobreNosotros/SobreNosotros';
 function App() {
   return (
     
@@ -22,7 +23,10 @@ function App() {
          <Route path="/noticias" element={<Noticias />} />
          <Route path="/institucion" element={<Institución />}/>
          <Route path="/contacto" element={<Contacto />}/>
+         <Route path="/registro" element={<RegistrationForm />}/>
+         <Route path="/ingresar" element={ <FormLogin />} />
          <Route path="/registrar" element={<RegistrationForm/>}/>
+         <Route path="/sobreNosotros" element={<SobreNosotros/>} />
       </Routes>  
       <Footer/>
       </div>
