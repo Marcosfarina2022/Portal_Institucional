@@ -53,7 +53,7 @@ const SobreNosotros = () => {
     });
 
     return (
-        <Container className='text-center'>
+        <Container className='containerSobreNosotros text-center'>
             <Row>
                 <h1>Equipo de Mentes Dementes</h1>
                 <Col className='text-start'>
@@ -68,12 +68,12 @@ const SobreNosotros = () => {
             <Row>
                 {equipoDesarrollo.map((miembro, index) => (
                     <Col key={index} xs={12} md={4} className='mt-4 mb-4'>
-                        <Card>
-                            <Card.Body>
+                        <Card className='cardMiembros'>
+                            <Card.Body className='cardBody'>
                                 <animated.div style={fadeIn}>
-                                    <Card.Title>{miembro.nombre}</Card.Title>
-                                    <Card.Subtitle>{miembro.descripcion}</Card.Subtitle>
-                                    <Card.Img variant='top' src={miembro.foto_perfil} />
+                                    <Card.Title className='cardTitle'>{miembro.nombre}</Card.Title>
+                                    <Card.Subtitle className='cardSubtitle'>{miembro.descripcion}</Card.Subtitle>
+                                    <Card.Img className='cardImg' variant='top' src={miembro.foto_perfil} />
                                     <a
                                         href={miembro.linkedin}
                                         target='_blank'
