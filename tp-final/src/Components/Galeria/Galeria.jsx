@@ -1,16 +1,16 @@
 
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+import hockeyFem1 from '../../Imagenes/imagenesGaleria/hockeyClub.jpeg';
+import hockeyFem2 from '../../Imagenes/imagenesGaleria/hockeyClub2.jpeg';
+import hockeyFem3 from '../../Imagenes/imagenesGaleria/hockeyClub3.jpeg';
+import rugbyFem1 from '../../Imagenes/imagenesGaleria/infantiles.jpeg';
+import imgInfantil1 from '../../Imagenes/imagenesGaleria/infantiles2.jpeg';
+import imgInfantil2 from '../../Imagenes/imagenesGaleria/infantil5.jpeg';
+import imgInfantil3 from '../../Imagenes/imagenesGaleria/infantiles3.jpeg';
+import imgInfantil4 from '../../Imagenes/imagenesGaleria/infantiles4.jpeg';
+import imgInfantil5 from '../../Imagenes/imagenesGaleria/rugbyClub.jpeg';
 import './galeria.css';
-import hockeyFem1 from '../../Imgenes/imagenesGaleria/hockeyClub.jpeg';
-import hockeyFem2 from '../../Imgenes/imagenesGaleria/hockeyClub2.jpeg';
-import hockeyFem3 from '../../Imgenes/imagenesGaleria/hockeyClub3.jpeg';
-import rugbyFem1 from '../../Imgenes/imagenesGaleria/infantiles.jpeg';
-import imgInfantil1 from '../../Imgenes/imagenesGaleria/infantiles2.jpeg';
-import imgInfantil2 from '../../Imgenes/imagenesGaleria/infantil5.jpeg';
-import imgInfantil3 from '../../Imgenes/imagenesGaleria/infantiles3.jpeg';
-import imgInfantil4 from '../../Imgenes/imagenesGaleria/infantiles4.jpeg';
-import imgInfantil5 from '../../Imgenes/imagenesGaleria/rugbyClub.jpeg';
 
 const Galeria = () => {
   const fotos = [

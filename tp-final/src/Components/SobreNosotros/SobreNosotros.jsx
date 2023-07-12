@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
-import imgMelina from '../../Imgenes/imgSobreNosotros/melina.jpg';
-import imgMarcos from '../../Imgenes/imgSobreNosotros/marcos.JPG';
-import imgFernando from '../../Imgenes/imgSobreNosotros/fernando.jpeg';
+import imgMelina from '../../Imagenes/imgSobreNosotros/melina.jpg';
+import imgMarcos from '../../Imagenes/imgSobreNosotros/marcos.JPG';
+import imgFernando from '../../Imagenes/imgSobreNosotros/fernando.jpeg';
 import './sobreNosotros.css';
 
 const equipoDesarrollo = [

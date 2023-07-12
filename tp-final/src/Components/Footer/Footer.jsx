@@ -2,9 +2,9 @@ import React from 'react';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
-import logoCLA from '../../Imgenes/imagenes-Header-Footer/logoCla.svg';
-import './Footer.css';
+import logoCLA from '../../Imagenes/imagenes-Header-Footer/logoCla.svg';
 import { Link } from 'react-router-dom';
+import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
