@@ -1,10 +1,11 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
-import logoCLA from '../../Imgenes/imagenes-Header-Footer/logoCla.svg';
-import './Footer.css';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import logoCLA from '../../Imagenes/imagenes-Header-Footer/logoCla.svg';
+import './Footer.css';
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -54,7 +55,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} className="text-center">
             <LinkContainer to="/SobreNosotros">
-              <Link href="/sobreNosotros">
+              <Link to="/sobreNosotros">
                 <p>&copy; 2023 - MentesDeMentes </p>
               </Link>
             </LinkContainer>
