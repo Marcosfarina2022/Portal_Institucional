@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap'
+import Noticias from '../Noticias/Noticias';
 import './NavBar.css'
 
 
@@ -14,19 +15,20 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse expand="lg" id="basic-navbar-nav">
           <Nav className="justify-content-around w-100">
-
           <LinkContainer to="/">
               <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/noticias">
             <NavDropdown title="Noticias" id="basic-nav-dropdown" className='color'>
-              <NavDropdown.Item href="noticias/rugby-juveniles" className='color'>Rugby-Juveniles</NavDropdown.Item>
+              <Nav.Link href="#noticias/rugby-juveniles" className='color'>Rugby-Juveniles</Nav.Link>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="rugby-adultos" className='color'>Rugby- Adultos</NavDropdown.Item>
+              <Nav.Link href="#rugby-adultos" className='color'>Rugby- Adultos</Nav.Link>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="hockey-juveniles" className='color'>Hockey-Juveniles</NavDropdown.Item>
+              <Nav.Link href="#hockey-juveniles" className='color'>Hockey-Juveniles</Nav.Link>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="hockey-adultos" className='color'>Hockey-Adultos</NavDropdown.Item>
+              <Nav.Link href="#hockey-adultos" className='color'>Hockey-Adultos</Nav.Link>
             </NavDropdown>
+            </LinkContainer>
             <LinkContainer to="/galeria">
               <Nav.Link href="#galeria" className='color rounded'>Galeria</Nav.Link>
             </LinkContainer>
