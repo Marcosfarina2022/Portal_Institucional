@@ -1,7 +1,7 @@
 import Noticia1 from '../../Imagenes/imgNoticias/1.svg';
 import Noticia2 from '../../Imagenes/imgNoticias/2.svg';
 import Noticia3 from '../../Imagenes/imgNoticias/3.svg';
-const RugbyJuveniles = [
+const HockeyAdultos = [
     {
         titulo_noticia: 'Juveniles',
         foto_noticia: Noticia1,
@@ -31,4 +31,4 @@ const RugbyJuveniles = [
 
 },
 ];
-export default RugbyJuveniles;
+export default HockeyAdultos;
