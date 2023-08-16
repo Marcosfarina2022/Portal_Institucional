@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
-import  logoCLA  from "../../Imgenes/LogoCLA2.png";
+import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
 
 const FormLogin = () => {
@@ -16,15 +16,15 @@ const FormLogin = () => {
 
   return(
 
-    <div className='box-login'>
+    <div>
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={12}>
+          <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
-              <Card.Body className="card-body" >
+              <Card.Body>
                 <div className="mb-3 mt-md-4">
                   <h2 className="fw-bold mb-2 text-center text-uppercase ">
-                  <img src={logoCLA} alt="Logo" />
+                  <img className="img-registrationForm" src={logoCLA} alt="Logo" />
                   </h2>
                   <div className="mb-3">
                     <Form onSubmit={handleInputChange}>

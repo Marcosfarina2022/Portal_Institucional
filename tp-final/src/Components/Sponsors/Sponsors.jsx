@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoMacro from '../../Imgenes/imagenesSponsors/logoBancoMacro.svg';
-import logoTanteSara from '../../Imgenes/imagenesSponsors/logoTanteSara.svg';
-import logoPopper from '../../Imgenes/imagenesSponsors/logoPopperSports.svg';
-import logoCerveza from '../../Imgenes/imagenesSponsors/logoCervezaImperial.svg';
+import logoMacro from '../../Imagenes/imagenesSponsors/logoBancoMacro.svg';
+import logoTanteSara from '../../Imagenes/imagenesSponsors/logoTanteSara.svg';
+import logoPopper from '../../Imagenes/imagenesSponsors/logoPopperSports.svg';
+import logoCerveza from '../../Imagenes/imagenesSponsors/logoCervezaImperial.svg';
 import './sponsors.css';
 
 const sponsorsData = [

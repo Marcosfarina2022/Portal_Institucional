@@ -7,7 +7,9 @@
     margin: 10px;
 }
 
-.card-body {
+
+.row-contenedor .card-body {
+
     background-color: rgba(61, 6, 31, 0.183);
     border-radius: 5px;
 }
@@ -32,7 +34,7 @@ aside{
 
 .card-aside{
     margin: 10px;
-    height: 60%;
+    height: 57%;
 }
 
 .card-text{

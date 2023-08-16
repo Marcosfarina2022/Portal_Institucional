@@ -1,24 +1,26 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import logoCLA from '../../Imagenes/imagenes-Header-Footer/logoCla.svg';
 import './Footer.css';
-import logoCLA from '../../Imgenes/imagenes-Header-Footer/logoCla.svg';
+
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="glow"></div>
-      <Container> 
+      <Container>
         <Row className="align-items-center justify-content-around">
-          <Col >
+          <Col>
             <div className='div-logo'>
-                <Link to="/">
-                    <img className='logo' href={"/"} src={logoCLA} alt="Logo"/>  
-                </Link>        
-            </div>     
-            </Col>  
-            <Col >
+              <LinkContainer to="/">
+                <img className='logo' src={logoCLA} alt="Logo" />
+              </LinkContainer>
+            </div>
+          </Col>
+          <Col>
             <p className='titulo'>El club familiar de Rugby y Hockey más austral del mundo</p>
           </Col>
           <Col className="text-center text-sm-end">
@@ -51,16 +53,15 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="text-center text-sm-end">
-              <Link className="link-contacto" to="/contacto">
-                Contáctanos
-              </Link>
-            </div>
           </Col>
           <Col xs={12} className="text-center">
-            <p>&copy; 2023 - MentesDeMentes</p>
-          </Col> 
-          </Row>
+            <LinkContainer to="/SobreNosotros">
+              <Link to="/sobreNosotros">
+                <p>&copy; 2023 - MentesDeMentes </p>
+              </Link>
+            </LinkContainer>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );

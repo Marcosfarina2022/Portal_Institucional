@@ -18,15 +18,15 @@ const NavBar = () => {
           <LinkContainer to="/">
               <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Disciplinas" id="basic-nav-dropdown" className='color'>
-              <NavDropdown.Item href="#action/3.1" className='color'>Rugby</NavDropdown.Item>
+            <NavDropdown title="Noticias" id="basic-nav-dropdown" className='color'>
+              <NavDropdown.Item href="noticias/rugby-juveniles" className='color'>Rugby-Juveniles</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2" className='color'>
-                Hockey</NavDropdown.Item>
+              <NavDropdown.Item href="rugby-adultos" className='color'>Rugby- Adultos</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="hockey-juveniles" className='color'>Hockey-Juveniles</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="hockey-adultos" className='color'>Hockey-Adultos</NavDropdown.Item>
             </NavDropdown>
-            <LinkContainer to="/noticias">
-              <Nav.Link href="#noticia" className='color rounded'>Noticias</Nav.Link>
-            </LinkContainer>
             <LinkContainer to="/galeria">
               <Nav.Link href="#galeria" className='color rounded'>Galeria</Nav.Link>
             </LinkContainer>
