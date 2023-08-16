@@ -5,10 +5,10 @@
   }
   
   .cardMiembros{
-    max-width: 300px;
+    max-width: 40vh;
     width: 100%;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border: 5px solid #3e0067;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -32,18 +32,18 @@
   
   .cardSubtitle {
     font-size: 16px;
-    color: #666;
+    color: #6c10c8;
     margin-bottom: 12px;
   }
   
   .cardLink {
-    color: #7b00ff;
+    color: #570068;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .cardLink:hover {
-    color: #b3007a;
+    color: #2700b3;
   }
   
   .cardImg {
@@ -52,4 +52,3 @@
     object-fit: cover;
     object-position: center;
   }
-  

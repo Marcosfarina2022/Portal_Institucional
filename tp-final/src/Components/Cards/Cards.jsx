@@ -35,7 +35,7 @@ const Cards = () => {
     <Container fluid className='contenedor'>
       <Row>
         {cardData.map((card, index) => (
-          <Col key={index}>
+          <Col md='6' key={index}>
             <Card className='card'>
               <Card.Body className='cardBody'>
                 <Card.Title className='cardTitle'>{card.title}</Card.Title>

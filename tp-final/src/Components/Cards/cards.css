@@ -1,10 +1,12 @@
 .contenedor{
-    justify-content: center;
+    margin: 0 auto;
+    display: flex;
 }
 
 .card{
     width: 30vw;
     border-radius: 5vw;
+    margin: 5%;
 }
 
 
@@ -27,7 +29,7 @@
     height: auto;
 }
 
-.colorBoton{
+.card .colorBoton{
     background-color:rgba(93, 14, 84, 0.766);
 
 }
