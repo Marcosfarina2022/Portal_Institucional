@@ -15,6 +15,7 @@ const Contacto = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`Nombre: ${name}`);
+    console.log(`Apellido: ${surname}`);
     console.log(`Email: ${email}`);
     console.log(`Texto: ${text}`);
   };
@@ -22,8 +23,8 @@ const Contacto = () => {
     return(
     <div className='todo'>
        <div className='form'>
-        <Form onSubmit={handleSubmit} className='contenido'>
-        <h2>Escribinos</h2>
+        <Form onSubmit={handleSubmit} className='contenido' >
+        <h2 className='titulo1'>Escribinos</h2>
             <Row>
                 <Col>
                     <Form.Label>Nombre</Form.Label>
@@ -42,9 +43,11 @@ const Contacto = () => {
                 <Form.Label>Tu Mensaje</Form.Label>
                 <Form.Control as="textarea" rows={3} onChange={(e) => setText(e.target.value)} />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <div className='d-grid col-2 gap-2 mx-auto'>
+            <Button variant="dark" type="submit" className='boton_color' >
                  enviar
             </Button>
+            </div>
         </Form>
         </div> 
     <div className='info'>
