@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AuthService {
-  private readonly registroEndPoint = '/auth/registrase';
-  private readonly ingresoEndPoint = './auth/ingresar'; 
-  private readonly obtenerUsuariosEndPoint = '/auth/obtener-usuarios';
+  private readonly registroEndPoint = 'http://localhost:4000/auth/registrase';
+  private readonly ingresoEndPoint = 'http://localhost:4000/auth/ingresar';
+    private readonly obtenerUsuariosEndPoint = 'http://localhost:4000/auth/obtener-usuarios';
 
   async registraroUsuario(registroData: { nombre: string, apellido: string, email: string, password: string }) {
     try {

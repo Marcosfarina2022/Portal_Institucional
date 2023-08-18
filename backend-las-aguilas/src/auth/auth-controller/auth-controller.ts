@@ -19,7 +19,7 @@ export class AuthController {
   async registro_usuario(@Body() registroData: { nombre: string; apellido: string; email: string; password: string }) {
     try {
       const result = await this.authService.registraroUsuario(registroData);
-      return result; // Puedes ajustar cómo manejar la respuesta según tus necesidades
+      return result; 
     } catch (error) {
       throw new HttpException("No se pudo completar el registro", HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -29,7 +29,7 @@ export class AuthController {
   async obtenerUsuarios() {
     try {
       const users = await this.authService.obtenerUsuarios();
-      return users; // Puedes ajustar cómo manejar la respuesta según tus necesidades
+      return users; 
     } catch (error) {
       throw new HttpException("No se pudo obtener la lista de usuarios", HttpStatus.INTERNAL_SERVER_ERROR);
     }
