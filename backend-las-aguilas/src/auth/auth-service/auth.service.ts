@@ -1,64 +1,73 @@
 import { Injectable } from '@nestjs/common';
-import { createReadStream, createWriteStream, WriteStream } from 'fs';
-import { join } from 'path';
-import * as csvParser from 'csv-parser';
 
 @Injectable()
 export class AuthService {
-  private readonly usuariosFilePath = join(__dirname, 'registro.csv');
+  private readonly registroEndPoint = '/auth/registrase';
+  private readonly ingresoEndPoint = './auth/ingresar'; 
+  private readonly obtenerUsuariosEndPoint = '/auth/obtener-usuarios';
 
-  async registrarse(registroData: { nombre: string, apellido: string, email: string; password: string }) {
-    const usuario = {
-      nombre: registroData.nombre,
-      apellido: registroData.apellido,
-      email: registroData.email,
-      password: registroData.password,
-    };
-
+  async registraroUsuario(registroData: { nombre: string, apellido: string, email: string, password: string }) {
     try {
-      const stream = this.createWriteStream();
-      const csvRow = `${usuario.nombre},${usuario.apellido},${usuario.email},${usuario.password}\n`;
-      stream.write(csvRow);
-      stream.end();
+      const usuario = {
+        nombre: registroData.nombre,
+        apellido: registroData.apellido,
+        email: registroData.email,
+        password: registroData.password,
+        role: 'user',
+      };
+
+      const response = await fetch(this.registroEndPoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(usuario),
+      });
+
+      if (!response.ok) {
+        throw new Error('No se pudo completar el registro');
+      }
+
+      const data = await response.json();
+      return data;
     } catch (error) {
-      throw new Error('Error al registrar el usuario');
+      throw new Error(`No se pudo completar el registro: ${error.message}`);
     }
   }
 
-  private createWriteStream(): WriteStream {
-    return createWriteStream(this.usuariosFilePath, { flags: 'a' });
+  async ingresoUsuario(credentials: { email: string; password: string }) {
+    try {
+      const response = await fetch(this.ingresoEndPoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials),
+      });
+
+      if (!response.ok) {
+        throw new Error('Credenciales incorrectas');
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error('No se pudo realizar el ingreso: ' + error.message);
+    }
   }
 
-  async obtenerUsuarios(): Promise<any[]> {
-    return new Promise((resolve, reject) => {
-      const results = [];
-      createReadStream(this.usuariosFilePath)
-        .pipe(csvParser())
-        .on('data', (data) => results.push(data))
-        .on('end', () => {
-          resolve(results);
-        })
-        .on('error', (error) => {
-          reject(error);
-        });
-    });
-  }
+  async obtenerUsuarios() {
+    try {
+      const response = await fetch(this.obtenerUsuariosEndPoint);
 
-  async ingresar(credentials: { email: string; password: string }) {
-    return new Promise((resolve, reject) => {
-      const email = credentials.email;
-      const password = credentials.password;
+      if (!response.ok) {
+        throw new Error('No se pudo obtener la lista de usuarios');
+      }
 
-      createReadStream(this.usuariosFilePath)
-        .pipe(csvParser())
-        .on('data', (row) => {
-          if (row.email === email && row.password === password) {
-            resolve('Token de autenticación');
-          }
-        })
-        .on('end', () => {
-          reject('Credenciales incorrectas');
-        });
-    });
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error('No se pudo obtener la lista de usuarios: ' + error.message);
+    }
   }
 }
