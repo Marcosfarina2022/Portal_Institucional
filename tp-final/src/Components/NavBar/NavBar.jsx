@@ -18,12 +18,6 @@ const NavBar = () => {
           <LinkContainer to="/">
               <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Disciplinas" id="basic-nav-dropdown" className='color'>
-              <NavDropdown.Item href="disciplinas/#action/3.1" className='color'>Rugby</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2" className='color'>
-                Hockey</NavDropdown.Item>
-            </NavDropdown>
             <NavDropdown title="Noticias" id="basic-nav-dropdown" className='color'>
               <NavDropdown.Item href="noticias/rugby-juveniles" className='color'>Rugby-Juveniles</NavDropdown.Item>
               <NavDropdown.Divider />

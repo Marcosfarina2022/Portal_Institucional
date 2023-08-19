@@ -6,7 +6,6 @@ import Image2 from '../../Imagenes/imgNoticias/2.svg';
 import Image3 from '../../Imagenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imagenes/imgNoticias/sidebar1.svg';
 import './cards.css';
-
 const Cards = () => {
   const cardData = [
     {
@@ -36,6 +35,7 @@ const Cards = () => {
       <Row className='row-contenedor'>    
         <Col>        
           {cardData.slice(0, 2).map((card, index) => (
+
             <Card key={index}>
               <Card.Body>
                 <Card.Img variant="top" src={card.image} className="img-fluid" />
