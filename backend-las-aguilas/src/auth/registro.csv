@@ -1,0 +1,3 @@
+nombre,apellido,email,password,role
+Juan,Pérez,juan@example.com,clave123,user
+Admin,Admin,admin@gmail.com,admin123,admin
