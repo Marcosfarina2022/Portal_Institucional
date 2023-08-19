@@ -11,37 +11,52 @@ const equipoDesarrollo = [
         nombre: 'Melina Gabriela Figueroa',
         foto_perfil: imgMelina,
         linkedin: 'https://www.linkedin.com/in/melinagfigueroa/',
-        descripcion: 'Desarrolladora Full Stack | UX UI Designer'
+        descripcion: [
+            'Desarrolladora Full Stack',
+            ' UX/UI Designer',
+        ]
     },
     {
         nombre: 'Marcos Farina',
         foto_perfil: imgMarcos,
         linkedin: 'https://www.linkedin.com/in/farina-marcos-1063a271/',
-        descripcion: 'Desarrollador Full Stack'
+        descripcion: [
+            'Desarrollador Full Stack',
+            'Tecnico en sistemas',
+            ' Futuro contador'
+        ]
     },
     {
         nombre: 'Fernando Andres Diaz',
         foto_perfil: imgFernando,
         linkedin: 'https://www.linkedin.com/in/diaz-fernando/',
-        descripcion: 'Desarrollador Full Stack'
+        descripcion: [
+            'Desarrollador Full Stack'
+        ]
     },
     {
         nombre: 'Nicolas Vega',
         foto_perfil: 'ruta-de-la-imagen-3.jpg',
         linkedin: 'https://www.linkedin.com/perfil-miembro-2',
-        descripcion: 'Desarrollador Full Stack'
+        descripcion: [
+            'Desarrollador Full Stack'
+        ]
     },
     {
         nombre: 'Kevin Santander',
         foto_perfil: 'ruta-de-la-imagen-4.jpg',
         linkedin: 'https://www.linkedin.com/perfil-miembro-1',
-        descripcion: 'Desarrollador Full Stack'
+        descripcion: [
+            'Desarrollador Full Stack'
+        ]
     },
     {
         nombre: 'Guido',
         foto_perfil: 'ruta-de-la-imagen-5.jpg',
         linkedin: 'https://www.linkedin.com/perfil-miembro-2',
-        descripcion: 'Desarrollador Full Stack'
+        descripcion: [
+            'Desarrollador Full Stack'
+        ]
     }
 ];
 
@@ -72,12 +87,19 @@ const SobreNosotros = () => {
                             <Card.Body className='cardBody'>
                                 <animated.div style={fadeIn}>
                                     <Card.Title className='cardTitle'>{miembro.nombre}</Card.Title>
-                                    <Card.Subtitle className='cardSubtitle'>{miembro.descripcion}</Card.Subtitle>
+                                    <Card.Subtitle className='cardSubtitle'>
+                                         <ul className='text-start'>
+                                            {miembro.descripcion.map((descripcion, i) => (
+                                                <li key={i}>{descripcion}</li>
+                                            ))}
+                                        </ul>
+                                    </Card.Subtitle>                                    
                                     <Card.Img className='cardImg' variant='top' src={miembro.foto_perfil} />
                                     <a
                                         href={miembro.linkedin}
                                         target='_blank'
                                         rel='noopener noreferrer'
+                                        className='cardLink'
                                     >
                                         Perfil de LinkedIn
                                     </a>

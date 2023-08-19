@@ -6,11 +6,9 @@ import { LinkContainer } from 'react-router-bootstrap'
 import Noticias from '../Noticias/Noticias';
 import './NavBar.css'
 
-
 const NavBar = () => {
-
   return (
-    <Navbar expand="lg" className='bg-nav'>
+    <Navbar expand="lg" className="bg-nav">
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse expand="lg" id="basic-navbar-nav">
@@ -30,19 +28,25 @@ const NavBar = () => {
             </NavDropdown>
             </LinkContainer>
             <LinkContainer to="/galeria">
-              <Nav.Link href="#galeria" className='color rounded'>Galeria</Nav.Link>
+              <Nav.Link href="#galeria" className="color rounded">
+                Galeria
+              </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/institucion">
-              <Nav.Link href="#institucion" className='color rounded'>Institución</Nav.Link>
+              <Nav.Link href="#institucion" className="color rounded">
+                Institución
+              </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contacto">
-              <Nav.Link href="#contacto" className='color rounded'>Contacto</Nav.Link>
+              <Nav.Link href="#contacto" className="color rounded">
+                Contacto
+              </Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
 
 export default NavBar;
