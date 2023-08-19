@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AuthService {
-  private readonly registroEndPoint = 'http://localhost:4000/auth/registrase';
+  private readonly registroEndPoint = 'http://localhost:4000/auth/registrarse';
   private readonly ingresoEndPoint = 'http://localhost:4000/auth/ingresar';
     private readonly obtenerUsuariosEndPoint = 'http://localhost:4000/auth/obtener-usuarios';
 
@@ -27,11 +27,11 @@ export class AuthService {
       if (!response.ok) {
         throw new Error('No se pudo completar el registro');
       }
-
       const data = await response.json();
       return data;
+
     } catch (error) {
-      throw new Error(`No se pudo completar el registro: ${error.message}`);
+      throw error;
     }
   }
 
