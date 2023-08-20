@@ -1,43 +1,42 @@
 import { Injectable } from '@nestjs/common';
+import { RegistroDto } from '../auth-controller/registro.dto';
+import { MongoConexionService } from '../../mongo/mongo-conexion/mongo-conexion.service'; // Asegúrate de usar la ruta correcta para el servicio de conexión
+import { userSchema } from '../../models/user.model'; // Asegúrate de usar la ruta correcta para el modelo
 
 @Injectable()
 export class AuthService {
-  private readonly registroEndPoint = 'http://localhost:4000/auth/registrarse';
-  private readonly ingresoEndPoint = 'http://localhost:4000/auth/ingresar';
-    private readonly obtenerUsuariosEndPoint = 'http://localhost:4000/auth/obtener-usuarios';
+  constructor(private readonly mongoConexionService: MongoConexionService) {} // Inyecta el servicio de conexión
 
-  async registraroUsuario(registroData: { nombre: string, apellido: string, email: string, password: string }) {
+  async registrarUsuario(registroData: RegistroDto) {
     try {
-      const usuario = {
+      const nuevoUsuarioDto: RegistroDto = {
         nombre: registroData.nombre,
         apellido: registroData.apellido,
         email: registroData.email,
         password: registroData.password,
-        role: 'user',
       };
 
-      const response = await fetch(this.registroEndPoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(usuario),
-      });
+      const connection = this.mongoConexionService.getConnection();
+      const UserModel = connection.model('User', userSchema); 
 
-      if (!response.ok) {
-        throw new Error('No se pudo completar el registro');
-      }
-      const data = await response.json();
-      return data;
+      const nuevoUsuario = await UserModel.create(nuevoUsuarioDto);
 
+      return {
+        'Message': 'Usuario creado con éxito',
+        'Usuario': nuevoUsuario,
+      };
     } catch (error) {
-      throw error;
+      throw new Error('No se pudo realizar el registro: ' + error.message);
     }
+  }
+
+  async obtenerUsuarios() {
+    return [];
   }
 
   async ingresoUsuario(credentials: { email: string; password: string }) {
     try {
-      const response = await fetch(this.ingresoEndPoint, {
+      const response = await fetch('http://localhost:4000/auth/ingresar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,21 +52,6 @@ export class AuthService {
       return data;
     } catch (error) {
       throw new Error('No se pudo realizar el ingreso: ' + error.message);
-    }
-  }
-
-  async obtenerUsuarios() {
-    try {
-      const response = await fetch(this.obtenerUsuariosEndPoint);
-
-      if (!response.ok) {
-        throw new Error('No se pudo obtener la lista de usuarios');
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      throw new Error('No se pudo obtener la lista de usuarios: ' + error.message);
     }
   }
 }

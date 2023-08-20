@@ -1,18 +1,15 @@
-// registro.dto.ts
-import { IsNotEmpty, IsEmail, MinLength } from 'class-validator';
+import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
 
 export class RegistroDto {
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'El nombre es obligatorio' })
   nombre: string;
 
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'El apellido es obligatorio' })
   apellido: string;
 
-  @IsNotEmpty()
-  @IsEmail()
+  @IsEmail({}, { message: 'El email no es válido' })
   email: string;
 
-  @IsNotEmpty()
-  @MinLength(6)
+  @MinLength(6, { message: 'La contraseña debe tener al menos 6 caracteres' })
   password: string;
 }
