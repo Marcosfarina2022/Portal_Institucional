@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
-import { RegistroDto } from '../auth-controller/registro.dto';
-import { MongoConexionService } from '../../mongo/mongo-conexion/mongo-conexion.service'; // Asegúrate de usar la ruta correcta para el servicio de conexión
-import { userSchema } from '../../models/user.model'; // Asegúrate de usar la ruta correcta para el modelo
+import { Injectable } from "@nestjs/common";
+import { RegistroDto } from "../auth-controller/registro.dto";
+import { MongoConexionService } from "../../mongo/mongo-conexion/mongo-conexion.service"; // Asegúrate de usar la ruta correcta para el servicio de conexión
+import { userSchema } from "../../models/user.model"; // Asegúrate de usar la ruta correcta para el modelo
 
 @Injectable()
 export class AuthService {
@@ -17,41 +17,56 @@ export class AuthService {
       };
 
       const connection = this.mongoConexionService.getConnection();
-      const UserModel = connection.model('User', userSchema); 
+      const UserModel = connection.model("User", userSchema);
 
       const nuevoUsuario = await UserModel.create(nuevoUsuarioDto);
 
       return {
-        'Message': 'Usuario creado con éxito',
-        'Usuario': nuevoUsuario,
+        Message: "Usuario creado con éxito",
+        Usuario: nuevoUsuario,
       };
     } catch (error) {
-      throw new Error('No se pudo realizar el registro: ' + error.message);
+      throw new Error("No se pudo realizar el registro: " + error.message);
     }
   }
 
   async obtenerUsuarios() {
-    return [];
-  }
+    try {
+      const connection = this.mongoConexionService.getConnection();
+      const UserModel = connection.model("User", userSchema);
 
+      const usuarios = await UserModel.find().exec();
+
+      return usuarios;
+    } catch (error) {
+      throw new Error(
+        "No se pudo obtener la lista de usuarios: " + error.message,
+      );
+    }
+  }
   async ingresoUsuario(credentials: { email: string; password: string }) {
     try {
-      const response = await fetch('http://localhost:4000/auth/ingresar', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(credentials),
-      });
+      const connection = this.mongoConexionService.getConnection();
+      const UserModel = connection.model("User", userSchema);
 
-      if (!response.ok) {
-        throw new Error('Credenciales incorrectas');
+      const usuario = await UserModel.findOne({
+        email: credentials.email,
+      }).exec();
+
+      if (!usuario) {
+        throw new Error("Usuario no encontrado");
       }
 
-      const data = await response.json();
-      return data;
+      if (usuario.password !== credentials.password) {
+        throw new Error("Credenciales incorrectas");
+      }
+
+      return {
+        Message: "Ingreso exitoso",
+        Usuario: usuario,
+      };
     } catch (error) {
-      throw new Error('No se pudo realizar el ingreso: ' + error.message);
+      throw new Error("No se pudo realizar el ingreso: " + error.message);
     }
   }
 }
