@@ -11,24 +11,35 @@ const RegistrationForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirPassword, setConfirPassword] = useState("");
-
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (confirPassword === password) {
-      try {
-        const response = await axios.post(
-          "http://localhost:4000/auth/registrarse",
-          { name, username, email, password }
-        );
-        console.log(response.data.message);
-      } catch (error) {
-        console.error("Error en el registro:", error);
-      }
-    } else {
+    if (confirPassword !== password) {
       alert("Las contraseñas no coinciden");
-    }
+    return
   };
-
+const userData = {
+    "nombre": name,
+    "apellido": username,
+    "email": email,
+    "password": password
+  };
+await fetch('http://localhost:4000/auth/registrarse', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Server response:', data);
+    })
+    .catch(error => {
+      console.error('Error sending data:', error);
+    });
+  };
+    
   return (
     <div>
       <Container>

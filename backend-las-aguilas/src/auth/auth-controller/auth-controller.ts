@@ -10,34 +10,27 @@ import { AuthService } from '../auth-service/auth.service';
 import { createReadStream, WriteStream } from 'fs';
 import { join } from 'path';
 import csvParser from 'csv-parser';
+import { RegistroDto } from './registro.dto';
 
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post('registrarse')
-  async registrarse(
-    @Body()
-    registroData: {
-      nombre: string;
-      apellido: string;
-      email: string;
-      password: string;
-    },
-  ) {
-    try {
-      // Llama al servicio de autenticación para manejar el registro
-      this.authService.registrarse(registroData);
+  //post funcional
 
-      return { message: 'Usuario registrado exitosamente' };
-    } catch (error) {
-      throw new HttpException(
-        'No se pudo completar el registro',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
+  @Post("registrarse")
+  public registro_usuario(@Body() registroData: RegistroDto) : any {
+    return this.authService.registraroUsuario(registroData);
   }
-  @Get('registro') // Ruta para obtener el registro de usuarios
+
+  @Get('registro')
+  getRegistro():any{
+      return this.authService.getRegistro();
+  }
+  
+
+  
+  @Get('registro2') // Ruta para obtener el registro de usuarios
   async obtenerRegistroUsuarios() {
     try {
       // Lee un archivo CSV
