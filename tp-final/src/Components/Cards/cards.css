@@ -1,35 +1,69 @@
-.contenedor{
-    margin: 0 auto;
+
+.row-contenedor{
     display: flex;
+ 
 }
 
+/*
 .card{
-    width: 30vw;
-    border-radius: 5vw;
-    margin: 5%;
+    margin: auto;
+  
 }
+*/
 
 
-.cardBody {
+.row-contenedor .card-body {
+
     background-color: rgba(61, 6, 31, 0.183);
-    border-radius: 5vw;
-}
-.sideBar{
-    width: 30vw;
-    height: 20vw;
-}
-.sideBar, .imgSideBar{
-    height: auto;
-    border-radius: 2vw;
+    border-radius: 5px;
 }
 
-.cardText{
-    width: 25vw;
+.card-body-aside {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+
+.img-aside{
+    object-fit: contain;
+}
+
+.card-aside{
+    margin:auto;
+    
+}
+
+.card-text{
     text-align: center;
-    height: auto;
+    height: 48px;
 }
 
-.card .colorBoton{
+.colorBoton{
     background-color:rgba(93, 14, 84, 0.766);
 
+}
+
+.padre{
+    display: flex;
+    flex-direction: row;
+}
+.hijoUno{
+    margin: 100px;
+    margin-left: 5px;
+    justify-content: flex-start;
+}
+.hijoDos{
+    margin: 100px;
+    margin-left: 5px;
+}
+.hijoTres{
+    margin: 100px;
+    margin-right:5px;
 }
