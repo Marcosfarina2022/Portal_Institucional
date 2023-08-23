@@ -1,19 +1,20 @@
 import { Injectable } from "@nestjs/common";
 import { RegistroDto } from "../auth-controller/registro.dto";
-import { MongoConexionService } from "../../mongo/mongo-conexion/mongo-conexion.service"; // Ruta para el servicio de conexión
-import { userSchema } from "../../models/user.model"; // Ruta para el modelo
+import { MongoConexionService } from "../../mongo/mongo-conexion/mongo-conexion.service"; // Asegúrate de usar la ruta correcta para el servicio de conexión
+import { userSchema } from "../../models/user.model"; // Asegúrate de usar la ruta correcta para el modelo
 
 @Injectable()
 export class AuthService {
-  private readonly usuariosFilePath = join(__dirname, 'registro.csv');
+  constructor(private readonly mongoConexionService: MongoConexionService) {} // Inyecta el servicio de conexión
 
-  async registrarse(registroData: { nombre: string, apellido: string, email: string; password: string }) {
-    const usuario = {
-      nombre: registroData.nombre,
-      apellido: registroData.apellido,
-      email: registroData.email,
-      password: registroData.password,
-    };
+  async registrarUsuario(registroData: RegistroDto) {
+    try {
+      const nuevoUsuarioDto: RegistroDto = {
+        nombre: registroData.nombre,
+        apellido: registroData.apellido,
+        email: registroData.email,
+        password: registroData.password,
+      };
 
       const connection = this.mongoConexionService.getConnection();
       const UserModel = connection.model("User", userSchema);
@@ -52,25 +53,13 @@ export class AuthService {
         email: credentials.email,
       }).exec();
 
-  async obtenerUsuarios(): Promise<any[]> {
-    return new Promise((resolve, reject) => {
-      const results = [];
-      createReadStream(this.usuariosFilePath)
-        .pipe(csvParser())
-        .on('data', (data) => results.push(data))
-        .on('end', () => {
-          resolve(results);
-        })
-        .on('error', (error) => {
-          reject(error);
-        });
-    });
-  }
+      if (!usuario) {
+        throw new Error("Usuario no encontrado");
+      }
 
-  async ingresar(credentials: { email: string; password: string }) {
-    return new Promise((resolve, reject) => {
-      const email = credentials.email;
-      const password = credentials.password;
+      if (usuario.password !== credentials.password) {
+        throw new Error("Credenciales incorrectas");
+      }
 
       return {
         Message: "Ingreso exitoso",
