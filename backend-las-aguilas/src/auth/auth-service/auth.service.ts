@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { RegistroDto } from "../auth-controller/registro.dto";
-import { MongoConexionService } from "../../mongo/mongo-conexion/mongo-conexion.service"; // Asegúrate de usar la ruta correcta para el servicio de conexión
-import { userSchema } from "../../models/user.model"; // Asegúrate de usar la ruta correcta para el modelo
+import { MongoConexionService } from "../../mongo/mongo-conexion/mongo-conexion.service"; // Ruta para el servicio de conexión
+import { userSchema } from "../../models/user.model"; // Ruta para el modelo
 
 @Injectable()
 export class AuthService {
