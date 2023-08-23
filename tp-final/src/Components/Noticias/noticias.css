@@ -1,109 +1,41 @@
 .noticias-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .tituloNoticias {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .contenedor-titulo-boton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .boton-todas {
-    padding: 10px 20px;
-    background-color: #8d8d8d;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .boton-todas:focus {
-    outline: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .categorias {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .categoria {
-    padding: 10px 20px;
-    margin: 0 5px;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .categoria-activa {
-    background-color: #2196f3;
-    color: white;
-  }
-  
-  .noticias-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .noticias-item {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .noticias-titulo {
-    margin-top: 0;
-  }
-  
-  .noticias-categoria {
-    color: #666;
-  }
-  
-  .categoria-select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #f5f5f5;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .categoria-select:focus {
-    outline: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .dropdown {
-    display: flex;
-    align-items: flex-start;
-    margin: 15px;
-  }
-  
-  .dropdown-menu {
-    margin-top: 10px;
-  }
-  
-  .dropdown-item {
-    cursor: pointer;
-  }
-  
-  .dropdown-item.active {
-    background-color: #2196f3;
-    color: white;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mostrar 2 tarjetas por fila, puedes ajustar el número según tus necesidades */
+  gap: 20px; /* Espacio entre las tarjetas */
+  height: auto;
+}
+
+.cardNoticias {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.footerNoticias {
+  /* Ajusta estos estilos según tus preferencias */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
