@@ -1,86 +1,57 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import { useSpring, animated } from "react-spring";
-import { Link } from "react-router-dom";
-import RugbyAdultos from "./rugbyAdultos";
-import RugbyJuveniles from "./rugbyJuveniles";
-import HockeyAdultos from "./HockeyAdultos";
-import HockeyJuveniles from "./HockeyJuveniles";
-import "./noticias.css";
+import React, { useState, useEffect } from 'react';
+import { Dropdown, Button } from 'react-bootstrap';
+import { BrowserRouter  ,Routes, Route , Link } from 'react-router-dom';
+import './noticias.css'
 
 const Noticias = () => {
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
-  const fadeIn = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 500 },
-  });
+  const [categoria, setCategoria] = useState('todas');
+  const noticias = [
+    { categoria: 'Infantiles', titulo: 'Noticia 1' },
+    { categoria: 'Femenina', titulo: 'Noticia 2' },
+    { categoria: 'Juvenil', titulo: 'Noticia 3' },
+    { categoria: 'Adulto', titulo: 'Noticia 4' },
+    { categoria: 'Veterano', titulo: 'Noticia 5' },
+    { categoria: 'Hockey', titulo: 'Noticia 6' },
+    // ...
+  ];
+  const categorias = ['todas', 'Infantiles', 'Femenina', 'Juvenil', 'Adulto', 'Veterano', 'Hockey'];
 
-  let noticiasFiltradas;
+  const filtrarNoticias = (noticias, categoria) => {
+    if (categoria === 'todas') {
+      return noticias;
+    } else {
+      return noticias.filter(noticia => noticia.categoria === categoria);
+    }
+  };
 
-  if (categoriaSeleccionada === "rugby-adultos") {
-    noticiasFiltradas = RugbyAdultos;
-  } else if (categoriaSeleccionada === "rugby-juveniles") {
-    noticiasFiltradas = RugbyJuveniles;
-  } else if (categoriaSeleccionada === "hockey-adultos") {
-    noticiasFiltradas = HockeyAdultos;
-  } else if (categoriaSeleccionada === "hockey-juveniles") {
-    noticiasFiltradas = HockeyJuveniles;
-  } else {
-    // Si no se selecciona una categoría, se muestran todas las noticias
-    noticiasFiltradas = [
-      ...RugbyAdultos,
-      ...HockeyJuveniles,
-      ...HockeyAdultos,
-      ...RugbyJuveniles,
-    ];
-  }
+  const noticiasFiltradas = filtrarNoticias(noticias, categoria);
 
   return (
-    <Container className="text-center">
-      <Row>
-        <h1>Te damos la Bienvenida a la sección noticias</h1>
-        <Col className="text-center">
-          <h5>Aquí podrás encontrar la última información del club</h5>
-        </Col>
-      </Row>
-      <Row>
-        {noticiasFiltradas.map((noticia, index) => (
-          <Col key={index} xs={12} md={4} className="mt-4 mb-4">
-            <Card className="cardMiembros">
-              <Card.Body className="cardBody">
-                <animated.div style={fadeIn}>
-                  <Card.Title className="cardTitle">
-                    {noticia.titulo_noticia}
-                  </Card.Title>
-                  <Card.Subtitle className="cardSubtitle">
-                    <ul className="text-start">
-                      {noticia.descripcion.map((descripcion, i) => (
-                        <li key={i}>{descripcion}</li>
-                      ))}
-                    </ul>
-                  </Card.Subtitle>
-                  <Card.Img
-                    className="cardImg"
-                    variant="top"
-                    src={noticia.foto}
-                  />
-                  <Link
-                    to={noticia.linkNoticia}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cardLink"
-                  >
-                    Ver más
-                  </Link>
-                </animated.div>
-              </Card.Body>
-            </Card>
-          </Col>
+    <div className="noticias-container">
+      <div className="contenedor-titulo-boton">
+      <Dropdown onSelect={setCategoria}>
+          <Dropdown.Toggle as={Button} variant="primary" id="dropdown-categoria" className="boton-todas">
+            {categoria}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            {categorias.map(cat => (
+              <Dropdown.Item key={cat} eventKey={cat}>{cat}</Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown><h1 className="tituloNoticias">Últimas Noticias del Club</h1>
+       </div>
+      <div className="noticias-grid">
+        {noticiasFiltradas.map(noticia => (
+          <div key={noticia.titulo} className="noticias-item">
+            <h2 className="noticias-categoria">{noticia.categoria}</h2>
+            <p className="noticias-titulo">{noticia.titulo}</p>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 
 export default Noticias;
+
+

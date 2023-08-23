@@ -136,3 +136,4 @@ await fetch('http://localhost:4000/auth/registrarse', {
 };
 
 export default RegistrationForm;
+
