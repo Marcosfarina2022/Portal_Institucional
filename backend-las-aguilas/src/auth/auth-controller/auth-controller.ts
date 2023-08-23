@@ -1,103 +1,29 @@
-import {
-  Controller,
-  HttpException,
-  HttpStatus,
-  Post,
-  Body,
-  Get,
-} from '@nestjs/common';
+import { Controller, Post, Body, Get } from "@nestjs/common";
 import { AuthService } from '../auth-service/auth.service';
-import { createReadStream, WriteStream } from 'fs';
-import { join } from 'path';
-import csvParser from 'csv-parser';
+import { RegistroDto } from './registro.dto';
 
-@Controller('auth')
+@Controller("auth")
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post('registrarse')
-  async registrarse(
-    @Body()
-    registroData: {
-      nombre: string;
-      apellido: string;
-      email: string;
-      password: string;
-    },
-  ) {
-    try {
-      // Llama al servicio de autenticación para manejar el registro
-      this.authService.registrarse(registroData);
-
-      return { message: 'Usuario registrado exitosamente' };
-    } catch (error) {
-      throw new HttpException(
-        'No se pudo completar el registro',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
+  @Post("registro")
+  async registro_usuario(@Body() registroData: RegistroDto): Promise<any>  {
+    console.log('Funciona?');
+    return  this.authService.registrarUsuario(registroData);
   }
-  @Get('registro') // Ruta para obtener el registro de usuarios
-  async obtenerRegistroUsuarios() {
-    try {
-      // Lee un archivo CSV
-      const csvFilePath = join(__dirname, '..', 'auth', 'registro.csv');
-      const results = [];
-
-      return new Promise((resolve, reject) => {
-        createReadStream(csvFilePath)
-          .pipe(csvParser())
-          .on('data', (data) => results.push(data))
-          .on('end', () => {
-            resolve(results);
-          })
-          .on('error', (error) => {
-            reject(error);
-          });
-      });
-    } catch (error) {
-      throw new HttpException(
-        'No se pudo obtener el registro de usuarios',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
+  @Get("registro-exitoso")
+  registroExitoso(): string {
+    return 'Registro exitoso. ¡Bienvenido!';
   }
-  @Get('usuarios') // Nueva ruta para obtener usuarios desde el CSV
-  async obtenerUsuarios() {
-    try {
-      // Lee un archivo CSV
-      const csvFilePath = join(__dirname, 'registro.csv');
-      const results = [];
-      console.log(results);
-      return new Promise((resolve, reject) => {
-        createReadStream(csvFilePath)
-          .pipe(csvParser())
-          .on('data', (data) => results.push(data))
-          .on('end', () => {
-            resolve(results);
-          })
-          .on('error', (error) => {
-            reject(error);
-          });
-      });
-    } catch (error) {
-      throw new HttpException(
-        'No se pudo obtener la lista de usuarios',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
+  @Post("ingreso")
+  async ingreso_usuario(@Body() credentials: { email: string; password: string }): Promise<any> {
+    console.log('Funciona ingresar?');
+    return  this.authService.ingresoUsuario(credentials);
   }
 
-  @Post('ingresar')
-  async ingresar(@Body() credentials: { email: string; password: string }) {
-    try {
-      const token = this.authService.ingresar(credentials);
-      return `Ingreso exitoso ${token}`;
-    } catch (error) {
-      throw new HttpException(
-        'Credenciales incorrectas',
-        HttpStatus.UNAUTHORIZED,
-      );
-    }
+  @Get("obtener-usuarios")
+  async obtenerUsuarios(): Promise<any> {
+    console.log('Funciona obtener?');
+    return  this.authService.obtenerUsuarios();
   }
 }

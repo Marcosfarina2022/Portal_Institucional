@@ -6,13 +6,20 @@ header{
     height: 20%;
     background:  rgba(137, 139, 159, 0.507);
 }
-
+.ingreso-registro .colorEnlace {
+    display: none; /* Oculta los enlaces de Ingresar y Registrarse */
+  }
+  
+  .ingreso-registro .creaCuenta {
+    display: inline-block; /* Muestra el botón de Cerrar sesión */
+  }
+  
 .glow{
     width: 100%;
     height: 5px;
-    background: linear-gradient(45deg, #ffffff, #fe7eb6, #f771a5, #b76eff, #8c20f8);
+    background: linear-gradient(45deg, #000000, #000000, #f771a5, #b76eff, #8c20f8);
     background-size: 400%;
-    animation: animate 1.5s linear infinite;
+    animation: animate 1.5s linear 3;
 }
 
 
