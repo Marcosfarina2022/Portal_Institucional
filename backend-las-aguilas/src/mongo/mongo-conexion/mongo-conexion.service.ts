@@ -14,7 +14,7 @@ export class MongoConexionService {
     const DB_URI =
       'mongodb+srv://melinafigueroa89:santino3719@las-aguilas.djhwv1t.mongodb.net/?retryWrites=true&w=majority';
 
-    this.dbConnection = await createConnection(DB_URI);
+    this.dbConnection = createConnection(DB_URI);
 
     this.dbConnection.once('open', () => {
       console.log('Connected to MongoDB');
