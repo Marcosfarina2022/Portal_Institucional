@@ -1,35 +1,48 @@
-.contenedor{
-    margin: 0 auto;
-    display: flex;
+.row-contenedor{
+    justify-content: center;
 }
 
 .card{
-    width: 30vw;
-    border-radius: 5vw;
-    margin: 5%;
+    margin: 10px;
 }
 
 
-.cardBody {
+.row-contenedor .card-body {
+
     background-color: rgba(61, 6, 31, 0.183);
-    border-radius: 5vw;
-}
-.sideBar{
-    width: 30vw;
-    height: 20vw;
-}
-.sideBar, .imgSideBar{
-    height: auto;
-    border-radius: 2vw;
+    border-radius: 5px;
 }
 
-.cardText{
-    width: 25vw;
+.card-body-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.img-aside{
+    object-fit: contain;
+}
+
+.card-aside{
+    margin: 10px;
+    height: 57%;
+}
+
+.card-text{
     text-align: center;
-    height: auto;
+    height: 48px;
 }
 
-.card .colorBoton{
+.colorBoton{
     background-color:rgba(93, 14, 84, 0.766);
 
 }
+
