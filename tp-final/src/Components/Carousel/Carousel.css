@@ -1,8 +1,7 @@
 .carousell {
+  margin: 5vh;
   border: 1px solid #ccc;
-  margin-top: 5px;
   border-radius: 15px;
-  margin-top: 4px;
 }
 
 .caption {

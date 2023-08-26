@@ -41,14 +41,14 @@ const FormLogin = () => {
 
                       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
                       <div className="d-grid">
-                        <Button variant="primary" type="submit">Ingresar</Button>
+                        <Button className="colorBoton" variant="dark" type="submit">Ingresar</Button>
                       </div>
                     </Form>
                     <div className="mt-3">
                     <LinkContainer to="/registro">
                       <p className="mb-0  text-center">
                         ¿No dispones de una cuenta? {''}
-                        <a href="{''}" className="text-primary fw-bold">
+                        <a href="{''}" className="fw-bold colorLink">
                           Registrase
                         </a>
                       </p>

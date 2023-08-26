@@ -10,6 +10,7 @@ import './App.css';
 import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
 import FormLogin from './Components/FormLogin/FormLogin';
 import SobreNosotros from './Components/SobreNosotros/SobreNosotros';
+import RugbyJuveniles from './Components/Noticias/rugbyJuveniles';
 function App() {
   return (
     
@@ -21,6 +22,7 @@ function App() {
          <Route path ="/" element ={<Home />}/>
          <Route path ="/galeria" element={<Galeria />}/>
          <Route path="/noticias" element={<Noticias />} />
+         <Route path="/rugby-juveniles" element={<RugbyJuveniles />} />
          <Route path="/institucion" element={<Institución />}/>
          <Route path="/contacto" element={<Contacto />}/>
          <Route path="/registro" element={<RegistrationForm />}/>

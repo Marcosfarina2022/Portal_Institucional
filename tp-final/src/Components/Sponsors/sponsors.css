@@ -1,5 +1,8 @@
 .sponsors-container {
   padding: 20px;
+}
+
+.sponsors-grid {
   transform: scale(1.2);
   animation: zoomInAnimation 8s ease-in-out infinite alternate;
 }
