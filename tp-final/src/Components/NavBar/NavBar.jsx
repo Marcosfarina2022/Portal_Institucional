@@ -19,7 +19,9 @@ const NavBar = () => {
               <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Noticias" id="basic-nav-dropdown" className='color'>
-              <NavDropdown.Item href="noticias/rugby-juveniles" className='color'>Rugby-Juveniles</NavDropdown.Item>
+            <LinkContainer to="/rugby-juveniles">
+              <NavDropdown.Item href="rugby-juveniles" className='color'>Rugby-Juveniles</NavDropdown.Item>
+              </LinkContainer>
               <NavDropdown.Divider />
               <NavDropdown.Item href="rugby-adultos" className='color'>Rugby- Adultos</NavDropdown.Item>
               <NavDropdown.Divider />
