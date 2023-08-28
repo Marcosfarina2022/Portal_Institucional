@@ -21,6 +21,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/noticias" element={<Noticias />} />
+          <Route path="/noticias/Rugby-Juveniles" element={<Noticias />} />
+          <Route path="/noticias/Rugby-Adultos" element={<Noticias />} />
+          <Route path="/noticias/Hockey-Juveniles" element={<Noticias />} />
+          <Route path="/noticias/Hockey-Adultos" element={<Noticias />} />
           <Route path="/institucion" element={<Institución />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="auth/registro" element={<RegistrationForm />} />

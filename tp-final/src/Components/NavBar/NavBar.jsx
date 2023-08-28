@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import RugbyAdultos from "../Noticias/RugbyAdultos";
+import RugbyJuveniles from "../Noticias/RugbyJuveniles";
+
 
 import "./NavBar.css";
 
@@ -16,20 +19,20 @@ const NavBar = () => {
                 Inicio
               </Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Noticias" id="basic-nav-dropdown" className="color">
-              <LinkContainer to="/noticias/rugby-juveniles">
-                <NavDropdown.Item>Rugby-Adultos</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/noticias/rugby-adultos">
-                <NavDropdown.Item>Rugby- Juveniles</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/noticias/hockey-juveniles">
-                <NavDropdown.Item>Hockey-Adultos</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/noticias/hockey-adultos">
-                <NavDropdown.Item>Hockey- Juveniles</NavDropdown.Item>
-              </LinkContainer>
-            </NavDropdown>
+              <NavDropdown title="Noticias" id="basic-nav-dropdown" className="color">
+                <LinkContainer to="/noticias/rugby-juveniles">
+                  <NavDropdown.Item>Rugby-Juveniles</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/noticias/rugby-adultos">
+                <NavDropdown.Item >Rugby-Adultos</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/noticias/hockey-juveniles">
+                  <NavDropdown.Item>Hockey-Juveniles</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/noticias/hockey-adultos">
+                  <NavDropdown.Item>Hockey-Adultos</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
             <LinkContainer to="/galeria">
               <Nav.Link href="#galeria" className="color rounded">
                 Galeria

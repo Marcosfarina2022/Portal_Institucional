@@ -6,6 +6,8 @@ import Image2 from '../../Imagenes/imgNoticias/2.svg';
 import Image3 from '../../Imagenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imagenes/imgNoticias/sidebar1.svg';
 import './cards.css';
+import NavLink from 'react-bootstrap';
+
 const Cards = () => {
   const cardData = [
     {
