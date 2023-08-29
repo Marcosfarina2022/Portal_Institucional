@@ -27,10 +27,10 @@ return(<>
         <NavBar categoriaSeleccionada={setCategoriaSeleccionada}/>
         
         <div className='divRegistro'>
-            <LinkContainer to="/ingresar">
+            <LinkContainer to="auth/ingreso">
               <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
             </LinkContainer>
-            <LinkContainer to="/registro">
+            <LinkContainer to="auth/registro">
               <a href="#registro" className='colorEnlace'>Registrarse</a>
             </LinkContainer>
         </div>

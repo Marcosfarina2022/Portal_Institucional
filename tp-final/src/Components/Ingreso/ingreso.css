@@ -1,0 +1,45 @@
+/* Clase para ajustar el tamaño de la imagen del logo */
+.logo-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Centrar verticalmente el contenido en la tarjeta */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 576px) {
+    .logo-image {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .d-grid {
+      justify-content: center;
+    }
+}
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .d-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .text-danger {
+    text-align: center;
+  }

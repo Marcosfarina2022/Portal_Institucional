@@ -1,0 +1,46 @@
+/* Ajustar el tamaño de la imagen del logo para pantallas pequeñas */
+.img-registrationForm {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  /* Centrar verticalmente el contenido en la tarjeta */
+  .cardbodyForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  /* Ajustar el tamaño de los botones para pantallas pequeñas */
+  @media (max-width: 576px) {
+    .btn {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  /* Margen inferior para los elementos de formulario y botones */
+  .form-group,
+  .btn {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Ajustar el tamaño de los campos de texto para pantallas pequeñas */
+  @media (max-width: 576px) {
+    .form-control {
+      width: 100%;
+    }
+  }
+  
+  /* Margen superior para el título "¿Ya dispones de un usuario?" */
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  /* Alinear el enlace al centro en pantallas pequeñas */
+  @media (max-width: 576px) {
+    .text-center-small {
+      text-align: center;
+    }
+  }

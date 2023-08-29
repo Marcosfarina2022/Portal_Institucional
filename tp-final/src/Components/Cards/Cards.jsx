@@ -53,9 +53,6 @@ const Cards = () => {
               <Card.Img variant="top" src={sidebar1} className="img-fluid imgSideBar" />
               <Card.Text className='cardText'>
                 Contenido del sidebar.
-                mas contenidohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-                jjjjjjjjjjjjjjjjjjjjjjjjjjjjj
               </Card.Text>
               <Button variant="dark" className='colorBoton'>Leer más...</Button>
             </Card.Body>
