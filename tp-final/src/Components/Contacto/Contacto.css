@@ -17,8 +17,8 @@
     width: 800px;
     text-align: left;
     border: 4mm ridge rgba(220, 50, 138, 0.6);
-    border-radius: 17px;
-    background-color: rgba(243, 121, 162, 0.564);
+    background-color: rgba(61, 6, 31, 0.183);
+    border-radius: 5px;
 }
 
 .hola{
@@ -38,7 +38,7 @@
     margin: 5px;
 }
 
-.rowContacto{
+.row{
     margin: 1px;
 }
 

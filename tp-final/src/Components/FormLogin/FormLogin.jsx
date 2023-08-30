@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
+import './FormLogin.css';
 
 const FormLogin = () => {
 
@@ -14,11 +15,9 @@ const FormLogin = () => {
     console.log(`Contrasena: ${password}`);
   };
 
-  return(
-
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+  return(<>
+      <Container className='containerLogin'>
+        <Row className="d-flex justify-content-center align-items-center">
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body>
@@ -61,8 +60,7 @@ const FormLogin = () => {
           </Col>
         </Row>
       </Container>
-    </div>
-      
+      </>  
   )
 }
 

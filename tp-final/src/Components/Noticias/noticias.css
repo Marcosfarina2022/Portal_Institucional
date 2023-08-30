@@ -16,7 +16,7 @@
 
 /* Estilo para las imágenes en las tarjetas */
 .cardImgNoticias {
-  max-height: 300px; /* Ajusta la altura máxima de las imágenes */
+  height: 300px; /* Ajusta la altura máxima de las imágenes */
   object-fit: cover;
 }
 /*.containerNoticias {
@@ -31,6 +31,7 @@
   justify-content: space-between;
   height: 100%;
   background-color: rgba(61, 6, 31, 0.183);
+  border-radius: 5px;
 }
 
 .cardTitleNoticias {

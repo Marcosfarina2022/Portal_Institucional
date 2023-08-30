@@ -25,9 +25,9 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+    <>
+      <Container className='containerRegistro'>
+        <Row className="d-flex justify-content-center align-items-center">
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body className="cardbodyForm">
@@ -79,7 +79,7 @@ const RegistrationForm = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

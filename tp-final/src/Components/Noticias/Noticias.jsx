@@ -66,8 +66,6 @@ const Noticias = () => {
     <Container className='containerNoticias text-center fluid'>
       <Row>
         <h1>Ultimas noticias</h1>
-        <Col className='text-start'>
-        </Col>
       </Row>
       <Row className='rowNoticias'>
         {noticias.map((noticia, index) => (
