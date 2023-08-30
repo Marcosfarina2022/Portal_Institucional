@@ -26,7 +26,8 @@ return(<>
         <div className='divRegistro'>
             <LinkContainer to="/ingresar">
               <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
-            </LinkContainer>
+            </LinkContainer> <p> ||
+            </p>
             <LinkContainer to="/registro">
               <a href="#registro" className='colorEnlace'>Registrarse</a>
             </LinkContainer>
