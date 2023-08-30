@@ -49,7 +49,7 @@ const FormLogin = () => {
                       <p className="mb-0  text-center">
                         ¿No dispones de una cuenta? {''}
                         <a href="{''}" className="fw-bold colorLink">
-                          Registrase
+                          Registrarse
                         </a>
                       </p>
                       </LinkContainer>
