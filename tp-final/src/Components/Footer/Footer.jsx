@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="glow"></div>
-      <Container>
+      <Container className='containerFooter'>
         <Row className="align-items-center justify-content-around">
           <Col>
             <div className='div-logo'>

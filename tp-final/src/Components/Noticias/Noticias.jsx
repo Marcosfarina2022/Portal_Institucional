@@ -63,7 +63,7 @@ const Noticias = () => {
   });
 
   return (
-    <Container className='containerNoticias text-center'>
+    <Container className='containerNoticias text-center fluid'>
       <Row>
         <h1>Ultimas noticias</h1>
         <Col className='text-start'>
