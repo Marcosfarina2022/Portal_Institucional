@@ -4,6 +4,7 @@ import VideoPlayer from '../Video/Video';
 import Image1 from '../../Imagenes/imgNoticias/1.svg';
 import Image2 from '../../Imagenes/imgNoticias/2.svg';
 import Image3 from '../../Imagenes/imgNoticias/3.svg';
+import Image4 from '../../Imagenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imagenes/imgNoticias/sidebar1.svg';
 import './cards.css';
 const Cards = () => {
@@ -11,22 +12,22 @@ const Cards = () => {
     {
       image: Image1,
       title: 'Águilas Jr',
-      text: 'Nuestra escuela de rugby para niños ofrece una experiencia deportiva divertida y educativa.',
+      text: 'Nuestra escuela de rugby para niños ofrece una experiencia divertida y educativa.',
     },
     {
       image: Image2,
-      title: 'Hockey Femenino',
+      title: 'Hockey Femenino Adultos',
       text: 'El equipo de hockey femenino del club ha tenido una destacada participación...',
     },
     {
       image: Image3,
-      title: 'Noticia 3',
-      text: 'Contenido de la noticia 3.',
+      title: 'Águilas Juveniles',
+      text: 'Nuestros jovenes tienen sentido de pertenencia con el club...',
     },
     {
-      image: Image3,
-      title: 'Noticia 4',
-      text: 'Contenido de la noticia 4.',
+      image: Image4,
+      title: 'Aguilas Campeones',
+      text: 'Nuestras categorías se destacaron en todas...',
     },
   ];
 
