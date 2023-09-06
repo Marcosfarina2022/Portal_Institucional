@@ -18,16 +18,17 @@ const NavBar = () => {
             </LinkContainer>
             <NavDropdown title="Noticias" id="basic-nav-dropdown" className="color">
               <LinkContainer to="/noticias/rugby-juveniles">
-                <NavDropdown.Item>Rugby-Adultos</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/noticias/rugby-adultos">
                 <NavDropdown.Item>Rugby- Juveniles</NavDropdown.Item>
               </LinkContainer>
+              <LinkContainer to="/noticias/rugby-adultos">
+                <NavDropdown.Item>Rugby-adultos
+                </NavDropdown.Item>
+              </LinkContainer>
               <LinkContainer to="/noticias/hockey-juveniles">
-                <NavDropdown.Item>Hockey-Adultos</NavDropdown.Item>
+                <NavDropdown.Item>Hockey-Juveniles</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer to="/noticias/hockey-adultos">
-                <NavDropdown.Item>Hockey- Juveniles</NavDropdown.Item>
+                <NavDropdown.Item>Hockey-Adultos</NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
             <LinkContainer to="/galeria">
@@ -50,6 +51,6 @@ const NavBar = () => {
       </Container>
     </Navbar>
   );
-};
+}
 
 export default NavBar;

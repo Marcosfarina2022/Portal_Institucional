@@ -26,28 +26,17 @@ const Encabezado = ({ loggedIn, handleLogout }) => {
             <h1>Club Las Aguilas</h1>
           </div>
         </div>
-
-        <NavBar categoriaSeleccionada={null} />
-        <div className={`divRegistro ${loggedIn ? "ingreso-registro" : ""}`}>
-          {loggedIn ? (
-            <>
-              <button
-                onClick={handleLogoutAndNavigate}
-                className="creaCuenta colorEnlace"
-              >
-                Cerrar sesión
-              </button>
-            </>
-          ) : (
-            <>
-              <Link to="/auth/ingreso" className="creaCuenta colorEnlace">
-                Ingresar
-              </Link>
-              <Link to="/auth/registro" className="colorEnlace">
-                Registrarse
-              </Link>
-            </>
-          )}
+        
+        <NavBar/>
+        
+        <div className='divRegistro'>
+            <LinkContainer to="/ingresar">
+              <a href="Ingresá" className='creaCuenta colorEnlace'>Ingresar</a>
+            </LinkContainer> <p> ||
+            </p>
+            <LinkContainer to="/registro">
+              <a href="#registro" className='colorEnlace'>Registrarse</a>
+            </LinkContainer>
         </div>
       </header>
     </>
