@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './cajaDeComentarios.css'; // Asegúrate de que el nombre del archivo CSS coincida con el que proporcioné
 import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap';
 
 class CajaDeComentarios extends Component {
@@ -12,7 +13,7 @@ class CajaDeComentarios extends Component {
   }
 
   handleCommentChange = (event) => {
-    this.setState({ newComment: event.target.value});
+    this.setState({ newComment: event.target.value });
   };
 
   handleSubmit = () => {
@@ -29,39 +30,35 @@ class CajaDeComentarios extends Component {
   render() {
     const { comments, newComment } = this.state;
     return (
-      <Container className="mt-5">
-        <h2>Comentarios</h2>
-        <Row className="mb-3">
-          <Col>
+      <Container className="comment-box mt-12">
+        <Row className="mt-12">
+            <ListGroup>
+              {comments.map((comment, index) => {
+                const [time, text] = comment.split(' - ');
+                return (
+                  <ListGroup.Item key={index} className="comment-item">
+                    <strong>{time}</strong>: {text}
+                  </ListGroup.Item>
+                );
+              })}
+            </ListGroup>
+            <div className='textarea'>
             <Form.Control
               as="textarea"
               rows={4}
+              className="comment-input"
               placeholder="Escribe un comentario..."
               value={newComment}
               onChange={this.handleCommentChange}
             />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Button variant="primary" onClick={this.handleSubmit}>
+            <Button
+              variant="primary"
+              className="comment-submit"
+              onClick={this.handleSubmit}
+            >
               Enviar comentario
             </Button>
-          </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col>
-            <h3>Comentarios anteriores:</h3>
-            <ListGroup>
-              {comments.map((comment, index) => {const [time, text] = comment.split(' - ');
-              return (
-                <ListGroup.Item key={index}>
-                  <strong>{time}</strong>: {text}
-                </ListGroup.Item>
-                );
-                })}
-            </ListGroup>
-          </Col>
+            </div>
         </Row>
       </Container>
     );
