@@ -13,7 +13,7 @@ const captions = [
   },
   {
     title: 'Ya conoces los deportes del club?',
-    text: 'Puedes visitar nuestra sección "Disciplinas" en la pestaña de la barra superior.',
+    text: 'Puedes visitar nuestra sección "Noticias" en la pestaña de la barra superior.',
     image: imagen2
   },
   {
