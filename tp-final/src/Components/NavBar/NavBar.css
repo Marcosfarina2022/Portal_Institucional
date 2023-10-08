@@ -1,0 +1,27 @@
+
+.bg-nav{
+    display: flex;
+    width: 50%;
+    font-weight: bolder;
+    align-items: center;
+    
+}
+.color{
+    align-self: center;
+
+}
+
+.color:hover {
+    font-weight: bolder;
+    background-color: rgba(138, 62, 138, 0.697);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  .dropdown-item.active{
+  background-color: rgba(138, 62, 138, 0.697);
+  }
+  
+  .dropdown-menu {
+    --bs-dropdown-link-active-bg: rgba(138, 62, 138, 0.697);
+  }
+  

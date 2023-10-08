@@ -1,0 +1,54 @@
+
+.todo{
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+    width: 66rem;
+}
+
+.contenido{
+    display: flex-start;
+    width: 800px;
+    text-align: left;
+    border: 4mm ridge rgba(220, 50, 138, 0.6);
+    background-color: rgba(61, 6, 31, 0.183);
+    border-radius: 5px;
+}
+
+.hola{
+   text-align: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton_color{
+    background-color:rgba(93, 14, 84, 0.766);
+    margin: 5px;
+}
+
+.row{
+    margin: 1px;
+}
+
+.mb-3{
+    margin: 14px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
