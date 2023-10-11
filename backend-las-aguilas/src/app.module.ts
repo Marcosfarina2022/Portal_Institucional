@@ -1,9 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
-import { AuthModule } from './auth/auth.module';
-import { ArticlesModule } from './articles/articles-service/articles.module';
 import { TypeOrmModule } from '@nestjs/typeorm'; // Importa TypeOrmModule
 import { UsersModule } from './users/users.module';
 
@@ -15,13 +12,11 @@ import { UsersModule } from './users/users.module';
       port: 3306,
       username: 'root',
       password: 'tino3719',
-      database: 'db_las_aguilas',
-      entities: [],
+      database: 'db_aguilas',
+      entities: ["dist/**/**.entity{.ts,.js}"],
       synchronize: true,
     }),
-    UsersModule,
-    AuthModule,
-    ArticlesModule,
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
