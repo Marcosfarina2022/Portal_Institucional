@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm'; // Importa TypeOrmModule
 import { UsersModule } from './users/users.module';
+import { RolModule } from './rol/rol.module';
+import { NoticiasModule } from './noticias/noticias.module';
 
 @Module({
   imports: [
@@ -16,7 +18,9 @@ import { UsersModule } from './users/users.module';
       entities: ["dist/**/**.entity{.ts,.js}"],
       synchronize: true,
     }),
-    UsersModule
+    UsersModule,
+    RolModule,
+    NoticiasModule
   ],
   controllers: [AppController],
   providers: [AppService],

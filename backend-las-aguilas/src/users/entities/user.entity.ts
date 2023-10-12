@@ -1,7 +1,8 @@
 import { IsEmail, IsNotEmpty, isEmail } from "class-validator";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Rol } from "src/rol/entities/rol.entity";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({name: "usuario"})
+@Entity({ name: "usuario" })
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
@@ -20,6 +21,9 @@ export class User {
   @Column()
   @IsEmail()
   email: string;
+
+  @ManyToOne(() => Rol, (rol) => rol.users)
+  rol: Rol;
 
   constructor(nombre: string, apellido: string, fecha: Date, email: string) {
     this.nombre = nombre;
