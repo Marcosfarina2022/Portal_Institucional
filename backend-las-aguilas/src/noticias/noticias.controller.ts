@@ -1,20 +1,16 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { NoticiasService } from './noticias.service';
-import { CreateNoticiaDto } from './dto/noticia.dto';
-import { UpdateNoticiaDto } from './dto/update-noticia.dto';
+import { NoticiaDto } from './dto/noticia.dto';
 
 @Controller('noticias')
 export class NoticiasController {
   constructor(private readonly noticiasService: NoticiasService) {}
 
-  @Post()
-  create(@Body() createNoticiaDto: CreateNoticiaDto) {
-    return this.noticiasService.create(createNoticiaDto);
-  }
+  
 
-  @Get()
-  findAll() {
-    return this.noticiasService.findAll();
+  @Get("todos")
+  async findAll(): Promise<NoticiaDto[]> {
+    return await this.noticiasService.getAll();
   }
 
   @Get(':id')
@@ -23,7 +19,7 @@ export class NoticiasController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateNoticiaDto: UpdateNoticiaDto) {
+  update(@Param('id') id: string, @Body() updateNoticiaDto:NoticiaDto) {
     return this.noticiasService.update(+id, updateNoticiaDto);
   }
 

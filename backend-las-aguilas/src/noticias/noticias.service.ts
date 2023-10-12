@@ -1,22 +1,25 @@
 import { Injectable } from '@nestjs/common';
-import { CreateNoticiaDto } from './dto/noticia.dto';
-import { UpdateNoticiaDto } from './dto/update-noticia.dto';
+import { NoticiaDto } from './dto/noticia.dto';
+import { Noticia } from './entities/noticia.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class NoticiasService {
-  create(createNoticiaDto: CreateNoticiaDto) {
-    return 'This action adds a new noticia';
-  }
+  constructor(
+    @InjectRepository(Noticia)
+    private readonly noticiaRepository: Repository<Noticia>
+  ) {}
 
-  findAll() {
-    return `This action returns all noticias`;
+  public async getAll(): Promise<NoticiaDto[]> {
+    return await this.noticiaRepository.find();
   }
 
   findOne(id: number) {
     return `This action returns a #${id} noticia`;
   }
 
-  update(id: number, updateNoticiaDto: UpdateNoticiaDto) {
+  update(id: number, updateNoticiaDto: NoticiaDto) {
     return `This action updates a #${id} noticia`;
   }
 
