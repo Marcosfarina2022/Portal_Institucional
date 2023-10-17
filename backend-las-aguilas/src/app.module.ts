@@ -6,6 +6,8 @@ import { UsersModule } from './users/users.module';
 import { RolModule } from './rol/rol.module';
 import { NoticiasModule } from './noticias/noticias.module';
 import { GaleriaModule } from './galeria/galeria.module';
+import { CategoriaModule } from './categoria/categoria.module';
+import { ContactoModule } from './contacto/contacto.module';
 
 @Module({
   imports: [
@@ -22,7 +24,9 @@ import { GaleriaModule } from './galeria/galeria.module';
     UsersModule,
     RolModule,
     NoticiasModule,
-    GaleriaModule
+    GaleriaModule,
+    CategoriaModule,
+    ContactoModule
   ],
   controllers: [AppController],
   providers: [AppService],
