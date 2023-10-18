@@ -3,16 +3,16 @@ import "./LineaDeTiempo.css";
 
 const LineaDeTiempo = () => {
     const [events, setEvents] = useState([
-        { id: 1, title: '13 de Mayo de 2018', date: 'Se inaguro el estadio de las Aguilas'},
-        { id: 2, title: 'Event 2', date: 'February 14th, 2021'},
-        { id: 3, title: 'Event 3', date: 'March 20th, 2021'},
-        { id: 4, title: 'Event 4', date: 'April 30th, 2021'},
-        { id: 5, title: 'Event 5', date: 'May 15th, 2021'},
-        { id: 6, title: 'Event 6', date: 'June 21st, 2021'},
-        { id: 7, title: 'Event 7', date: 'July 4th, 2021'},
-        { id: 8, title: 'Event 8', date: 'August 10th, 2021'},
-        { id: 9, title: 'Event 9', date: 'September 22nd, 2021'},
-        { id: 10, title: 'Event 10', date: 'October 31st, 2021'}
+        { id: 1, title: 'FECHA CONSTITUCION DEL CLUB 09/04/1990', date: ''},
+        { id: 2, title: 'PRIMEROS ENTRENAMIENTOS', date: 'FEBRERO 1990'},
+        { id: 3, title: 'SE CONSIGUE PREDIO!', date: 'MARZO 1991'},
+        { id: 4, title: 'PRIMER PARTICIPACION EN TORNEO', date: 'MARZO 1991'},
+        { id: 5, title: 'CAMPEONES TORNEO LOCAL APERTURA 1992', date: 'JUNIO 1992'},
+        { id: 6, title: 'GIRA HISTORICA SUDAFRICA 1998', date: 'FEBRERO 1998'},
+        { id: 7, title: 'CAMPEONES TORNEO LOCAL CLAUSURA 1999', date: 'DICIEMBRE 1999'},
+        { id: 8, title: 'NUEVO PREDIO ANEXO!', date: 'ENERO 2000'},
+        { id: 9, title: 'NUEVA CANCHA RUGBY', date: 'FEBRERO 2001'},
+        { id: 10, title: 'ASCENSO A TORNEO REGIONAL PATAGONICO', date: 'OCTUBRE 2022'}
     ]);
 
     return ( <>

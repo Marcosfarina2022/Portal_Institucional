@@ -25,9 +25,9 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+    <>
+      <Container className='containerRegistro'>
+        <Row className="d-flex justify-content-center align-items-center">
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body className="cardbodyForm">
@@ -59,14 +59,14 @@ const RegistrationForm = () => {
 
                       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
                       <div className="d-grid">
-                        <Button variant="primary" type="submit">Registrase</Button>
+                        <Button className='colorBoton' variant="dark" type="submit">Registrase</Button>
                       </div>
                     </Form>
                     <div className="mt-3">
                     <LinkContainer to="/Ingresar">
                       <p className="mb-0  text-center">
                         ¿Ya dispones de un usuario?{' '}
-                        <a href="{''}" className="text-primary fw-bold">
+                        <a href="{''}" className="colorLink fw-bold">
                           Ingresar
                         </a>
                       </p>
@@ -79,7 +79,7 @@ const RegistrationForm = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

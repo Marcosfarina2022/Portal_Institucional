@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
+import './FormLogin.css';
 
 const FormLogin = () => {
 
@@ -14,11 +15,9 @@ const FormLogin = () => {
     console.log(`Contrasena: ${password}`);
   };
 
-  return(
-
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+  return(<>
+      <Container className='containerLogin'>
+        <Row className="d-flex justify-content-center align-items-center">
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body>
@@ -41,15 +40,15 @@ const FormLogin = () => {
 
                       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
                       <div className="d-grid">
-                        <Button variant="primary" type="submit">Ingresar</Button>
+                        <Button className="colorBoton" variant="dark" type="submit">Ingresar</Button>
                       </div>
                     </Form>
                     <div className="mt-3">
                     <LinkContainer to="/registro">
                       <p className="mb-0  text-center">
                         ¿No dispones de una cuenta? {''}
-                        <a href="{''}" className="text-primary fw-bold">
-                          Registrase
+                        <a href="{''}" className="fw-bold colorLink">
+                          Registrarse
                         </a>
                       </p>
                       </LinkContainer>
@@ -61,8 +60,7 @@ const FormLogin = () => {
           </Col>
         </Row>
       </Container>
-    </div>
-      
+      </>  
   )
 }
 
