@@ -47,6 +47,7 @@ const noticias = [
     foto: noticia6,
     linkNoticia: 'https://www.linkedin.com/perfil-miembro-6',
     descripcion: 'Descripción de la noticia 6.',
+    
   },
 ];
 
