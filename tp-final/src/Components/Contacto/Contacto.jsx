@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import { FaWhatsapp , FaClock , FaEnvelope} from "react-icons/fa";
 import './Contacto.css'
+import Mapa from './Mapa.jsx';
 
 const Contacto = () => {
 
@@ -21,11 +22,12 @@ const Contacto = () => {
   };
 
     return(
+        <div>
     <div className='todo'>
        <div className='form'>
         <Form onSubmit={handleSubmit} className='contenido' >
         <h2 className='titulo1'>Escribinos</h2>
-            <Row>
+            <Row className='rowContacto'>
                 <Col>
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text" placeholder="Nombre" onChange={(e) => setName(e.target.value)}  />
@@ -50,11 +52,15 @@ const Contacto = () => {
             </div>
         </Form>
         </div> 
-    <div className='info'>
+    <div className=' info '>
         <h5><strong>Direccion</strong> : Salta 2357</h5>
         <h5><FaClock/> Lunes a Viernes de 13:00 a 21:00 hs </h5>
         <h5><FaWhatsapp/> 2964566780</h5>
         <h5><FaEnvelope/> clasaguilas@gmail.com</h5>
+    </div>
+    </div>
+    <div className='map'>
+       <Mapa/>
     </div>
     </div>
     )

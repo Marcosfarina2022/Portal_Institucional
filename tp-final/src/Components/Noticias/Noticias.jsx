@@ -1,77 +1,84 @@
-import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { useSpring, animated } from 'react-spring';
+//import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
+import './noticias.css';
+import { useSpring, animated } from 'react-spring';
+
 import noticia1 from '../../Imagenes/imgNoticias/1.svg';
 import noticia2 from '../../Imagenes/imgNoticias/2.svg';
 import noticia3 from '../../Imagenes/imgNoticias/3.svg';
-import noticia4 from '../../Imagenes/imgNoticias/3.svg';
-import './noticias.css';
+import noticia4 from '../../Imagenes/imgNoticias/4.jpeg';
+import noticia5 from '../../Imagenes/imgNoticias/5.jpeg';
+import noticia6 from '../../Imagenes/imgNoticias/6.jpeg';
 
 const noticias = [
   {
-    nombre: 'Juveniles',
+    nombre: 'Noticia 1',
     foto: noticia1,
     linkNoticia: 'https://www.diarioprensa.com.ar/el-club-las-aguilas-sumo-un-nuevo-titulo/',
-    descripcion: ['En una cancha colmada de público, el equipo local se hizo fuerte venciendo por 40-21 al Ushuaia Rugby Club en la gran final del Torneo Apertura de la Unión de Rugby de Tierra del Fuego. De esta manera, las camisetas fucsia suman su cuarto título en fila y el sexto en los últimos siete campeonatos.'],
+    descripcion: 'Descripcion de la noticia 1',
   },
   {
-    nombre: 'Adultos',
+    nombre: 'Noticia 2',
     foto: noticia2,
     linkNoticia: 'https://www.linkedin.com/in/farina-marcos-1063a271/',
-    descripcion: ['', '', ''],
+    descripcion: 'Descripción de la noticia 2.',
   },
   {
-    nombre: 'Hockey Juvenil',
+    nombre: 'Noticia 3',
     foto: noticia3,
     linkNoticia: 'https://www.linkedin.com/in/diaz-fernando/',
-    descripcion: ['blaaa'],
+    descripcion: 'Descripción de la noticia 3.',
   },
   {
-    nombre: 'Hockey Adultos',
+    nombre: 'Noticia 4',
     foto: noticia4,
-    linkNoticia: 'https://www.linkedin.com/perfil-miembro-2',
-    descripcion: [''],
+    linkNoticia: 'https://www.linkedin.com/perfil-miembro-4',
+    descripcion: 'Descripción de la noticia 4.',
+  },
+  {
+    nombre: 'Noticia 5',
+    foto: noticia5,
+    linkNoticia: 'https://www.linkedin.com/perfil-miembro-5',
+    descripcion: 'Descripción de la noticia 5.',
+  },
+  {
+    nombre: 'Noticia 6',
+    foto: noticia6,
+    linkNoticia: 'https://www.linkedin.com/perfil-miembro-6',
+    descripcion: 'Descripción de la noticia 6.',
   },
 ];
 
 const Noticias = () => {
-  const fadeIn = useSpring({
+  /*const fadeIn = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
     config: { duration: 500 },
+  });*/
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 500 }, // Ajusta la duración de la animación
   });
 
   return (
-    <Container className='containerSobreNosotros text-center'>
+    <Container className='containerNoticias text-center fluid'>
       <Row>
-        <h1>Te damos la Bienvenida a la sección noticias</h1>
-        <Col className='text-start'>
-          <h5>Aquí podras encontrar la ultima info del club</h5>
-        </Col>
+        <h1>Ultimas noticias</h1>
       </Row>
-      <Row>
+      <Row className='rowNoticias'>
         {noticias.map((noticia, index) => (
-          <Col key={index} xs={12} md={4} className='mt-4 mb-4'>
-            <Card className='cardMiembros'>
-              <Card.Body className='cardBody'>
+          <Col key={index} xs={12} md={4} className='mt-4 mb-4'> 
+            <Card className='cardNoticias'>
+              <Card.Body className='cardBodyNoticias'>
                 <animated.div style={fadeIn}>
-                  <Card.Title className='cardTitle'>{noticia.nombre}</Card.Title>
-                  <Card.Subtitle className='cardSubtitle'>
-                    <ul className='text-start'>
-                      {noticia.descripcion.map((descripcion, i) => (
-                        <li key={i}>{descripcion}</li>
-                      ))}
-                    </ul>
+                  <Card.Title className='cardTitleNoticias'>{noticia.nombre}</Card.Title>
+                  <Card.Subtitle className='cardSubtitleNoticias'>
+                    <p className='text-center'>{noticia.descripcion}</p>
                   </Card.Subtitle>
-                  <Card.Img className='cardImg' variant='top' src={noticia.foto} />
-                  <Link
-                    to={noticia.linkNoticia}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='cardLink'
-                  >
-                    Ver más
+                  <Link  to={noticia.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
+                  <Card.Img className='cardImgNoticias' variant='top' src={noticia.foto} />
                   </Link>
                 </animated.div>
               </Card.Body>

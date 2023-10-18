@@ -6,3 +6,11 @@
 .card-body {
     background-color: white;
 }
+
+a .colorLink{
+    color: rgba(93, 14, 84, 0.766);
+}
+
+.containerLogin{
+    height: 100vh;
+}
