@@ -1,5 +1,6 @@
 import { IsNotEmpty } from "class-validator";
-import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Categoria } from "src/categoria/entities/categoria.entity";
+import { Column, Entity, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: "galeria" })
 export class Galeria {
@@ -12,6 +13,10 @@ export class Galeria {
   @Column()
   @IsNotEmpty()
   nombre: string;
+
+  @ManyToOne(() => Categoria, (categoria) => categoria.galeria)
+  categoria: Categoria;
+
 
   constructor(nombre: string) {
     this.nombre = nombre;

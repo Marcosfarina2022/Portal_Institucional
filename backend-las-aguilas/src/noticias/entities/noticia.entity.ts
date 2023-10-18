@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Categoria } from "src/categoria/entities/categoria.entity";
+import { Column, Entity, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("noticias")
 export class Noticia {
@@ -16,6 +17,9 @@ export class Noticia {
 
   @Column()
   foto_noticia: string;
+
+  @ManyToOne(() => Categoria, (categoria) => categoria.noticias)
+  categoria: Categoria;
 
   constructor(titulo: string, descripcion: string, foto: string) {
     this.titulo_noticia = titulo;
