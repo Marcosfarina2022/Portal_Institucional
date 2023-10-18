@@ -34,26 +34,23 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
 
 2. Navega al directorio del proyecto:
 
-```bash
-
+   ```bash
    cd Portal_Institucional
-```
+   ```
 
 3. Instala las dependencias:
 
-```bash
-
+   ```bash   
    npm install
-```
+   ```
 
 4. Configura la base de datos MySQL y ajusta las configuraciones de conexión en el archivo de configuración.
 
 5. Inicia la aplicación:
 
-```bash
-
+   ```bash
    npm start
-```
+   ```
 
 # La aplicación se ejecutará en http://localhost:3000.
 
