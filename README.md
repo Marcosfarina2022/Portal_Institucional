@@ -52,10 +52,12 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
    npm start
    ```
 
-# La aplicación se ejecutará en http://localhost:3000.
+## La aplicación se ejecutará en http://localhost:3000.
 
-- Licencia
 
-* Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-# # Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en contactar a alguno de los colaboradores del proyecto. ¡Esperamos que disfrutes explorando y contribuyendo al Portal Institucional Las Águilas!
+- **Licencia**
+
+- **Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles**.
+
+## Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en contactar a alguno de los colaboradores del proyecto. ¡Esperamos que disfrutes explorando y contribuyendo al Portal Institucional Las Águilas!
