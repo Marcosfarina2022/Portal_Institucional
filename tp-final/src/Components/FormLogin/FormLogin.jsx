@@ -1,62 +1,23 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
+import './FormLogin.css';
+
 const FormLogin = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword,] = useState('');
 
-  /**const handleSubmit = async (event) => {
+  const handleInputChange = (event) => {
     event.preventDefault();
-    if (confirPassword === password) {
-      try {
-        const response = await axios.post(
-          "http://localhost:4000/auth/registrarse",
-          { name, username, email, password }
-        );
-        console.log(response.data.message);
-      } catch (error) {
-        console.error("Error en el registro:", error);
-      }
-    } else {
-      alert("Las contraseñas no coinciden");
-    }
-  }; */
-  const handleInputChange = async (event) => {
-    event.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:4000/auth/ingresar', { email, password });
-      alert('Bienvenido');
-      // Manejar la respuesta del backend
-    } catch (error) {
-      if (error.response) {
-        // Error de respuesta del servidor (HTTP 4xx o 5xx)
-        if (error.response.status === 401) {
-          console.error('Las credenciales proporcionadas son incorrectas. Verifica tu correo electrónico y contraseña.');
-        } else if (error.response.status === 403) {
-          console.error('No tienes permisos para acceder a esta función. Ponte en contacto con el administrador si crees que esto es un error.');
-        } else {
-          console.error('Hubo un error en el servidor. Inténtalo de nuevo más tarde o ponte en contacto con el soporte.');
-        }
-      } else if (error.request) {
-        // Error de solicitud (sin respuesta del servidor)
-        console.error('No se pudo conectar al servidor. Verifica tu conexión a Internet y vuelve a intentarlo más tarde.');
-      } else {
-        // Otro tipo de error
-        console.error('Ocurrió un error. Inténtalo de nuevo más tarde.');
-      }
-       
-    }
+    console.log(`Email: ${email}`);
+    console.log(`Contrasena: ${password}`);
   };
-  
 
-  return(
-
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+  return(<>
+      <Container className='containerLogin'>
+        <Row className="d-flex justify-content-center align-items-center">
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body>
@@ -79,15 +40,15 @@ const FormLogin = () => {
 
                       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
                       <div className="d-grid">
-                        <Button variant="primary" type="submit">Ingresar</Button>
+                        <Button className="colorBoton" variant="dark" type="submit">Ingresar</Button>
                       </div>
                     </Form>
                     <div className="mt-3">
                     <LinkContainer to="/registro">
                       <p className="mb-0  text-center">
                         ¿No dispones de una cuenta? {''}
-                        <a href="{''}" className="text-primary fw-bold">
-                          Registrase
+                        <a href="{''}" className="fw-bold colorLink">
+                          Registrarse
                         </a>
                       </p>
                       </LinkContainer>
@@ -99,8 +60,7 @@ const FormLogin = () => {
           </Col>
         </Row>
       </Container>
-    </div>
-      
+      </>  
   )
 }
 

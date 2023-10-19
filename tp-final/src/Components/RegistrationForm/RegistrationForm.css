@@ -8,6 +8,10 @@
     height: 145px;
 }
 
-.cardbodyForm {
+a .cardbodyForm {
     background-color: white;
+}
+
+.containerRegistro{
+    height: 100vh;
 }

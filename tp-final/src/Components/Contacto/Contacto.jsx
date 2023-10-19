@@ -25,7 +25,7 @@ const Contacto = () => {
        <div className='form'>
         <Form onSubmit={handleSubmit} className='contenido' >
         <h2 className='titulo1'>Escribinos</h2>
-            <Row>
+            <Row className='rowContacto'>
                 <Col>
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text" placeholder="Nombre" onChange={(e) => setName(e.target.value)}  />
