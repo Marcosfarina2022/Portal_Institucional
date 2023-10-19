@@ -11,6 +11,7 @@ import './App.css';
 import RegistrationForm from './Components/Registro/Registro-usuario';
 import FormLogin from './Components/Ingreso/Ingreso-usuario';
 import SobreNosotros from './Components/SobreNosotros/SobreNosotros';
+import CajaDeComentarios from './Components/CajaDeComentarios/CajaDeComentarios';
 
 function App() {
   return (
@@ -27,9 +28,10 @@ function App() {
           <Route path="/noticias/Hockey-Adultos" element={<Noticias />} />
           <Route path="/institucion" element={<Institución />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="auth/registro" element={<RegistrationForm />} />
-          <Route path="auth/ingreso" element={<FormLogin />} />
+          <Route path="/registro" element={<RegistrationForm />} />
+          <Route path="/ingresar" element={<FormLogin />} />
           <Route path="/sobreNosotros" element={<SobreNosotros />} />
+          <Route path="/cajaDeComentarios" element={<CajaDeComentarios />} />
         </Routes>
         <Footer />
       </div>
