@@ -1,0 +1,48 @@
+
+.row-contenedor{
+    justify-content: center;
+}
+
+.card{
+    margin: 10px;
+}
+
+
+.row-contenedor .card-body {
+
+    background-color: rgba(61, 6, 31, 0.183);
+    border-radius: 5px;
+}
+
+.card-body-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.img-aside{
+    object-fit: contain;
+}
+
+.card-aside{
+    margin: 10px;
+    height: 57%;
+}
+
+.card-text{
+    text-align: center;
+    height: 48px;
+}
+
+.colorBoton{
+    background-color:rgba(93, 14, 84, 0.766);
+
+}
