@@ -11,22 +11,22 @@ const Cards = () => {
     {
       image: Image1,
       title: 'Águilas Jr',
-      text: 'Nuestra escuela de rugby para niños ofrece una experiencia deportiva divertida y educativa.',
+      text: 'Nuestra escuela de rugby para niños ofrece una experiencia divertida y educativa...',
     },
     {
       image: Image2,
-      title: 'Hockey Femenino',
+      title: 'Hockey Femenino Adulto',
       text: 'El equipo de hockey femenino del club ha tenido una destacada participación...',
     },
     {
       image: Image3,
-      title: 'Noticia 3',
-      text: 'Contenido de la noticia 3.',
+      title: 'Águilas Juveniles',
+      text: 'Nuestros jovenes tienen sentido de pertenencia con el club...',
     },
     {
       image: Image3,
-      title: 'Noticia 4',
-      text: 'Contenido de la noticia 4.',
+      title: 'Águilas Campeones',
+      text: 'Nuestras categorias se destacaron en todas...',
     },
   ];
 

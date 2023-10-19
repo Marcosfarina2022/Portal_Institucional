@@ -11,6 +11,7 @@ import './App.css';
 import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
 import FormLogin from './Components/FormLogin/FormLogin';
 import SobreNosotros from './Components/SobreNosotros/SobreNosotros';
+import CajaDeComentarios from './Components/CajaDeComentarios/CajaDeComentarios';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/registro" element={<RegistrationForm />} />
           <Route path="/ingresar" element={<FormLogin />} />
           <Route path="/sobreNosotros" element={<SobreNosotros />} />
+          <Route path="/cajaDeComentarios" element={<CajaDeComentarios />} />
         </Routes>
         <Footer />
       </div>

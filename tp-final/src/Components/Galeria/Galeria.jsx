@@ -10,6 +10,7 @@ import imgInfantil3 from '../../Imagenes/imagenesGaleria/infantiles3.jpeg';
 import imgInfantil4 from '../../Imagenes/imagenesGaleria/infantiles4.jpeg';
 import imgInfantil5 from '../../Imagenes/imagenesGaleria/rugbyClub.jpeg';
 import './galeria.css';
+import CajaDeComentarios from '../CajaDeComentarios/CajaDeComentarios';
 
 const Galeria = () => {
   const fotos = [
@@ -38,6 +39,7 @@ const Galeria = () => {
     <>
        <div className={model ? 'model open' : 'model'}>
                 <img src={tempImgSrc} />
+                <CajaDeComentarios/>
                 <CloseIcon onClick={() => setModel(false)} />
             </div>
             <h2>Galería</h2>
