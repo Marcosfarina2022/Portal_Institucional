@@ -1,6 +1,14 @@
-import { IsEmail, IsNotEmpty, isEmail } from "class-validator";
+import { IsEmail, IsNotEmpty } from "class-validator";
+import { ComentariosGaleria } from "src/comentarios_galeria/entities/comentarios_galeria.entity";
+import { ComentariosNoticia } from "src/comentarios_noticias/entities/comentarios_noticia.entity";
 import { Rol } from "src/rol/entities/rol.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 
 @Entity({ name: "usuario" })
 export class User {
@@ -24,6 +32,18 @@ export class User {
 
   @ManyToOne(() => Rol, (rol) => rol.users)
   rol: Rol;
+
+  @OneToMany(
+    () => ComentariosGaleria,
+    (comentariosGaleria) => comentariosGaleria.usuario,
+  )
+  comentariosGaleria: ComentariosGaleria[];
+
+  @OneToMany(
+    () => ComentariosNoticia,
+    (comentariosNoticia) => comentariosNoticia.usuario,
+  )
+  comentariosNoticia: ComentariosNoticia[];
 
   constructor(nombre: string, apellido: string, fecha: Date, email: string) {
     this.nombre = nombre;
