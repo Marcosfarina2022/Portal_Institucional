@@ -1,7 +1,7 @@
 import { IsNotEmpty } from "class-validator";
 import { Galeria } from "src/galeria/entities/galeria.entity";
 import { Noticia } from "src/noticias/entities/noticia.entity";
-import { Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: "categoria" })
 export class Categoria {

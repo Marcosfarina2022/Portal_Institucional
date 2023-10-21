@@ -11,7 +11,7 @@ export class ComentariosNoticiasController {
     return this.comentariosNoticiasService.create(createComentariosNoticiaDto);
   }
 
-  @Get()
+  @Get('todos')
   findAll() {
     return this.comentariosNoticiasService.findAll();
   }
