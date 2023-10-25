@@ -1,13 +1,11 @@
 import { Categoria } from "src/categoria/entities/categoria.entity";
-import { Column, Entity, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { ComentariosNoticia } from "src/comentarios_noticias/entities/comentarios_noticia.entity";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("noticias")
 export class Noticia {
   @PrimaryGeneratedColumn()
   id: number;
-
-  @PrimaryColumn()
-  idCategoria: number;
 
   @Column()
   titulo_noticia: string;
@@ -20,6 +18,9 @@ export class Noticia {
 
   @ManyToOne(() => Categoria, (categoria) => categoria.noticias)
   categoria: Categoria;
+
+  @OneToMany(() => ComentariosNoticia, (comentariosNoticias) => comentariosNoticias.noticia)
+  comentariosNoticias: ComentariosNoticia[];
 
   constructor(titulo: string, descripcion: string, foto: string) {
     this.titulo_noticia = titulo;
