@@ -64,30 +64,30 @@ const Noticias = () => {
 
   return (
     <Container className='containerNoticias text-center fluid'>
-      <Row>
-        <h1>Ultimas noticias</h1>
-      </Row>
-      <Row className='rowNoticias'>
-        {noticias.map((noticia, index) => (
-          <Col key={index} xs={12} md={4} className='mt-4 mb-4'> 
-            <Card className='cardNoticias'>
-              <Card.Body className='cardBodyNoticias'>
-                <animated.div style={fadeIn}>
-                  <Card.Title className='cardTitleNoticias'>{noticia.nombre}</Card.Title>
-                  <Card.Subtitle className='cardSubtitleNoticias'>
-                    <p className='text-center'>{noticia.descripcion}</p>
-                  </Card.Subtitle>
-                  <Link  to={noticia.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
-                  <Card.Img className='cardImgNoticias' variant='top' src={noticia.foto} />
-                  </Link>
-                </animated.div>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </div>
-    </div>
-  );
+    <Row>
+      <h1>Ultimas noticias</h1>
+    </Row>
+    <Row className='rowNoticias'>
+      {noticias.map((noticia, index) => (
+        <Col key={index} xs={12} md={4} className='mt-4 mb-4'> 
+          <Card className='cardNoticias'>
+            <Card.Body className='cardBodyNoticias'>
+              <animated.div style={fadeIn}>
+                <Card.Title className='cardTitleNoticias'>{noticia.nombre}</Card.Title>
+                <Card.Subtitle className='cardSubtitleNoticias'>
+                  <p className='text-center'>{noticia.descripcion}</p>
+                </Card.Subtitle>
+                <Link  to={noticia.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
+                <Card.Img className='cardImgNoticias' variant='top' src={noticia.foto} />
+                </Link>
+              </animated.div>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  </Container>
+);
 };
 
 export default Noticias;
