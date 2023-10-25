@@ -85,8 +85,8 @@ const Noticias = () => {
             </Card>
           </Col>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 

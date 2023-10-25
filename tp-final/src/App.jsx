@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Galeria from './Components/Galeria/Galeria';
 import Noticias from './Components/Noticias/Noticias';
-import Header from './Components/Header/Header';
+import Encabezado from './Components/Header/Header';
 import Institución from './Components/Institucion/Institucion';
 import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
-import './App.css';
-import RegistrationForm from './Components/RegistrationForm/RegistrationForm';
-import FormLogin from './Components/FormLogin/FormLogin';
+import RegistrationForm from './Components/Registro/Registro-usuario';
+import FormLogin from './Components/Ingreso/Ingreso-usuario';
 import SobreNosotros from './Components/SobreNosotros/SobreNosotros';
 
 function App() {
