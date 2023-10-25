@@ -1,7 +1,8 @@
 import { IsNotEmpty } from "class-validator";
+import { Categoria } from "src/categoria/entities/categoria.entity";
 import { Galeria } from "src/galeria/entities/galeria.entity";
 import { User } from "src/users/entities/user.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: "comentarios_galeria" })
 export class ComentariosGaleria {
@@ -12,12 +13,16 @@ export class ComentariosGaleria {
   @IsNotEmpty()
   mensaje: string;
 
-  @ManyToOne(() => Galeria, (galeria) => galeria.comentarios)
+  @ManyToOne(() => Galeria, (galeria) => galeria.comentarios)//relacion muchos a uno de comentarios_galeria a galeria(fotos)
   galeria: Galeria;
 
   @ManyToOne(() => User, (usuario) => usuario.comentariosGaleria)
   usuario: User;
 
+  @ManyToOne(() => Categoria, { eager: true }) // Agrega la relación con la categoría
+  @JoinColumn({ name: "categoriaId" }) // Define el nombre de la columna de la clave externa
+  categoria: Categoria;
+  
   constructor(mensaje: string) {
     this.mensaje = mensaje;
   }
