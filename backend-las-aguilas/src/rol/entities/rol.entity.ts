@@ -1,3 +1,4 @@
+import { IsNotEmpty } from "class-validator";
 import { User } from "src/users/entities/user.entity";
 import {
   Column,
@@ -12,18 +13,16 @@ export class Rol {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @PrimaryColumn()
-  idUsuario: number;
 
   @Column()
   tipo: string;
 
+  
   @OneToMany(() => User, (users) => users.rol)
   users: User[];
 
 
-  constructor(idUsuario: number, tipo: string) {
-    this.idUsuario = idUsuario;
+  constructor(tipo: string) {
     this.tipo = tipo;
   }
 

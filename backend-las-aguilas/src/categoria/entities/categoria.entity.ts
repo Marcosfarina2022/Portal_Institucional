@@ -12,8 +12,12 @@ export class Categoria {
   @IsNotEmpty()
   nombre: string;
 
+  /* se va a implementar a futuro
+
   @OneToMany(() => Galeria, (galeria) => galeria.categoria)
   galeria: Galeria[];
+  
+  */
 
   @OneToMany(() => Noticia, (noticias) => noticias.categoria)
   noticias: Noticia[];

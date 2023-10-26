@@ -12,6 +12,7 @@ import {
 
 @Entity({ name: "usuario" })
 export class User {
+  
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -30,7 +31,7 @@ export class User {
   @IsEmail()
   email: string;
 
-  @ManyToOne(() => Rol, (rol) => rol.users)
+  @ManyToOne(() => Rol, (rol) => rol.users, { nullable: false })
   rol: Rol;
 
   @OneToMany(
