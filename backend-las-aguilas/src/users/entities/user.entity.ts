@@ -7,6 +7,7 @@ import {
   Entity,
   ManyToOne,
   OneToMany,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
 } from "typeorm";
 
@@ -30,6 +31,9 @@ export class User {
   @Column()
   @IsEmail()
   email: string;
+
+  @PrimaryColumn()
+  rolId:number;
 
   @ManyToOne(() => Rol, (rol) => rol.users, { nullable: false })
   rol: Rol;

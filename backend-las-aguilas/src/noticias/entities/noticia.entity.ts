@@ -16,6 +16,9 @@ export class Noticia {
   @Column()
   foto_noticia: string;
 
+  @PrimaryColumn()
+  categoriaId:number;
+
   @ManyToOne(() => Categoria, (categoria) => categoria.noticias)
   categoria: Categoria;
 

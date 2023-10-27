@@ -1,4 +1,5 @@
 import { IsNotEmpty } from "class-validator";
+import { Role } from "src/common/enum/role.enum";
 import { User } from "src/users/entities/user.entity";
 import {
   Column,
@@ -14,22 +15,22 @@ export class Rol {
   id: number;
 
 
-  @Column()
-  tipo: string;
+  @Column({default:Role.USER})
+  tipo: Role;
 
   
   @OneToMany(() => User, (users) => users.rol)
   users: User[];
 
 
-  constructor(tipo: string) {
+  constructor(tipo: Role) {
     this.tipo = tipo;
   }
 
   public getTipo(): string {
     return this.tipo;
   }
-  public setTipo(tipo: string): void {
+  public setTipo(tipo: Role): void {
     this.tipo = tipo;
   }
 }
