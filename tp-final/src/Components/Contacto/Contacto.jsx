@@ -12,68 +12,68 @@ const Contacto = () => {
     const [email, setEmail] = useState('');
     const [text, setText,] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-      
+
         const formData = {
-          nombre: name,
-          apellido: surname,
-          correo_electronico: email,
-          texto: text,
-        };
-      
-        fetch('http://localhost:4000/contacto/agregar', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((response) => {
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Error en la solicitud');
-          })
-          .then((data) => {
-            // Maneja la respuesta de tu backend, por ejemplo, muestra un mensaje de éxito.
-            console.log('Solicitud POST exitosa', data);
-          })
-          .catch((error) => {
-            // Maneja cualquier error que ocurra durante la solicitud POST.
-            console.error('Error al enviar la solicitud POST', error);
-          });
-
-    /*const handleSubmit = (event) => {
-        event.preventDefault();
-
-        console.log(name,text,surname,email)
-
-        // Crear objeto con los datos del formulario
-        const datosUsuario = {
-            'consulta':text,
-            'nombre': name,
-            'apellido':surname,
-            'correo_electronico': email
+            consulta: text,
+            nombre: name,
+            apellido: surname,
+            correo_electronico: email,
         };
 
-        // Enviar los datos al servidor
-        fetch('localhost:4000/contacto/agregar', {
+        await fetch('http://localhost:4000/contacto/agregar', {
             method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json'
+            headers: {
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(datosUsuario)
-        }).then(response => response.json())
-            .then(data => {
-
-                // Aquí puedes manejar la respuesta del servidor
-                console.log('Respuesta del servidor:', data);
+            body: JSON.stringify(formData),
+        })
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Error en la solicitud');
             })
-            .catch(error => {
-                // Aquí puedes manejar el error en caso de fallo en la solicitud
-                console.error('Error al enviar los datos:', error);
-            });*/
+            .then((data) => {
+                // Maneja la respuesta de tu backend, por ejemplo, muestra un mensaje de éxito.
+                console.log('Solicitud POST exitosa', data);
+            })
+            .catch((error) => {
+                // Maneja cualquier error que ocurra durante la solicitud POST.
+                console.error('Error al enviar la solicitud POST', error);
+            });
+
+        /*const handleSubmit = (event) => {
+            event.preventDefault();
+    
+            console.log(name,text,surname,email)
+    
+            // Crear objeto con los datos del formulario
+            const datosUsuario = {
+                'consulta':text,
+                'nombre': name,
+                'apellido':surname,
+                'correo_electronico': email
+            };
+    
+            // Enviar los datos al servidor
+            fetch('localhost:4000/contacto/agregar', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datosUsuario)
+            }).then(response => response.json())
+                .then(data => {
+    
+                    // Aquí puedes manejar la respuesta del servidor
+                    console.log('Respuesta del servidor:', data);
+                })
+                .catch(error => {
+                    // Aquí puedes manejar el error en caso de fallo en la solicitud
+                    console.error('Error al enviar los datos:', error);
+                });*/
     };
 
     return (
