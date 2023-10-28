@@ -7,6 +7,8 @@ import { Repository } from 'typeorm';
 @Injectable()
 export class ContactoService {
 
+  private consultas: Contacto [] = [];  
+
   constructor(@InjectRepository(Contacto)
               private contactoRepository:Repository<Contacto>){} 
             
@@ -28,8 +30,8 @@ export class ContactoService {
   }
   }
 
-  findAll() {
-    return `This action returns all contacto`;
+  public async findAll(): Promise<ContactoDto[]> {
+    return await this.contactoRepository.find();
   }
 
   findOne(id: number) {
@@ -38,7 +40,7 @@ export class ContactoService {
 
   update(id: number, updateContactoDto: ContactoDto) {
     return `This action updates a #${id} contacto`;
-  }
+  } 
 
   remove(id: number) {
     return `This action removes a #${id} contacto`;

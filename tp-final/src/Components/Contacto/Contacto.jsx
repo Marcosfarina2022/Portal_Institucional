@@ -19,7 +19,7 @@ const Contacto = () => {
             consulta: text,
             nombre: name,
             apellido: surname,
-            correo_electronico: email,
+            correo_electronico: email
         };
 
         await fetch('http://localhost:4000/contacto/agregar', {
