@@ -7,11 +7,13 @@ import {
   Entity,
   ManyToOne,
   OneToMany,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
 } from "typeorm";
 
 @Entity({ name: "usuario" })
 export class User {
+  
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -30,7 +32,10 @@ export class User {
   @IsEmail()
   email: string;
 
-  @ManyToOne(() => Rol, (rol) => rol.users)
+  @PrimaryColumn()
+  rolId:number;
+
+  @ManyToOne(() => Rol, (rol) => rol.users, { nullable: false })
   rol: Rol;
 
   @OneToMany(

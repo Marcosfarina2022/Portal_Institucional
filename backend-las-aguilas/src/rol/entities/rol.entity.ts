@@ -1,3 +1,5 @@
+import { IsNotEmpty } from "class-validator";
+import { Role } from "src/common/enum/role.enum";
 import { User } from "src/users/entities/user.entity";
 import {
   Column,
@@ -12,25 +14,23 @@ export class Rol {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @PrimaryColumn()
-  idUsuario: number;
 
-  @Column()
-  tipo: string;
+  @Column({default:Role.USER})
+  tipo: Role;
 
+  
   @OneToMany(() => User, (users) => users.rol)
   users: User[];
 
 
-  constructor(idUsuario: number, tipo: string) {
-    this.idUsuario = idUsuario;
+  constructor(tipo: Role) {
     this.tipo = tipo;
   }
 
   public getTipo(): string {
     return this.tipo;
   }
-  public setTipo(tipo: string): void {
+  public setTipo(tipo: Role): void {
     this.tipo = tipo;
   }
 }

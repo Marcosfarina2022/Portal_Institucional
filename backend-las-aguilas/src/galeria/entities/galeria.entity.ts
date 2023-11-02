@@ -19,11 +19,17 @@ export class Galeria {
   @IsNotEmpty()
   nombre: string;
 
-  @ManyToOne(() => Categoria, (categoria) => categoria.galeria)
-  categoria: Categoria;
+ /* se va a implementar a futuro
 
+ @ManyToOne(() => Categoria, (categoria) => categoria.galeria)
+  categoria: Categoria;
+  
+  */
+
+  
   @OneToMany(() => ComentariosGaleria, (comentarios) => comentarios.galeria)
   comentarios: ComentariosGaleria[];
+  
 
 
   constructor(nombre: string) {
