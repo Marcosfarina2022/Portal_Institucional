@@ -20,7 +20,7 @@ import { ComentariosGaleriaModule } from './comentarios_galeria/comentarios_gale
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'tino3719',
+      password: 'marcos_2326',
       database: 'db_aguilas',
       entities: ["dist/**/**.entity{.ts,.js}"],
       synchronize: true,
