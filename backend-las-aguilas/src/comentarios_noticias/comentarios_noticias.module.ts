@@ -3,11 +3,11 @@ import { ComentariosNoticiasService } from './comentarios_noticias.service';
 import { ComentariosNoticiasController } from './comentarios_noticias.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ComentariosNoticia } from './entities/comentarios_noticia.entity';
-import { User } from 'src/users/entities/user.entity';
+import { Usuario } from 'src/usuario/entities/usuario.entity';
 import { Noticia } from 'src/noticias/entities/noticia.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([ComentariosNoticia, User, Noticia])],
+  imports: [TypeOrmModule.forFeature([ComentariosNoticia, Usuario, Noticia])],
   controllers: [ComentariosNoticiasController],
   providers: [ComentariosNoticiasService],
 })

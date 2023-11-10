@@ -1,27 +1,23 @@
-import { IsNotEmpty } from "class-validator";
-import { Role } from "src/common/enum/role.enum";
-import { User } from "src/users/entities/user.entity";
+import { IsNotEmpty } from 'class-validator';
+import { Role } from 'src/common/enum/role.enum';
+import { Usuario } from 'src/usuario/entities/usuario.entity';
 import {
   Column,
   Entity,
   OneToMany,
-  PrimaryColumn,
   PrimaryGeneratedColumn,
-} from "typeorm";
+} from 'typeorm';
 
 @Entity({ name: "rol" })
 export class Rol {
   @PrimaryGeneratedColumn()
   id: number;
 
-
-  @Column({default:Role.USER})
+  @Column({ default: Role.USER }) // Cambia Role.USER a 'user'
   tipo: Role;
 
-  
-  @OneToMany(() => User, (users) => users.rol)
-  users: User[];
-
+  @OneToMany(() => Usuario, (usuarios) => usuarios.rol)
+  usuarios: Usuario[];
 
   constructor(tipo: Role) {
     this.tipo = tipo;

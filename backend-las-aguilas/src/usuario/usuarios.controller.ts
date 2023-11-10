@@ -7,12 +7,12 @@ import {
   Param,
   Delete,
 } from "@nestjs/common";
-import { UsersService } from "./users.service";
-import { UserDto } from "./dto/user.dto";
+import { UsuariosService } from "./usuarios.service";
+import { UsuarioDto } from "./dto/usuario.dto";
 
-@Controller("users")
-export class UsersController {
-  constructor(private usersService: UsersService) {}
+@Controller("usuarios")
+export class UsuariosController {
+  constructor(private usersService: UsuariosService) {}
 
   /*@Post()
   create(@Body() createUserDto: UserDto) {
@@ -20,7 +20,7 @@ export class UsersController {
   }*/
 
   @Get("todos")
-  async findAll(): Promise<UserDto[]> {
+  async findAll(): Promise<UsuarioDto[]> {
     return await this.usersService.getAll();
   }
 
@@ -30,7 +30,7 @@ export class UsersController {
   }
 
   @Patch(":id")
-  update(@Param("id") id: string, @Body() updateUserDto: UserDto) {
+  update(@Param("id") id: string, @Body() updateUserDto: UsuarioDto) {
     return this.usersService.update(+id, updateUserDto);
   }
 

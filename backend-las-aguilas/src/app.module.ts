@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { databaseConfig } from './config/database.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm'; // Importa TypeOrmModule
-import { UsersModule } from './users/users.module';
+import { UsuarioModule } from './usuario/usuarios.module';
 import { RolModule } from './rol/rol.module';
 import { NoticiasModule } from './noticias/noticias.module';
 import { GaleriaModule } from './galeria/galeria.module';
@@ -12,21 +13,10 @@ import { ComentariosNoticiasModule } from './comentarios_noticias/comentarios_no
 import { ComentariosGaleriaModule } from './comentarios_galeria/comentarios_galeria.module';
 import { AuthModule } from './auth/auth.module';
 
-
-
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'timo2906',
-      database: 'las_aguilas',
-      entities: ["dist/**/**.entity{.ts,.js}"],
-      synchronize: true,
-    }),
-    UsersModule,
+    TypeOrmModule.forRoot(databaseConfig),
+    UsuarioModule,
     RolModule,
     NoticiasModule,
     GaleriaModule,

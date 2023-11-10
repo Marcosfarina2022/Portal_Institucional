@@ -2,6 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.interface';
 import { ValidationPipe } from '@nestjs/common';
+import { config } from 'dotenv';
+config({ path: '../.env' });
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -30,4 +32,5 @@ async function bootstrap() {
   await app.listen(4000);
   console.log(`Escuchando en el puerto 4000`)
 }
+
 bootstrap();

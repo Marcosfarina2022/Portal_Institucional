@@ -1,7 +1,7 @@
 import { IsNotEmpty } from "class-validator";
 import { Categoria } from "src/categoria/entities/categoria.entity";
 import { Noticia } from "src/noticias/entities/noticia.entity";
-import { User } from "src/users/entities/user.entity";
+import { Usuario } from "src/usuario/entities/usuario.entity";
 import {
   Column,
   Entity,
@@ -22,8 +22,8 @@ export class ComentariosNoticia {
   @ManyToOne(() => Noticia, (noticia) => noticia.comentariosNoticias)
   noticia: Noticia;
 
-  @ManyToOne(() => User, (usuario) => usuario.comentariosNoticia)
-  usuario: User;
+  @ManyToOne(() => Usuario, (usuario) => usuario.comentariosNoticia)
+  usuario: Usuario;
 
   @ManyToOne(() => Categoria, { eager: true }) // Agrega la relación con la categoría
   @JoinColumn({ name: "categoriaId" }) // Define el nombre de la columna de la clave externa
