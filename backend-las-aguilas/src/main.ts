@@ -10,7 +10,7 @@ async function bootstrap() {
 
   // Configura CORS
   const corsOptions: CorsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: ['http://localhost:3000','https://portal-institucional-5edb1.web.app'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   };
