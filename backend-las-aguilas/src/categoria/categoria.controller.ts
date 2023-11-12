@@ -10,7 +10,7 @@ export class CategoriaController {
   create(@Body() createCategoriaDto: CategoriaDto) {
     return this.categoriaService.create(createCategoriaDto);
   }
-
+ 
   @Get()
   findAll() {
     return this.categoriaService.findAll();
