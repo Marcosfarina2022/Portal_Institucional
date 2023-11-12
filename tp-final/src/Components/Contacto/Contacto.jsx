@@ -22,7 +22,7 @@ const Contacto = () => {
             correo_electronico: email
         };
 
-        await fetch('http://localhost:4000/contacto/agregar', {
+        await fetch('https://porta-institucional.onrender.com/contacto/agregar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
