@@ -1,9 +1,7 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
-//import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 import './noticias.css';
 import { useSpring, animated } from 'react-spring';
-
 import noticia1 from '../../Imagenes/imgNoticias/1.svg';
 import noticia2 from '../../Imagenes/imgNoticias/2.svg';
 import noticia3 from '../../Imagenes/imgNoticias/3.svg';
@@ -102,10 +100,6 @@ const Noticias = (props) => {
             </Card>
           </Col>
         ))}
-        <CategoriasDropdown
-          categoriaSeleccionada={categoriaSeleccionada}
-          setCategoriaSeleccionada={setCategoriaSeleccionada}
-        />
       </Row>
     </Container>
   );

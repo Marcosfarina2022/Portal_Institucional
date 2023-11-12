@@ -41,6 +41,9 @@ aside{
     text-align: center;
     height: 48px;
 }
+.card-title{
+    margin-top:var(--bs-card-title-spacer-y);
+}
 
 .colorBoton{
     background-color:rgba(93, 14, 84, 0.766);
