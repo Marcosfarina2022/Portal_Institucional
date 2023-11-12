@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "pkg": "^5.8.1"
-=======
   "name": "tp-final",
   "version": "0.1.0",
   "private": true,
@@ -53,6 +49,5 @@
   },
   "devDependencies": {
     "web-vitals": "^3.3.1"
->>>>>>> origin/FernandoDiaz
   }
 }
