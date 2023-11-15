@@ -10,6 +10,7 @@
     "@react-icons/all-files": "^4.1.0",
     "bootstrap": "^5.3.0-alpha3",
     "cra-template": "1.2.0",
+    "firebase": "^10.6.0",
     "framer-motion": "^10.12.17",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
@@ -21,7 +22,8 @@
     "react-router-bootstrap": "^0.26.2",
     "react-router-dom": "^6.14.0",
     "react-scripts": "5.0.1",
-    "react-spring": "^9.7.2"
+    "react-spring": "^9.7.2",
+    "react-update": "^0.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,6 +50,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.23.3",
     "web-vitals": "^3.3.1"
   }
 }
