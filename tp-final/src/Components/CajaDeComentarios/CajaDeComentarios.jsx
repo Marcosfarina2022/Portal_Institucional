@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './cajaDeComentarios.css'; // Asegúrate de que el nombre del archivo CSS coincida con el que proporcioné
-import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap';
+import { Container, Form, Button, ListGroup } from 'react-bootstrap';
 
 class CajaDeComentarios extends Component {
   constructor(props) {
@@ -31,7 +31,6 @@ class CajaDeComentarios extends Component {
     const { comments, newComment } = this.state;
     return (
       <Container className="comment-box mt-12">
-        <Row className="mt-12">
             <ListGroup>
               {comments.map((comment, index) => {
                 const [time, text] = comment.split(' - ');
@@ -42,7 +41,9 @@ class CajaDeComentarios extends Component {
                 );
               })}
             </ListGroup>
-            <div className='textarea'>
+            
+
+        <div className='textarea'>
             <Form.Control
               as="textarea"
               rows={4}
@@ -59,7 +60,6 @@ class CajaDeComentarios extends Component {
               Enviar comentario
             </Button>
             </div>
-        </Row>
       </Container>
     );
   }
