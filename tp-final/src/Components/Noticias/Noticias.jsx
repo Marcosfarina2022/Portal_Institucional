@@ -2,7 +2,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 //import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 import './noticias.css';
-import { useSpring, animated } from 'react-spring';
+//import { useSpring, animated } from 'react-spring';
 
 import noticia1 from '../../Imagenes/imgNoticias/1.svg';
 import noticia2 from '../../Imagenes/imgNoticias/2.svg';
@@ -55,12 +55,12 @@ const Noticias = () => {
     from: { opacity: 0 },
     to: { opacity: 1 },
     config: { duration: 500 },
-  });*/
+  });
   const fadeIn = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
     config: { duration: 500 }, // Ajusta la duración de la animación
-  });
+  });*/
 
   return (
     <Container className='containerNoticias text-center fluid'>
@@ -72,7 +72,6 @@ const Noticias = () => {
           <Col key={index} xs={12} md={4} className='mt-4 mb-4'> 
             <Card className='cardNoticias'>
               <Card.Body className='cardBodyNoticias'>
-                <animated.div style={fadeIn}>
                   <Card.Title className='cardTitleNoticias'>{noticia.nombre}</Card.Title>
                   <Card.Subtitle className='cardSubtitleNoticias'>
                     <p className='text-center'>{noticia.descripcion}</p>
@@ -80,7 +79,6 @@ const Noticias = () => {
                   <Link  to={noticia.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
                   <Card.Img className='cardImgNoticias' variant='top' src={noticia.foto} />
                   </Link>
-                </animated.div>
               </Card.Body>
             </Card>
           </Col>

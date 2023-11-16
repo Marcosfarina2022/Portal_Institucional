@@ -5,6 +5,7 @@ import imgMelina from "../../Imagenes/imgSobreNosotros/foto-perfil-melina.svg";
 import imgMarcos from "../../Imagenes/imgSobreNosotros/foto-perfil-marcos.svg";
 import imgFernando from "../../Imagenes/imgSobreNosotros/fernando.jpeg";
 import imgGuido from "../../Imagenes/imgSobreNosotros/foto-perfil-guido.svg";
+import imgNico from '../../Imagenes/imgSobreNosotros/foto-perfil-nico.svg'
 import "./sobreNosotros.css";
 
 const equipoDesarrollo = [
@@ -18,14 +19,14 @@ const equipoDesarrollo = [
     nombre: "Marcos Farina",
     foto_perfil: imgMarcos,
     linkedin: "https://www.linkedin.com/in/farina-marcos-1063a271/",
-    descripcion: "Desarrollador Full Stack",
+    descripcion: "Desarrollador Full-Stack | Licenciado en Informática | Analista de Sistemas",
   },
   {
     nombre: "Melina Gabriela Figueroa",
     foto_perfil: imgMelina,
     linkedin: "https://www.linkedin.com/in/melinagfigueroa/",
     descripcion:
-      "Desarrolladora Full Stack | Fron-End | Back-End | UX UI Designer",
+      "Desarrolladora Full-Stack | Fron-End | Back-End | UX UI Designer",
   },
 
   {
@@ -36,7 +37,7 @@ const equipoDesarrollo = [
   },
   {
     nombre: "Nicolas Vega",
-    foto_perfil: "ruta-de-la-imagen-3.jpg",
+    foto_perfil: imgNico,
     linkedin: "https://www.linkedin.com/perfil-miembro-2",
     descripcion: "Desarrollador Full Stack",
   },
