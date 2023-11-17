@@ -1,3 +1,27 @@
+/* Estilo de las tarjetas de los miembros del equipo en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .card-integrante {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .card-integrante .cardImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .titulo-nombre {
+    font-size: 18px;
+  }
+
+  .descripcion-skills {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
 /* Contenedor principal de la sección "Sobre Nosotros" */
 .containerSobreNosotros {
   display: flex;
