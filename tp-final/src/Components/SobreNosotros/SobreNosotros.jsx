@@ -44,15 +44,15 @@ const equipoDesarrollo = [
   },
   {
     nombre: "Kevin Santander",
-    foto_perfil: "ruta-de-la-imagen-4.jpg",
-    linkedin: "https://www.linkedin.com/perfil-miembro-1",
-    descripcion: "Desarrollador Full Stack.",
-  },
-  {
-    nombre: "Emanuel Lucietti",
     foto_perfil: imgKevin,
     linkedin: "https://www.linkedin.com/perfil-miembro-1",
     descripcion: "Desarrollador Full Stack |  habilidades destacadas en la resolución de problemas | diseño de sistemas y optimización de rendimiento.",
+  },
+  {
+    nombre: "Emanuel Lucietti",
+    foto_perfil: "ruta-de-la-imagen-.jpg",
+    linkedin: "https://www.linkedin.com/perfil-miembro-1",
+    descripcion: "Desarrollador Full Stack",
   },
 ];
 
