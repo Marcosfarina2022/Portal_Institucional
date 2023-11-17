@@ -6,6 +6,7 @@ import imgMarcos from "../../Imagenes/imgSobreNosotros/foto-perfil-marcos.svg";
 import imgFernando from "../../Imagenes/imgSobreNosotros/fernando.jpeg";
 import imgGuido from "../../Imagenes/imgSobreNosotros/foto-perfil-guido.svg";
 import imgNico from '../../Imagenes/imgSobreNosotros/foto-perfil-nico.svg'
+import imgKevin from '../../Imagenes/imgSobreNosotros/foto-perfil-kevin.svg'
 import "./sobreNosotros.css";
 
 const equipoDesarrollo = [
@@ -13,45 +14,45 @@ const equipoDesarrollo = [
     nombre: "Guido Simonetti",
     foto_perfil: imgGuido,
     linkedin: "https://www.linkedin.com/perfil-miembro-2",
-    descripcion: "Desarrollador Full Stack",
+    descripcion: "Desarrollador Full Stack.",
   },
   {
     nombre: "Marcos Farina",
     foto_perfil: imgMarcos,
     linkedin: "https://www.linkedin.com/in/farina-marcos-1063a271/",
-    descripcion: "Desarrollador Full-Stack | Licenciado en Informática | Analista de Sistemas",
+    descripcion: "Desarrollador Full-Stack | Licenciado en Informática | Analista de Sistemas.",
   },
   {
     nombre: "Melina Gabriela Figueroa",
     foto_perfil: imgMelina,
     linkedin: "https://www.linkedin.com/in/melinagfigueroa/",
     descripcion:
-      "Desarrolladora Full-Stack | Fron-End | Back-End | UX UI Designer",
+      "Desarrolladora Full-Stack | Fron-End | Back-End | UX UI Designer.",
   },
 
   {
     nombre: "Fernando Andres Diaz",
     foto_perfil: imgFernando,
     linkedin: "https://www.linkedin.com/in/diaz-fernando/",
-    descripcion: "Desarrollador Full Stack",
+    descripcion: "Desarrollador Full Stack.",
   },
   {
     nombre: "Nicolas Vega",
     foto_perfil: imgNico,
     linkedin: "https://www.linkedin.com/perfil-miembro-2",
-    descripcion: "Desarrollador Full Stack",
+    descripcion: "Desarrollador Full Stack.",
   },
   {
     nombre: "Kevin Santander",
     foto_perfil: "ruta-de-la-imagen-4.jpg",
     linkedin: "https://www.linkedin.com/perfil-miembro-1",
-    descripcion: "Desarrollador Full Stack",
+    descripcion: "Desarrollador Full Stack.",
   },
   {
     nombre: "Emanuel Lucietti",
-    foto_perfil: "ruta-de-la-imagen-4.jpg",
+    foto_perfil: imgKevin,
     linkedin: "https://www.linkedin.com/perfil-miembro-1",
-    descripcion: "Desarrollador Full Stack",
+    descripcion: "Desarrollador Full Stack |  habilidades destacadas en la resolución de problemas | diseño de sistemas y optimización de rendimiento.",
   },
 ];
 
