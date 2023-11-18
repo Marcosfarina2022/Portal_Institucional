@@ -6,14 +6,14 @@ import { GaleriaDto } from './dto/galeria.dto';
 export class GaleriaController {
   constructor(private readonly galeriaService: GaleriaService) {}
 
-  @Post()
-  create(@Body() createGaleriaDto: GaleriaDto) {
-    return this.galeriaService.create(createGaleriaDto);
-  }
+  //@Post()
+  //create(@Body() createGaleriaDto: GaleriaDto) {
+  //  return this.galeriaService.create(createGaleriaDto);
+  //}
 
-  @Get()
-  findAll() {
-    return this.galeriaService.findAll();
+  @Get('/fotos')
+  async findAll(): Promise<GaleriaDto[]> {
+    return await this.galeriaService.findAll();
   }
 
   @Get(':id')

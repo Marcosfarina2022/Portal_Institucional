@@ -1,14 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { GaleriaDto } from './dto/galeria.dto';
+import { Galeria } from './entities/galeria.entity';
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class GaleriaService {
-  create(createGaleriaDto: GaleriaDto) {
-    return 'This action adds a new galeria';
-  }
+  private imagenes: Galeria [] = [];  
 
-  findAll() {
-    return `This action returns all galeria`;
+  constructor(@InjectRepository(Galeria)
+              private galeriaRepository:Repository<Galeria>){}          
+
+  public async findAll(): Promise<GaleriaDto[]> {
+    return await this.galeriaRepository.find();
   }
 
   findOne(id: number) {

@@ -17,7 +17,11 @@ export class Galeria {
 
   @Column()
   @IsNotEmpty()
-  nombre: string;
+  img_nombre: string;
+
+  @Column()
+  @IsNotEmpty()
+  url: string;
 
  /* se va a implementar a futuro
 
@@ -32,15 +36,24 @@ export class Galeria {
   
 
 
-  constructor(nombre: string) {
-    this.nombre = nombre;
+  constructor(img_nombre: string, url:string) {
+    this.img_nombre = img_nombre;
+    this.url = url;
   }
-  public getNombre(): string {
-    return this.nombre;
+  public getImg_Nombre(): string {
+    return this.img_nombre;
   }
-  public setNombre(nombre: string): void {
-    this.nombre = nombre;
+  public setImg_Nombre(img_nombre: string): void {
+    this.img_nombre = img_nombre;
   }
+  public getImg_url(): string {
+    return this.url;
+  }
+
+  public setImg_url(nueva_url: string): void {
+    this.url = nueva_url;
+  }
+
   public getId(): number {
     return this.id;
   }

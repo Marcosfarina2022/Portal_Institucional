@@ -1,3 +1,4 @@
 export class GaleriaDto {
-  readonly nombre: string;
+  readonly img_nombre: string;
+  readonly url: string;
 }

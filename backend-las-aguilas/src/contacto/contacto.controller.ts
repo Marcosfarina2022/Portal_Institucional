@@ -11,7 +11,7 @@ export class ContactoController {
     return await this.contactoService.create(contactoDto);
   }
  
-  @Get("consultas")
+  @Get("/consultas")
   async findAll(): Promise<ContactoDto[]> {
     return await this.contactoService.findAll();
   }
