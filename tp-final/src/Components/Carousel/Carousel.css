@@ -1,7 +1,8 @@
 .carousell {
-  margin: 5vh;
+  width: 90%;
+  justify-content: center;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 1vh;
 }
 
 .caption {
@@ -11,23 +12,23 @@
 .caption h3,
 .caption p {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 2vh;
 }
 
 .caption h3 {
-  font-size: 24px;
+  font-size: 4vh;
 }
 
 .carousel-item {
   height: 400px;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 5vh;
 }
 
 .carousel-item img {
   object-fit: fill;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 1vh;
   transition: transform 0.5s ease;
 }
 

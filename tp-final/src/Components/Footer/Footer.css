@@ -1,60 +1,65 @@
-.footer {
-  width: 100%;
+.container-footer {
   display: flex;
-  flex-direction: column;
-  font-weight: bold;
+  flex-direction: row;
+justify-content: space-around;
+  width: 100%;
+  background: linear-gradient(rgba(247, 113, 164, 0.459), rgba(76, 120, 158, 0.524));
+  padding: 1.5vh; /* Ajusta según sea necesario */
 }
 
-.div-logo{ 
-  margin-top: 1%;  
-  width: 5rem;
-  height: 100%;
-}
-
-.logo{
+.container-footer img {
+  width: 20vh;
   animation: ilustracion 1s ease-in infinite alternate;
 }
-   
-.div-redes {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  margin-top: 20px;
-}
-  
-.titulo {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.titulo-redes{
-  font-size: 14px;
-}
-
-.redes {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-  
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.containerFooter{
-  max-width: inherit;
-}
-
 @keyframes ilustracion{
-  0%{
-    transform: scale(1);
-  }
-  100%{
-    transform: scale(1.05);
-  }
+    0%{
+        transform: scale(1);
+    }100%{
+        transform: scale(1.05);
+    }
+}
+.title-section{
+  text-align: center; 
+  margin: 2vh;
+
+}
+.title-section h5 {
+  font-size: 4vh;
+  margin: 3vh;
+}
+
+.title-section p{
+  font-size: 3vh;
 }
 
 
-  
+.redes-section a {
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+color: #d400ff;
+width: 5vh;
+}
+
+  .redes-section a:hover {
+    color: #ff0000; /* Cambia el color al pasar el ratón sobre los iconos */
+  }
+.glow {
+  width: 100%;
+  background: linear-gradient(45deg, #000000, #000000, #f771a5, #b76eff, #8c20f8);
+  background-size: 400%;
+  animation: animate 1.5s linear 3;
+  bottom: 0;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
