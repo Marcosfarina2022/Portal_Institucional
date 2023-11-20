@@ -1,6 +1,8 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { GaleriaService } from './galeria.service';
 import { GaleriaDto } from './dto/galeria.dto';
+import { Galeria } from './entities/galeria.entity';
+import { Auth } from 'src/auth/entities/auth.entity';
 
 @Controller('galeria')
 export class GaleriaController {
@@ -11,14 +13,14 @@ export class GaleriaController {
   //  return this.galeriaService.create(createGaleriaDto);
   //}
 
-  @Get('/fotos')
+  @Get('fotos')
   async findAll(): Promise<GaleriaDto[]> {
     return await this.galeriaService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.galeriaService.findOne(+id);
+  @Get('obtener/:id')
+  async buscarId(@Param('id') id: number):Promise<Galeria> {
+    return await this.galeriaService.findOne(id);
   }
 
   @Patch(':id')

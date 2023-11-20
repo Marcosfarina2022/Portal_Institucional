@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { GaleriaDto } from './dto/galeria.dto';
 import { Galeria } from './entities/galeria.entity';
-import { Repository } from 'typeorm';
+import { Repository, FindOneOptions } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
@@ -15,8 +15,13 @@ export class GaleriaService {
     return await this.galeriaRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} galeria`;
+  async findOne(id: number) {
+    const criterio :FindOneOptions = {where:{id:id}};
+    let foto:Galeria = await this.galeriaRepository.findOne(criterio);
+    if(foto)
+      return foto;
+    else
+      return null;
   }
 
   update(id: number, updateGaleriaDto: GaleriaDto) {

@@ -1,7 +1,7 @@
 import { IsNotEmpty } from "class-validator";
 import { Galeria } from "src/galeria/entities/galeria.entity";
 import { User } from "src/users/entities/user.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity({ name: "comentarios_galeria" })
 export class ComentariosGaleria {
@@ -14,9 +14,11 @@ export class ComentariosGaleria {
 
   @ManyToOne(() => Galeria, (galeria) => galeria.comentarios)
   galeria: Galeria;
+  
 
   @ManyToOne(() => User, (usuario) => usuario.comentariosGaleria)
   usuario: User;
+
 
   constructor(mensaje: string) {
     this.mensaje = mensaje;

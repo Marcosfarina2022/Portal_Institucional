@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ComentariosGaleriaService } from './comentarios_galeria.service';
 import { ComentariosGaleriaDto } from './dto/comentarios_galeria.dto';
+import { ComentariosGaleria } from './entities/comentarios_galeria.entity';
 
 @Controller('comentarios-galeria')
 export class ComentariosGaleriaController {
@@ -11,15 +12,15 @@ export class ComentariosGaleriaController {
     return this.comentariosGaleriaService.create(createComentariosGaleriaDto);
   }
 
-  @Get()
-  findAll() {
-    return this.comentariosGaleriaService.findAll();
+  @Get('obtenerAll/:id')
+  async buscarTodos(@Param('id') id: number):Promise<ComentariosGaleria[]> {
+    return await this.comentariosGaleriaService.findCommentsByGaleriaId(id);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.comentariosGaleriaService.findOne(+id);
-  }
+  /*@Get('/:id')
+  async buscarId(@Param('id') id: number):Promise<ComentariosGaleria> {
+    return await this.comentariosGaleriaService.findOne(id);
+  }*/
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateComentariosGaleriaDto: ComentariosGaleriaDto) {
