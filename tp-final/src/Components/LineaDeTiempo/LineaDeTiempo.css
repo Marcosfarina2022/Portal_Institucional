@@ -85,6 +85,10 @@
     color: white;
 }
 
+.content h4 {
+    
+    color: rgb(160, 2, 123);
+}
 /* Animacion de linea de tiempo*/
 
 .efecto{
