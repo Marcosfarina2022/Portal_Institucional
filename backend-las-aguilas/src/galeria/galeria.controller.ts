@@ -8,10 +8,10 @@ import { Auth } from 'src/auth/entities/auth.entity';
 export class GaleriaController {
   constructor(private readonly galeriaService: GaleriaService) {}
 
-  //@Post()
-  //create(@Body() createGaleriaDto: GaleriaDto) {
-  //  return this.galeriaService.create(createGaleriaDto);
-  //}
+  @Post('crear')
+  create(@Body() createGaleriaDto: GaleriaDto) {
+    return this.galeriaService.create(createGaleriaDto);
+  }
 
   @Get('fotos')
   async findAll(): Promise<GaleriaDto[]> {

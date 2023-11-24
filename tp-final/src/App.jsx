@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageUploadForm from './Components/Formulario_Edicion/ImageUploadForm';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Galeria from './Components/Galeria/Galeria';
@@ -18,6 +19,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
+        <ImageUploadForm/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/galeria" element={<Galeria />} />
