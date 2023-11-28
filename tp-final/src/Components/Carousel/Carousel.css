@@ -1,39 +1,22 @@
-.carousell {
-  width: 90%;
-  justify-content: center;
+.container-carrousel {
+  width: 100%;
+  display: flex;
+  align-items: center;
   border: 1px solid #ccc;
-  border-radius: 1vh;
+  border-radius: 5px;
+  margin-bottom: 5%;
 }
-
-.caption {
-  background-color: rgba(0, 0, 0, 0.6);
+.carrousel{
+  width: 100%;
 }
-
-.caption h3,
-.caption p {
-  color: #ffffff;
-  font-size: 2vh;
-}
-
-.caption h3 {
-  font-size: 4vh;
-}
-
-.carousel-item {
-  height: 400px;
-  overflow: hidden;
-  border-radius: 5vh;
-}
-
-.carousel-item img {
-  object-fit: fill;
-  height: 100%;
-  border-radius: 1vh;
+.carrousel-img{
+  width: 100%;
+  border-radius: 5px;
   transition: transform 0.5s ease;
 }
 
-.carousell img {
-  transition: transform 0.5s ease;
+.carrousel-item{
+  border-radius: 5px;
 }
 
 .carousell img:hover {

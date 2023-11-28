@@ -1,9 +1,10 @@
-import { Injectable } from '@nestjs/common';
-import { LoginDto } from './dto/login.dto';
+// auth.service.ts
+import { Injectable, BadRequestException } from '@nestjs/common';
+import { RegistroDto } from './dto/registro.dto';
 import { Usuario } from 'src/usuario/entities/usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { RegistroDto } from './dto/registro.dto';
+import { validate } from 'class-validator';
 
 @Injectable()
 export class AuthService {
@@ -12,23 +13,14 @@ export class AuthService {
   ) {}
 
   async registro(createAuthDto: RegistroDto): Promise<Usuario> {
-    // Crea un nuevo usuario en la base de datos usando el DTO de registro
-    return await this.userRepository.save(createAuthDto);
-  }
+    // Validar el DTO usando class-validator
+    const errors = await validate(createAuthDto);
+    if (errors.length > 0) {
+      throw new BadRequestException(errors);
+    }
 
-  findAll() {
-    return `This action returns all auth`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} auth`;
-  }
-
-  update(id: number, updateAuthDto: LoginDto) {
-    return `This action updates a #${id} auth`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} auth`;
+    // Continuar con el proceso de registro
+    const nuevoUsuario = this.userRepository.create(createAuthDto);
+    return await this.userRepository.save(nuevoUsuario);
   }
 }

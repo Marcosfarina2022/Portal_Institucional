@@ -43,7 +43,7 @@ function Sponsors() {
     <div className="sponsors-container">
       <div className="text">
         <div className="text-overlay" />
-        <div id="title">
+        <div className="title">
           Nos apoyan
         </div>
         <div className="descripcion">

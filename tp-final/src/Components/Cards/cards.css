@@ -1,48 +1,87 @@
-
-.row-contenedor{
-    justify-content: center;
-}
-
-.card{
-    margin: 10px;
-}
-
-
-.row-contenedor .card-body {
-
-    background-color: rgba(61, 6, 31, 0.183);
-    border-radius: 5px;
-}
-
-.card-body-aside {
+.container-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start; 
+  }
+  
+  .noticias-seccion {
+    width: 66.66%; 
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card-noticia {
+    width: 45%; 
+    margin: 1%; /* Espaciado entre las tarjetas */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .sidebar-seccion {
+    width: 33.34%; /* Ancho para el sidebar */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-aside{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.img-aside{
-    object-fit: contain;
-}
-
-.card-aside{
-    margin: 10px;
-    height: 57%;
-}
-
-.card-text{
+    align-items: flex-start; /* Alinea al inicio del contenedor */
+  }
+  
+  .card-sidebar {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .imagen-foto,
+  .imagen-sidebar {
+    object-fit: fill;
+    width: 100%;
+  }
+  
+  .titulo-nombre {
+    color: #1d1c1c;
+    padding: 2%;
+    margin: 2%;
     text-align: center;
-    height: 48px;
-}
-
-.colorBoton{
-    background-color:rgba(93, 14, 84, 0.766);
-
-}
+  }
+  
+  .card-noticia p,
+  .card-sidebar p {
+    padding: 10px;
+  }
+  
+ .boton{
+    color: #1d1c1c;
+    background-color:    rgba(247, 113, 164, 0.966);
+    font-weight: bolder;
+  }
+  .boton:hover{
+    color: #1d1c1c;
+    background-color:  rgba(76, 120, 158, 0.524);
+    font-weight: bolder;
+  } 
+  
+  .link-leermas {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .container-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .noticias-seccion,
+    .sidebar-seccion {
+      width: 100%;
+    }
+  
+    .card-noticia,
+    .card-sidebar {
+      width: 100%;
+    }
+  }
+  

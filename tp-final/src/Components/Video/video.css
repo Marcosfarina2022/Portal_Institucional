@@ -1,0 +1,10 @@
+.container-videoPlayer {
+  width: 33.34%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+}
+.react-player{
+    width: 100%; /* Ancho para el sidebar */
+align-items: flex-end;
+}

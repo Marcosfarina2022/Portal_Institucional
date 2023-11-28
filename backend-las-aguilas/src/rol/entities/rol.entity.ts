@@ -13,7 +13,7 @@ export class Rol {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ default: Role.USER }) // Cambia Role.USER a 'user'
+  @Column({ default: Role.USER })
   tipo: Role;
 
   @OneToMany(() => Usuario, (usuarios) => usuarios.rol)

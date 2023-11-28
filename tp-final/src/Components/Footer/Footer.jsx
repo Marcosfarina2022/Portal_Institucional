@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import logoCLA from "../../Imagenes/imagenes-Header-Footer/logoCla.svg";
+import Logo from "../../Imagenes/imagenes-Header-Footer/logo.svg";
 import "./footer.css";
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
       <footer className="container-footer">
         <section className="logo-section">
           <Link to="/">
-            <img src={logoCLA} alt="logo-Las-Aguilas" />
+            <img src={Logo} alt="logo-Las-Aguilas" />
           </Link>
         </section>
         <section className="title-section">

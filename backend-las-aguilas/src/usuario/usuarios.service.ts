@@ -3,6 +3,7 @@ import { UsuarioDto } from './dto/usuario.dto';
 import { Usuario } from './entities/usuario.entity';
 import { FindManyOptions, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { createRoot } from 'react-dom/client';
 
 @Injectable()
 export class UsuariosService {
@@ -13,8 +14,8 @@ export class UsuariosService {
     private readonly usuarioRepository: Repository<Usuario>
   ) {}
 
-  public async getAll(): Promise<UsuarioDto[]> {
-    return await this.usuarioRepository.find();
+  public async createRoot(): Promise<UsuarioDto[]> {
+    return await this.usuarioRepository.createRoot();
   }
 
   findOne(id: number) {

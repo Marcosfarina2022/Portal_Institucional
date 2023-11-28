@@ -1,35 +1,17 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
-
+import React from "react";
+import ReactPlayer from "react-player";
+import './video.css';
 const VideoPlayer = () => {
   return (
-    <div
-      style={{
-        width: 'auto',
-        height: '400px',
-        paddingBottom: '50.25%',
-        position: 'relative',
-        borderRadius: '10px',
-        overflow: 'hidden',
-        marginBottom:'3%',
-      }}
-    >
+    <div className="container-videoPlayer">
       <ReactPlayer
-        url='https://www.youtube.com/watch?v=_4QqLyc3HnI'
-        className='react-player'
-        width='100%'
-        height='100%'
-        style={{
-          position: 'absolute',
-          top: '0',
-          left: '0',
-          borderRadius: '10px'
-        }}
+        url="https://www.youtube.com/watch?v=_4QqLyc3HnI"
+        className="react-player"
         controls
         volume={0.4}
       />
     </div>
   );
-}
+};
 
 export default VideoPlayer;

@@ -25,9 +25,6 @@ export class Usuario {
   @IsNotEmpty({ message: "Apellido no puede estar vacío" })
   apellido: string;
 
-  @Column({ type: "date", nullable: true })
-  @IsDate({ message: "Fecha de nacimiento debe ser una fecha" })
-  fecha_nacimiento: Date;
 
   @Column({ unique: true, nullable: false })
   @IsEmail({}, { message: "Correo electrónico no es válido" })
@@ -43,7 +40,7 @@ export class Usuario {
   rolId: Role;
 
   @ManyToOne(() => Rol, (rol) => rol.usuarios, { nullable: false })
-  rol: Rol;
+  rol: Role;
 
   @OneToMany(
     () => ComentariosGaleria,
@@ -60,14 +57,12 @@ export class Usuario {
   constructor(
     nombre: string,
     apellido: string,
-    fecha: Date,
     email: string,
     password: string,
     rolId: Role
   ) {
     this.nombre = nombre;
     this.apellido = apellido;
-    this.fecha_nacimiento = fecha;
     this.email = email;
     this.password = password;
     this.rolId = rolId;

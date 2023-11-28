@@ -1,0 +1,17 @@
+.px-4 {
+    border-radius: 25px;
+    box-shadow: 3px 3px rgba(245, 245, 245, 0.692), -1em 0 .4em rgba(0, 0, 0, 0.418);
+}
+
+.img-registrationForm {
+    width: 145px;
+    height: 145px;
+}
+
+a .cardbodyForm {
+    background-color: white;
+}
+
+.containerRegistro{
+    height: 100vh;
+}

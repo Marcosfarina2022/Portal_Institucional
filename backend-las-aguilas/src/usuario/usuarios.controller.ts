@@ -12,12 +12,12 @@ import { UsuarioDto } from "./dto/usuario.dto";
 
 @Controller("usuarios")
 export class UsuariosController {
-  constructor(private usersService: UsuariosService) {}
+  constructor(private  usersService: UsuariosService) {}
 
-  /*@Post()
-  create(@Body() createUserDto: UserDto) {
+  @Post()
+  create(@Body() createUserDto: UsuarioDto) {
     return this.usersService.create(createUserDto);
-  }*/
+  }
 
   @Get("todos")
   async findAll(): Promise<UsuarioDto[]> {

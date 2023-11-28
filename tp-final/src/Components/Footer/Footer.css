@@ -34,11 +34,11 @@ justify-content: space-around;
 
 
 .redes-section a {
-  margin-right: 10px;
+  width: 5vw;
+  margin-right: 5%;
   text-decoration: none;
   transition: color 0.3s ease; 
-color: #d400ff;
-width: 5vh;
+color: #1c0121;
 }
 
   .redes-section a:hover {

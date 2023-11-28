@@ -3,21 +3,23 @@ import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import NavBar from "../NavBar/NavBar";
-import logoCLA from "../../Imagenes/LogoCLA2.png";
+import Logo from "../../Imagenes/imagenes-Header-Footer/logo.svg";
 import "./header.css";
 
 const Header = () => {
   return (
+    <React.Fragment>
     <>
-      <header className="container-header">
+      <header>
+        <section className="container-header">
         <section className="logo-section">
           <Link to="/">
-            <img src={logoCLA} alt="logo-Las-Aguilas" />
+            <img src={Logo} alt="logo-Las-Aguilas" />
           </Link>
         </section>
         <section className="title-section">
           <h1>Club Las Aguilas</h1>
-          <NavBar />
+          <NavBar className='nav-bar' />
         </section>
         <section className="ingreso-registro-section">
           <LinkContainer to="/ingresar">
@@ -31,10 +33,11 @@ const Header = () => {
             </a>
           </LinkContainer>
         </section>
-
+        </section>
       </header>
     </>
-  );
+    </React.Fragment>
+ );
 };
 
 export default Header;
