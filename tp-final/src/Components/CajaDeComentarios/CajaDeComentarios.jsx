@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './cajaDeComentarios.css'; // Asegúrate de que el nombre del archivo CSS coincida con el que proporcioné
-import { Container, Row, Form, Button, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap';
 
 class CajaDeComentarios extends Component {
   constructor(props) {

@@ -10,6 +10,7 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { ContactoModule } from './contacto/contacto.module';
 import { ComentariosNoticiasModule } from './comentarios_noticias/comentarios_noticias.module';
 import { ComentariosGaleriaModule } from './comentarios_galeria/comentarios_galeria.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -30,7 +31,8 @@ import { ComentariosGaleriaModule } from './comentarios_galeria/comentarios_gale
     CategoriaModule,
     ContactoModule,
     ComentariosNoticiasModule,
-    ComentariosGaleriaModule
+    ComentariosGaleriaModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],

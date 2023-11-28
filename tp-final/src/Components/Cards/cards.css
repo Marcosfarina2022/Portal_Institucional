@@ -9,7 +9,6 @@
 
 
 .row-contenedor .card-body {
-
     background-color: rgba(61, 6, 31, 0.183);
     border-radius: 5px;
 }
@@ -42,7 +41,36 @@ aside{
     height: 48px;
 }
 
+div.card-title.h5{
+    margin-top: 5px; 
+    /* modifica el titulo */
+}
+
 .colorBoton{
     background-color:rgba(93, 14, 84, 0.766);
+
+}
+
+/* 1527px */
+@media (min-width: 1400px)  {
+
+/* .row-contenedor{
+    background: red;
+} */
+
+/* .card-body{
+ height: 66vh;
+ width: 500px;
+} */
+
+div.card{
+    height: 66vh;
+    width: 52vh;
+}
+
+.card-body-aside{
+
+    height: 174vh;
+}
 
 }

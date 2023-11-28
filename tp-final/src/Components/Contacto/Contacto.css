@@ -2,6 +2,7 @@
 .todo{
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; utilizarlo con medias querys  */
 }
 
 .form {

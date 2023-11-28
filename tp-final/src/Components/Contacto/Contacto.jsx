@@ -1,25 +1,50 @@
 import React from 'react';
 import { useState } from 'react';
-import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
-import { FaWhatsapp , FaClock , FaEnvelope} from "react-icons/fa";
+import { Col, Button, Row, Form } from 'react-bootstrap';
+import { FaWhatsapp, FaClock, FaEnvelope } from "react-icons/fa";
 import './Contacto.css'
 import Mapa from './Mapa.jsx';
 
 const Contacto = () => {
 
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [text, setText,] = useState('');
 
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [text, setText,] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(`Nombre: ${name}`);
-    console.log(`Apellido: ${surname}`);
-    console.log(`Email: ${email}`);
-    console.log(`Texto: ${text}`);
-  };
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const formData = {
+            consulta: text,
+            nombre: name,
+            apellido: surname,
+            correo_electronico: email
+        };
+
+        await fetch('http://localhost:4000/contacto/agregar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Error en la solicitud');
+            })
+            .then((data) => {
+                // Maneja la respuesta de tu backend, por ejemplo, muestra un mensaje de éxito.
+                console.log('Solicitud POST exitosa', data);
+            })
+            .catch((error) => {
+                // Maneja cualquier error que ocurra durante la solicitud POST.
+                console.error('Error al enviar la solicitud POST', error);
+            });
+    };
 
     return(
         <div>
