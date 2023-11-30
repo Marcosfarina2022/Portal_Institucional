@@ -8,7 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 const RegistrationForm = () => {
     
     const [nombre, setNombre] = useState("");
-    // const [apellido, setApellido] = useState("");
+    const [apellido, setApellido] = useState("");
     const [fechaNacimiento, setFechaNacimiento] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -32,6 +32,7 @@ const RegistrationForm = () => {
             },
             body: JSON.stringify({
                 username:nombre,
+                surname:apellido,
                 date:fechaNacimiento,
                 email:email,
                 password:password
@@ -81,14 +82,14 @@ const RegistrationForm = () => {
                             onChange={(e) => setNombre(e.target.value)}
                           />
                         </Form.Group>
-                        {/* <Form.Group className="mb-3" controlId="apellido">
+                        <Form.Group className="mb-3" controlId="apellido">
                           <Form.Label className="text-center">Apellido</Form.Label>
                           <Form.Control
                             type="text"
                             placeholder="Ingrese su apellido"
                             onChange={(e) => setApellido(e.target.value)}
                           />
-                        </Form.Group> */}
+                        </Form.Group>
                         <Form.Group className="mb-3" controlId="fechaNacimiento">
                           <Form.Label className="text-center">Fecha de Nacimiento</Form.Label>
                           <Form.Control

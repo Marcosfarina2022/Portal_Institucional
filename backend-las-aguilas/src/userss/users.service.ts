@@ -17,7 +17,7 @@ export class Users1Service {
 
     let dato = new Date(createUserDto.date);
 
-    const user = new Userss(createUserDto.email,dato,createUserDto.password,createUserDto.username,createUserDto.role);
+    const user = new Userss(createUserDto.email,dato,createUserDto.password,createUserDto.surname,createUserDto.username,createUserDto.role);
     return await this.userRepository.save(user);
   }
 

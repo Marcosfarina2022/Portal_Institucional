@@ -8,6 +8,10 @@ export class RegisterDto{
     @IsNotEmpty()
     readonly username:string;
 
+    @IsString()
+    @IsNotEmpty()
+    readonly surname:string;
+
 
     @IsNotEmpty()
     readonly date:Date;

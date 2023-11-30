@@ -22,7 +22,7 @@ import { AuthModule } from './auth/auth.module';
       password: 'nico123',
       database: 'db_aguilas',
       entities: ["dist/**/**.entity{.ts,.js}"],
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     RolModule,

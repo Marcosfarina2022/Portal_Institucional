@@ -19,7 +19,7 @@ export class AuthService {
       throw new BadRequestException('El usuario ya existe')
     }
     const pass_encryptada = await bcrypt.hash(registerDto.password,10)
-    return await this.userService.create(new Userss(registerDto.email,registerDto.date,pass_encryptada,registerDto.username,registerDto.role))
+    return await this.userService.create(new Userss(registerDto.email,registerDto.date,pass_encryptada,registerDto.surname,registerDto.username,registerDto.role))
     
   }
   
@@ -36,7 +36,8 @@ export class AuthService {
     
     const token = await this.jwtService.signAsync(payload);
 
-    return token;
+    let respuesta = console.log("si ingreso");
+    return {token};
   }
 
 }

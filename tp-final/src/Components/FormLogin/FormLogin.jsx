@@ -2,18 +2,59 @@ import React, { useState } from "react";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
+import { Redirect, useNavigate } from "react-router-dom";
 import './FormLogin.css';
 
 const FormLogin = () => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword,] = useState('');
+  const navigate = useNavigate()
 
-  const handleInputChange = (event) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleInputChange = async (event) => {
     event.preventDefault();
-    console.log(`Email: ${email}`);
-    console.log(`Contrasena: ${password}`);
+
+    if ( !email || !password ) {
+      setError("Todos los campos son obligatorios");
+      return;
+    }
+
+const data = {
+  email:email,
+  password:password
+}
+      try {
+        const response = await fetch("http://localhost:4000/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          setIsLogin(true)
+          const data = await response.json();
+          console.log(data);
+          navigate("/")
+          // Limpiar errores si la solicitud es exitosa
+          setError(null);
+        } else {
+          setIsLogin(false);
+          alert("usuario o contraseña incorrecta");
+          setError("Error al registrar el usuario");
+        } 
+
+      } catch (error) {
+        console.error("Error en la solicitud:", error);
+        setError("Error en la solicitud");
+      }
+
   };
+  
 
   return(<>
       <Container className='containerLogin'>
@@ -40,7 +81,7 @@ const FormLogin = () => {
 
                       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
                       <div className="d-grid">
-                        <Button className="colorBoton" variant="dark" type="submit">Ingresar</Button>
+                        <Button className="colorBoton" variant="dark" type="submit" >Ingresar</Button>
                       </div>
                     </Form>
                     <div className="mt-3">
