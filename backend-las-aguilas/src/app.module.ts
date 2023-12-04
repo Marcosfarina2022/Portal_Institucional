@@ -13,7 +13,6 @@ import { ComentariosGaleriaModule } from './comentarios_galeria/comentarios_gale
 import { AuthModule } from './auth/auth.module';
 
 
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -24,7 +23,7 @@ import { AuthModule } from './auth/auth.module';
       password: 'marcos_2326',
       database: 'db_aguilas',
       entities: ["dist/**/**.entity{.ts,.js}"],
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     RolModule,

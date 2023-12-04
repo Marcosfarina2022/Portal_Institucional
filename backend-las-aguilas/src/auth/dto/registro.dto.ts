@@ -9,12 +9,20 @@ export class RegisterDto{
     readonly username:string;
 
     @IsString()
+    @IsNotEmpty()
+    readonly surname:string;
+
+
+    @IsNotEmpty()
+    readonly date:Date;
+
+    @IsString()
     @IsEmail()
     readonly email:string;
 
     @IsNotEmpty()
     @IsString()
-    @MinLength(8)
+    @MinLength(6)
     readonly password:string;
 
     readonly role:Role;

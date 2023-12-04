@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
+//import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 import './noticias.css';
 import { useSpring, animated } from 'react-spring';

@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
-
-
 const Header = () => {
 return(<>
     <header className='header'>
@@ -39,4 +37,3 @@ return(<>
 }
 
 export default Header
-
