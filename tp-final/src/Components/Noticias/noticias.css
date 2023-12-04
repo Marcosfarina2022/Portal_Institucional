@@ -42,3 +42,8 @@
 .cardSubtitleNoticias {
   flex-grow: 1;
 }
+
+.btn-agregarNoticia{
+  margin: 20px 0px 20px;
+  font-size: 40px;
+}

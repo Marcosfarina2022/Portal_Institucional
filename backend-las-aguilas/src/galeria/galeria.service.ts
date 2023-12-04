@@ -19,12 +19,12 @@ export class GaleriaService {
     if(imagen)
                return true;
            else
-               throw new Error('No se pudo crear la clase');
+               throw new Error('No se pudo cargar la Foto');
         }
         catch(error){
             throw new HttpException({
                 status: HttpStatus.NOT_FOUND,
-                error: 'Error en clase - ' + error
+                error: 'Error con la foto - ' + error
             },HttpStatus.NOT_FOUND)
         }
       }

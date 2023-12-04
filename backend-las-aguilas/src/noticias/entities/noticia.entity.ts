@@ -25,10 +25,11 @@ export class Noticia {
   @OneToMany(() => ComentariosNoticia, (comentariosNoticias) => comentariosNoticias.noticia)
   comentariosNoticias: ComentariosNoticia[];
 
-  constructor(titulo: string, descripcion: string, foto: string) {
+  constructor(titulo: string, descripcion: string, foto: string, categoria: number) {
     this.titulo_noticia = titulo;
     this.descripcion_noticia = descripcion;
     this.foto_noticia = foto;
+    this.categoriaId = categoria;
   }
 
   public getTitulo(): string {

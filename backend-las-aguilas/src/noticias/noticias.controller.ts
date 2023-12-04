@@ -18,9 +18,14 @@ export class NoticiasController {
     return this.noticiasService.findOne(+id);
   }
 
+  @Post('crear')
+  create(@Body() noticiaDto: NoticiaDto) {
+    return this.noticiasService.create(noticiaDto);
+  }
+
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateNoticiaDto:NoticiaDto) {
-    return this.noticiasService.update(+id, updateNoticiaDto);
+  update(@Param('id') id: string, @Body() noticiaDto:NoticiaDto) {
+    return this.noticiasService.update(+id, noticiaDto);
   }
 
   @Delete(':id')
