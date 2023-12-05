@@ -14,15 +14,10 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse expand="lg" id="basic-navbar-nav">
           <Nav className="justify-content-around w-100">
-<<<<<<< HEAD
-          <LinkContainer to="/">
-              <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
-=======
             <LinkContainer to="/">
               <Nav.Link href="#inicio" className="color">
                 Inicio
               </Nav.Link>
->>>>>>> origin/testing-backend
             </LinkContainer>
             <NavDropdown title="Noticias" id="basic-nav-dropdown" className="color">
               <LinkContainer to="/noticias/rugby-juveniles">
