@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './noticias.css';
 import { useSpring, animated } from 'react-spring';
 
+
 import noticia1 from '../../Imagenes/imgNoticias/1.svg';
 import noticia2 from '../../Imagenes/imgNoticias/2.svg';
 import noticia3 from '../../Imagenes/imgNoticias/3.svg';
@@ -48,6 +49,7 @@ const noticias = [
     linkNoticia: 'https://www.linkedin.com/perfil-miembro-6',
     descripcion: 'Descripción de la noticia 6.',
   },
+  
 ];
 
 const Noticias = () => {
@@ -63,7 +65,7 @@ const Noticias = () => {
   });
 
   return (
-    <Container className='containerNoticias text-center fluid'>
+    <Container className='containerNoticias'>
       <Row>
         <h1>Ultimas noticias</h1>
       </Row>

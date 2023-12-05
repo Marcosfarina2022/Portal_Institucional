@@ -1,9 +1,14 @@
 /* Estilo para las tarjetas */
+.containerNoticias {
+  height: auto;
+
+}
+
 .cardNoticias {
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  height: 100%; /* Ajusta la altura de las tarjetas */
+  height: auto; /* Ajusta la altura de las tarjetas */
 }
 
 .rowNoticias{
@@ -29,9 +34,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  height: auto;
   background-color: rgba(61, 6, 31, 0.183);
   border-radius: 5px;
+}
+
+.cardNoticias {
+  width: 80%;
+  height: 95%;
 }
 
 .cardTitleNoticias {
