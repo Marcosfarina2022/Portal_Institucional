@@ -21,7 +21,7 @@ const Noticias = (props) => {
     config: { duration: 500 },
   });*/
   const [filtro,setFiltro]= useState('');
-  const [model, setModel] = useState(false);
+  const [modelNoticia, setModel] = useState(false);
   const [noticias, setNoticias] = useState([]);
   const noticiasFiltradas = noticias.filter(element => element.categoriaId === filtro)
 
@@ -122,11 +122,12 @@ const handleSubmit = async (e) => {
 
   return (
     <Container className='containerNoticias text-center fluid'>
-      <div className={model ? 'model open' : 'model'}>
-                <form onSubmit={handleSubmit}>
+      <div className={modelNoticia ? 'modelNoticia open' : 'modelNoticia'}>
+      <form className='formNoticia' onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="T¿titulo">Titulo:</label>
+        <label className='labelNoticia' htmlFor="titulo">Titulo:</label>
         <input
+          className='inputNotica'
           type="text"
           id="titulo"
           value={titulo}
@@ -134,8 +135,9 @@ const handleSubmit = async (e) => {
         />
       </div>
       <div>
-        <label htmlFor="image">Cargar Archivo:</label>
+        <label className='labelNoticia' htmlFor="image">Cargar Archivo:</label>
         <input
+          className='inputNotica'
           type="file"
           id="image"
           accept="image/*"
@@ -143,8 +145,8 @@ const handleSubmit = async (e) => {
         />
       </div>
       <div>
-        <label htmlFor="infoNoticia">Informacion de noticia:</label>
-        <textarea
+        <label className='labelNoticia' htmlFor="infoNoticia">Informacion de noticia:</label>
+        <textarea className='textareaNoticia'
           type="text"
           id="infoNoticia"
           value={infoNoticia}
@@ -152,8 +154,8 @@ const handleSubmit = async (e) => {
         />
       </div>
       <div>
-        <label htmlFor="categoriaNoticia">Informacion de noticia:</label>
-        <select name="seleccionCategoria" id="seleccionCategoria" value={categoriaNoticia} onChange={handleCategoriaChange}>
+        <label className='labelNoticia' htmlFor="categoriaNoticia">Categoria de noticia:</label>
+        <select name="seleccionCategoria" className="seleccionCategoria" value={categoriaNoticia} onChange={handleCategoriaChange}>
       <option value={0}>Selecciona la categoria</option>
       <option value={1}>1- Rugby Juvenil</option>
       <option value={2}>2- Rugby Adultos</option>
@@ -162,10 +164,10 @@ const handleSubmit = async (e) => {
     </select>
       </div>
       <div>
-        <button type="submit">Enviar</button>
+        <button className='btnCargarNoticia' type="submit">Enviar</button>
       </div>
     </form>
-                <CloseIcon onClick={() => setModel(false)} />
+                <CloseIcon className='closeIconNoticia' onClick={() => setModel(false)} />
             </div>
       <Row>
         <h1>Ultimas noticias</h1>
