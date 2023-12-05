@@ -98,20 +98,6 @@ const RegistrationForm = () => {
                         controlId="formBasicCheckbox"
                       ></Form.Group>
                       <div className="d-grid">
-<<<<<<< HEAD
-                        <Button className='colorBoton' variant="dark" type="submit">Registrase</Button>
-                      </div>
-                    </Form>
-                    <div className="mt-3">
-                    <LinkContainer to="/Ingresar">
-                      <p className="mb-0  text-center">
-                        ¿Ya dispones de un usuario?{' '}
-                        <a href="{''}" className="colorLink fw-bold">
-                          Ingresar
-                        </a>
-                      </p>
-                    </LinkContainer>
-=======
                         <Button variant="primary" type="submit">
                           Registrase
                         </Button>
@@ -126,7 +112,6 @@ const RegistrationForm = () => {
                           </a>
                         </p>
                       </LinkContainer>
->>>>>>> origin/Diaz-Fernando
                     </div>
                   </div>
                 </div>
