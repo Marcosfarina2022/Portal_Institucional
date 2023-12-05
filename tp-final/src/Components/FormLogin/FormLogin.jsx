@@ -1,18 +1,56 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
-
 const FormLogin = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword,] = useState('');
 
-  const handleInputChange = (event) => {
+  /**const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Email: ${email}`);
-    console.log(`Contrasena: ${password}`);
+    if (confirPassword === password) {
+      try {
+        const response = await axios.post(
+          "http://localhost:4000/auth/registrarse",
+          { name, username, email, password }
+        );
+        console.log(response.data.message);
+      } catch (error) {
+        console.error("Error en el registro:", error);
+      }
+    } else {
+      alert("Las contraseñas no coinciden");
+    }
+  }; */
+  const handleInputChange = async (event) => {
+    event.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:4000/auth/ingresar', { email, password });
+      alert('Bienvenido');
+      // Manejar la respuesta del backend
+    } catch (error) {
+      if (error.response) {
+        // Error de respuesta del servidor (HTTP 4xx o 5xx)
+        if (error.response.status === 401) {
+          console.error('Las credenciales proporcionadas son incorrectas. Verifica tu correo electrónico y contraseña.');
+        } else if (error.response.status === 403) {
+          console.error('No tienes permisos para acceder a esta función. Ponte en contacto con el administrador si crees que esto es un error.');
+        } else {
+          console.error('Hubo un error en el servidor. Inténtalo de nuevo más tarde o ponte en contacto con el soporte.');
+        }
+      } else if (error.request) {
+        // Error de solicitud (sin respuesta del servidor)
+        console.error('No se pudo conectar al servidor. Verifica tu conexión a Internet y vuelve a intentarlo más tarde.');
+      } else {
+        // Otro tipo de error
+        console.error('Ocurrió un error. Inténtalo de nuevo más tarde.');
+      }
+       
+    }
   };
+  
 
   return(
 

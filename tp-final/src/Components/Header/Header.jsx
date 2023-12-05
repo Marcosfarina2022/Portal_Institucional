@@ -3,11 +3,14 @@ import './Header.css';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
+import React, { useState } from 'react';
 
 
 
 
 const Header = () => {
+const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
+
 return(<>
     <header className='header'>
         <div className='logo-titulo'>
@@ -21,7 +24,7 @@ return(<>
             </div>
         </div>
         
-        <NavBar/>
+        <NavBar categoriaSeleccionada={setCategoriaSeleccionada}/>
         
         <div className='divRegistro'>
             <LinkContainer to="/ingresar">
