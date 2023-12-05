@@ -6,14 +6,14 @@ import { ContactoDto } from './dto/contacto.dto';
 export class ContactoController {
   constructor(private readonly contactoService: ContactoService) {}
 
-  @Post()
-  create(@Body() createContactoDto: ContactoDto) {
-    return this.contactoService.create(createContactoDto);
+  @Post('agregar')
+  async create(@Body() contactoDto: ContactoDto):Promise<ContactoDto> {
+    return await this.contactoService.create(contactoDto);
   }
-
-  @Get()
-  findAll() {
-    return this.contactoService.findAll();
+ 
+  @Get("consultas")
+  async findAll(): Promise<ContactoDto[]> {
+    return await this.contactoService.findAll();
   }
 
   @Get(':id')

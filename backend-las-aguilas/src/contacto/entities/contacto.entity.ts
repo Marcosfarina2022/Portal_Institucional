@@ -23,15 +23,15 @@ export class Contacto {
   correo_electronico: string;
 
   constructor(
+    consulta: string,
     nombre: string,
     apellido: string,
-    email: string,
-    consulta: string,
+    email: string  
   ) {
+    this.consulta = consulta;
     this.nombre = nombre;
     this.apellido = apellido;
     this.correo_electronico = email;
-    this.consulta = consulta;
   }
 
   public getNombre(): string {

@@ -1,19 +1,16 @@
 
 .row-contenedor{
-    display: flex;
- 
+    justify-content: center;
 }
 
 /*
 .card{
-    margin: auto;
-  
+    margin: 10px;
 }
 */
 
 
 .row-contenedor .card-body {
-
     background-color: rgba(61, 6, 31, 0.183);
     border-radius: 5px;
 }
@@ -21,14 +18,15 @@
 .card-body-aside {
     display: flex;
     flex-direction: column;
-
-    
+    justify-content: space-between;
+    align-items: center;
 }
 
 aside{
     display: flex;
     flex-direction: column;
-    height: 30%;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .img-aside{
@@ -36,8 +34,8 @@ aside{
 }
 
 .card-aside{
-    margin:auto;
-    
+    margin: 10px;
+    height: 57%;
 }
 
 .card-text{
@@ -45,25 +43,36 @@ aside{
     height: 48px;
 }
 
+div.card-title.h5{
+    margin-top: 5px; 
+    /* modifica el titulo */
+}
+
 .colorBoton{
     background-color:rgba(93, 14, 84, 0.766);
 
 }
 
-.padre{
-    display: flex;
-    flex-direction: row;
+/* 1527px */
+@media (min-width: 1400px)  {
+
+/* .row-contenedor{
+    background: red;
+} */
+
+/* .card-body{
+ height: 66vh;
+ width: 500px;
+} */
+
+div.card{
+    height: 66vh;
+    width: 52vh;
 }
-.hijoUno{
-    margin: 100px;
-    margin-left: 5px;
-    justify-content: flex-start;
+
+.card-body-aside{
+
+    height: 174vh;
 }
-.hijoDos{
-    margin: 100px;
-    margin-left: 5px;
-}
-.hijoTres{
-    margin: 100px;
-    margin-right:5px;
+
 }
