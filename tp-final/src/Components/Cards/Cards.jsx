@@ -6,6 +6,7 @@ import Image2 from '../../Imagenes/imgNoticias/2.svg';
 import Image3 from '../../Imagenes/imgNoticias/3.svg';
 import sidebar1 from '../../Imagenes/imgNoticias/sidebar1.svg';
 import './cards.css';
+
 const Cards = () => {
   const cardData = [
     {
@@ -62,7 +63,7 @@ const Cards = () => {
           <aside>
             <Card className='card-aside'>
               <Card.Body className='card-body-aside'>
-                <Card.Img variant="top" src={sidebar1} style={{ height: '24rem' }} className="img-fluid" />
+                <Card.Img variant="top" src={sidebar1} style={{ height: '29rem' }} className="img-fluid" />
                 <Card.Text>Contenido del sidebar.</Card.Text>
                 <Button variant="dark" className='colorBoton'>Leer más...</Button>
               </Card.Body>
