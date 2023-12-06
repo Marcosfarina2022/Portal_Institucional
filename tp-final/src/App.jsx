@@ -22,6 +22,7 @@ const CajaDeComentarios = lazy(() =>
 );
 
 function App() {
+
   return (
     <BrowserRouter>
       <div className="App">
