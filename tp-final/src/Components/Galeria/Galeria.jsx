@@ -3,9 +3,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import './galeria.css';
 import CajaDeComentarios from '../CajaDeComentarios/CajaDeComentarios';
 
+
 const Galeria = () => {
     const [fotos, setFotos] = useState([]);
     const [model, setModel] = useState(false);
+    const [modelCargarFoto, setModelCargarFoto] = useState(false);
     const [tempImgSrc, setTempImgSrc] = useState('');
   
     useEffect(() => {
@@ -26,12 +28,15 @@ const Galeria = () => {
       setTempImgSrc(imgSrc);
       setModel(true);
   };
-  const closeModal = () => {
-    setModel(false);
-  };
+  
   return (
     <>
        <div className={model ? 'model open' : 'model'}>
+                <img src={tempImgSrc} />
+                <CajaDeComentarios/>
+                <CloseIcon onClick={() => setModel(false)} />
+            </div>
+            <div className={modelCargarFoto ? 'modelCargarFoto open' : 'modelCargarFoto'}>
                 <img src={tempImgSrc} />
                 <CajaDeComentarios/>
                 <CloseIcon onClick={() => setModel(false)} />

@@ -63,14 +63,14 @@ div.card-title.h5{
  width: 500px;
 } */
 
-div.card{
-    height: 66vh;
+.card-home{
+    height: -webkit-fill-available;
     width: 52vh;
 }
 
-.card-body-aside{
+.card-body-aside-home{
 
-    height: 174vh;
+    height: 89vh;
 }
 
 }
