@@ -1,9 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { animated, useSpring } from "@react-spring/web";
 import imgMelina from "../../Imagenes/imgSobreNosotros/foto-perfil-melina.svg";
 import imgMarcos from "../../Imagenes/imgSobreNosotros/foto-perfil-marcos.svg";
-import imgFernando from "../../Imagenes/imgSobreNosotros/fernando.jpeg";
 import imgGuido from "../../Imagenes/imgSobreNosotros/foto-perfil-guido.svg";
 import imgNico from '../../Imagenes/imgSobreNosotros/foto-perfil-nico.svg'
 import imgKevin from '../../Imagenes/imgSobreNosotros/foto-perfil-kevin.svg'
@@ -32,7 +31,7 @@ const equipoDesarrollo = [
 
   {
     nombre: "Fernando Andres Diaz",
-    foto_perfil: imgFernando,
+    foto_perfil: 'imgFernando',
     linkedin: "https://www.linkedin.com/in/diaz-fernando/",
     descripcion: "Desarrollador Full Stack.",
   },
@@ -66,8 +65,6 @@ const SobreNosotros = () => {
   
     return (
       <Container className="containerSobreNosotros">
-        <Row>
-          <Col>
             {/* Título principal */}
             <h1 className="titulo-principal">Bienvenido a Mentes Dementes</h1>
             {/* Subtítulo */}
@@ -141,8 +138,6 @@ const SobreNosotros = () => {
                 únete a nosotros en esta emocionante travesía!
               </p>
             </section>
-          </Col>
-        </Row>
         {/* Sección con tarjetas de miembros del equipo */}
         <section>
           <Row>
