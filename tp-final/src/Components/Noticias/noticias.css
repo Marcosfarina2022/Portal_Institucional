@@ -1,6 +1,6 @@
 .noticias-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Mostrar 2 tarjetas por fila, puedes ajustar el número según tus necesidades */
+  grid-template-columns: repeat(2, 1fr); /* Mostrar 2 tarjetas por fila */
   gap: 20px; /* Espacio entre las tarjetas */
   height: auto;
 }
@@ -31,7 +31,6 @@ p {
   margin-bottom: 0;
 }
 .footerNoticias {
-  /* Ajusta estos estilos según tus preferencias */
   position: fixed;
   bottom: 0;
   left: 0;
