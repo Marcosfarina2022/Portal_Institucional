@@ -1,39 +1,20 @@
-/* Estilo de las tarjetas de los miembros del equipo en pantallas pequeñas */
-@media only screen and (max-width: 768px) {
-  .card-integrante {
-    flex: 0 0 calc(50% - 20px);
-  }
-
-  .card-integrante .cardImg {
-    width: 100%;
-    height: auto;
-  }
-
-  .titulo-nombre {
-    font-size: 18px;
-  }
-
-  .descripcion-skills {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-
-  .link {
-    font-size: 14px;
-  }
-}
 /* Contenedor principal de la sección "Sobre Nosotros" */
 .containerSobreNosotros {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
   color: #420286;
   margin: 0 auto;
   width: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Animación de aparición para el título principal */
-.titulo-principal, .sub-titulo {
+.titulo-principal,
+.sub-titulo {
+  align-items: center;
   animation: fadeInUp 1s ease-out;
   margin: 1%;
   padding: 2%;
@@ -73,6 +54,7 @@
 /* Estilo de las tarjetas de los miembros del equipo */
 .card-integrante {
   flex: 0 0 calc(33.33% - 40px);
+  flex-direction: column;
   width: 100%;
   margin: 20px;
   border: 1px solid #58014c;
@@ -86,12 +68,14 @@
 .card-integrante:hover {
   box-shadow: 0 4px 8px rgba(130, 20, 158, 0.2);
   opacity: 0.7;
-  background-color: #35353598; 
+  background-color: #35353598;
 }
 
 /* Estilo de la imagen en la tarjeta */
 .card-integrante .cardImg {
   width: 80%;
+  display: flex;
+  flex-direction: column;
   object-fit: cover;
   object-position: center;
 }
@@ -111,6 +95,7 @@
 
 /* Estilo del enlace en la tarjeta */
 .link {
+  flex-direction: column;
   font-size: 16px;
   font-weight: bold;
   color: #390274;
@@ -146,4 +131,29 @@
 /* Efecto de cambio de color al pasar el ratón sobre el enlace de la tarjeta */
 .link:hover {
   color: #622c72;
+}
+
+/* Estilo de las tarjetas de los miembros del equipo en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .card-integrante {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .card-integrante .cardImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .titulo-nombre {
+    font-size: 18px;
+  }
+
+  .descripcion-skills {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
 }

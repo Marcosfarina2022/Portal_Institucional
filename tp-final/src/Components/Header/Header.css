@@ -1,29 +1,62 @@
-.container-header {
-  display: flex;
-  flex-direction: row;
-justify-content: space-around;
-  width: 100%;
-  position: fixed;
-  background: linear-gradient(rgba(247, 113, 164, 0.778), rgba(76, 120, 158, 0.613));
-  z-index: 1000;
-  top: 0;
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+    background:  rgba(137, 139, 159, 0.507);
 }
 
-.title-section h1 {
-  font-size: 6vh;
-  justify-content: center;
-  align-items: center;
+.glow{
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, #000000, #000000, #f771a5, #b76eff, #8c20f8);
+    background-size: 400%;
+    animation: animate 1.5s linear 3;
 }
 
-.title-section h1 {
-    font-size: 6vh;
-text-align: center;  
+
+.divRegistro{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 5px;
+    align-items: flex-start;
 }
 
-.logo-section img {
-  width: 20vh;
-  justify-items: flex-start;
-  animation: ilustracion 1s ease-in infinite alternate;
+.divRegistro a{
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+    
+
+.div-logo img{
+    justify-content: flex-start;
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+}
+
+.div-logo{ 
+    margin-top: 1%;  
+    width: 5rem;
+    height: 100%;
+
+}
+
+.logo-titulo{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.logo{
+    animation: ilustracion 1s ease-in infinite alternate;
 }
 @keyframes ilustracion{
     0%{
