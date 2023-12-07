@@ -22,7 +22,6 @@ const CajaDeComentarios = lazy(() =>
 );
 
 function App() {
-
   return (
     <BrowserRouter>
       <div className="App">
@@ -47,6 +46,22 @@ function App() {
             <Route path="/cajaDeComentarios" element={<CajaDeComentarios />} />
           </Routes>
         </Suspense>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/galeria" element={<Galeria />} />
+          <Route path="/noticias" element={<Noticias />} />
+          <Route path="/noticias/Rugby-Juveniles" element={<Noticias categoria='1'/>} />
+          <Route path="/noticias/Rugby-Adultos" element={<Noticias categoria='2' />} />
+          <Route path="/noticias/Hockey-Juveniles" element={<Noticias categoria='3'/>} />
+          <Route path="/noticias/Hockey-Adultos" element={<Noticias categoria='4'/>} />
+          <Route path="/institucion" element={<Institución />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/registro" element={<RegistrationForm />} />
+          <Route path="/ingresar" element={<FormLogin />} />
+          <Route path="/sobreNosotros" element={<SobreNosotros />} />
+          <Route path="/cajaDeComentarios" element={<CajaDeComentarios />} />
+        </Routes>
         <Footer />
       </div>
     </BrowserRouter>

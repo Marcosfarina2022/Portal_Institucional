@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap'
-import Noticias from '../Noticias/Noticias';
 import './NavBar.css'
 
 
@@ -15,20 +14,26 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse expand="lg" id="basic-navbar-nav">
           <Nav className="justify-content-around w-100">
-          <LinkContainer to="/">
-              <Nav.Link href="#inicio" className='color'>Inicio</Nav.Link>
+            <LinkContainer to="/">
+              <Nav.Link href="#inicio" className="color">
+                Inicio
+              </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/noticias">
-            <NavDropdown title="Noticias" id="basic-nav-dropdown" className='color'>
-              <Nav.Link href="#noticias/rugby-juveniles" className='color'>Rugby-Juveniles</Nav.Link>
-              <NavDropdown.Divider />
-              <Nav.Link href="#rugby-adultos" className='color'>Rugby- Adultos</Nav.Link>
-              <NavDropdown.Divider />
-              <Nav.Link href="#hockey-juveniles" className='color'>Hockey-Juveniles</Nav.Link>
-              <NavDropdown.Divider />
-              <Nav.Link href="#hockey-adultos" className='color'>Hockey-Adultos</Nav.Link>
+            <NavDropdown title="Noticias" id="basic-nav-dropdown" className="color">
+              <LinkContainer to="/noticias/rugby-juveniles">
+                <NavDropdown.Item>Rugby- Juveniles</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/noticias/rugby-adultos">
+                <NavDropdown.Item>Rugby-adultos
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/noticias/hockey-juveniles">
+                <NavDropdown.Item>Hockey-Juveniles</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/noticias/hockey-adultos">
+                <NavDropdown.Item>Hockey-Adultos</NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
-            </LinkContainer>
             <LinkContainer to="/galeria">
               <Nav.Link href="#galeria" className='color rounded'>Galeria</Nav.Link>
             </LinkContainer>
