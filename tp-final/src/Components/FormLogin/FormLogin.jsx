@@ -58,7 +58,6 @@ const data = {
 
   return(<>
       <Container className='containerLogin'>
-        <Row className="d-flex justify-content-center align-items-center">
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
               <Card.Body>
@@ -99,7 +98,6 @@ const data = {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
       </Container>
       </>  
   )

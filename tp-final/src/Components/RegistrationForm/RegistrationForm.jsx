@@ -60,7 +60,6 @@ const RegistrationForm = () => {
       <>
         {error && <div className="error-message">{error}</div>}
         <Container className="containerRegistro">
-          <Row className="d-flex justify-content-center align-items-center">
             <Col md={6} lg={4} xs={8}>
               <Card className="px-4">
                 <Card.Body className="cardbodyForm">
@@ -161,7 +160,6 @@ const RegistrationForm = () => {
                 </Card.Body>
               </Card>
             </Col>
-          </Row>
         </Container>
       </>
     );

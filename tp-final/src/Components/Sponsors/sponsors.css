@@ -33,7 +33,7 @@
 }
 
 #title, .descripcion {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
   color: rgb(3, 3, 73);
   margin-bottom: 10px;
@@ -42,7 +42,7 @@
 }
 
 .descripcion {
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .sponsors-grid {
@@ -65,8 +65,8 @@
 }
 
 .sponsors-image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
