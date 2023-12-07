@@ -1,19 +1,19 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { UsuarioDto } from './dto/usuario.dto';
-import { Usuario } from './entities/usuario.entity';
+import { UserDto } from './dto/user.dto';
+import { User } from './entities/user.entity';
 import { FindManyOptions, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
-export class UsuariosService {
-  private usuarios: Usuario [] = [];
+export class UsersService {
+  private usuarios: User [] = [];
 
   constructor(
-    @InjectRepository(Usuario)
-    private readonly usuarioRepository: Repository<Usuario>
+    @InjectRepository(User)
+    private readonly usuarioRepository: Repository<User>
   ) {}
 
-  public async getAll(): Promise<UsuarioDto[]> {
+  public async getAll(): Promise<UserDto[]> {
     return await this.usuarioRepository.find();
   }
 
@@ -21,7 +21,7 @@ export class UsuariosService {
     return `This action returns a #${id} user`;
   }
 
-  update(id: number, updateUserDto: UsuarioDto) {
+  update(id: number, updateUserDto: UserDto) {
     return `This action updates a #${id} user`;
   }
 

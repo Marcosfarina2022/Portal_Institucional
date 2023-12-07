@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { databaseConfig } from './config/database.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsuarioModule } from './usuario/usuarios.module';
+import { UsersModule } from './users/users.module';
 import { RolModule } from './rol/rol.module';
 import { NoticiasModule } from './noticias/noticias.module';
 import { GaleriaModule } from './galeria/galeria.module';
@@ -16,7 +16,7 @@ import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot(databaseConfig),
-    UsuarioModule,
+    UsersModule,
     RolModule,
     NoticiasModule,
     GaleriaModule,
