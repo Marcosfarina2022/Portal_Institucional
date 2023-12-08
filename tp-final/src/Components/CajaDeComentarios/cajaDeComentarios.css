@@ -1,6 +1,8 @@
 /* Estilo base para la caja de comentarios con fondo tipo vidrio */
 .comment-box {
     display: flex;
+    flex-direction: column;
+    justify-content: end;
     width: 100%;
     max-width: 450px;
     height: 100%;
@@ -19,7 +21,14 @@
     height: 100%;
     width: 100%;
   }
-  
+
+  .list-group{
+    padding-right: 0;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: white;
+  }
+
   /* Estilo para el encabezado del comentario */
   .comment-header {
     font-weight: bold;

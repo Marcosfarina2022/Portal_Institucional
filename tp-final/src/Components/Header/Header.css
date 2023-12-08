@@ -18,10 +18,11 @@ header{
 
 .divRegistro{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: column;
     height: 100%;
     margin-right: 5px;
-    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .divRegistro a{

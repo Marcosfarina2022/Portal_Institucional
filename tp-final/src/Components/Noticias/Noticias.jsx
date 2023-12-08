@@ -3,60 +3,106 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './noticias.css';
 import { useSpring, animated } from 'react-spring';
+import { IoIosAddCircleOutline } from "react-icons/io";
+import CloseIcon from '@mui/icons-material/Close';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-import noticia1 from '../../Imagenes/imgNoticias/1.svg';
-import noticia2 from '../../Imagenes/imgNoticias/2.svg';
-import noticia3 from '../../Imagenes/imgNoticias/3.svg';
-import noticia4 from '../../Imagenes/imgNoticias/4.jpeg';
-import noticia5 from '../../Imagenes/imgNoticias/5.jpeg';
-import noticia6 from '../../Imagenes/imgNoticias/6.jpeg';
+const Noticias = (props) => {
+  const [filtro,setFiltro]= useState('');
+  const [modelNoticia, setModel] = useState(false);
+  const [noticias, setNoticias] = useState([]);
+  const noticiasFiltradas = noticias.filter(element => element.categoriaId === filtro)
 
-const noticias = [
-  {
-    nombre: 'Noticia 1',
-    foto: noticia1,
-    linkNoticia: 'https://www.diarioprensa.com.ar/el-club-las-aguilas-sumo-un-nuevo-titulo/',
-    descripcion: 'Descripcion de la noticia 1',
-  },
-  {
-    nombre: 'Noticia 2',
-    foto: noticia2,
-    linkNoticia: 'https://www.linkedin.com/in/farina-marcos-1063a271/',
-    descripcion: 'Descripción de la noticia 2.',
-  },
-  {
-    nombre: 'Noticia 3',
-    foto: noticia3,
-    linkNoticia: 'https://www.linkedin.com/in/diaz-fernando/',
-    descripcion: 'Descripción de la noticia 3.',
-  },
-  {
-    nombre: 'Noticia 4',
-    foto: noticia4,
-    linkNoticia: 'https://www.linkedin.com/perfil-miembro-4',
-    descripcion: 'Descripción de la noticia 4.',
-  },
-  {
-    nombre: 'Noticia 5',
-    foto: noticia5,
-    linkNoticia: 'https://www.linkedin.com/perfil-miembro-5',
-    descripcion: 'Descripción de la noticia 5.',
-  },
-  {
-    nombre: 'Noticia 6',
-    foto: noticia6,
-    linkNoticia: 'https://www.linkedin.com/perfil-miembro-6',
-    descripcion: 'Descripción de la noticia 6.',
-    
-  },
-];
+const openModel = () => {
+  setModel(true);
+};
 
-const Noticias = () => {
-  /*const fadeIn = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 500 },
-  });*/
+const [image, setImage] = useState(null);
+  const [titulo, setTitulo] = useState('');
+  const [infoNoticia, setInfoNoticia] = useState('');
+  const [categoriaNoticia, setCategoriaNoticia] = useState(0);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
+  };
+
+  const handleTituloChange = (e) => {
+    setTitulo(e.target.value);
+  };
+  
+  const handleInfoChange = (e) => {
+    setInfoNoticia(e.target.value);
+  };
+
+  const handleCategoriaChange = (e) => {
+    const categoriaSeleccionada = e.target.value;
+    setCategoriaNoticia(parseInt(categoriaSeleccionada));
+
+    // Puedes realizar otras acciones basadas en la categoría seleccionada aquí, si es necesario
+    console.log(`Categoría seleccionada: ${categoriaSeleccionada}`);
+  };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  
+  
+   // Crea un objeto FormData para enviar la imagen y otros datos al servidor
+   const key = 'c8c772fbdeeef65807e6f575c1e3b288'
+   const formData = new FormData();
+   formData.append('key', key);
+   formData.append('image', image);
+   formData.append('name', titulo);
+
+
+   try {
+     // Realiza la solicitud POST al servidor utilizando axios
+     const response = await axios.post('https://api.imgbb.com/1/upload', formData, {
+       headers: {
+         'Content-Type': 'multipart/form-data', // Especifica el tipo de contenido como 'multipart/form-data' para el envío de archivos
+       },
+     });
+     console.log('se cargo imagen a imgbb');
+     //Esta constante guarda la url de la imagen cargada
+    const urlImg = response.data.data.url
+    const nuevaNoticia = {
+      titulo_noticia: titulo,
+      descripcion_noticia: infoNoticia,
+      foto_noticia: urlImg,
+      categoriaId: categoriaNoticia
+ };
+// se realiza un POST a nuesta base de datos
+ await fetch('http://localhost:4000/noticias/crear', {
+     method: 'POST',
+     headers: {
+         'Content-Type': 'application/json',
+     },
+     body: JSON.stringify(nuevaNoticia),
+ })
+     
+    console.log('se guardo en la base de datos', response);
+   } catch (error) {
+     // Maneja los errores de la solicitud
+     console.error('Error al enviar la imagen:', error);
+   }
+};
+
+  useEffect(()=>{
+    setFiltro(parseInt(props.categoria))
+    const obtenerNoticias = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/noticias/todos');
+        setNoticias(response.data);
+      } catch (error) {
+        console.error('Error al obtener noticias:', error);
+      }
+    };
+
+    obtenerNoticias();
+  });
+
   const fadeIn = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -65,28 +111,78 @@ const Noticias = () => {
 
   return (
     <Container className='containerNoticias text-center fluid'>
+      <div className={modelNoticia ? 'modelNoticia open' : 'modelNoticia'}>
+      <form className='formNoticia' onSubmit={handleSubmit}>
+      <div>
+        <label className='labelNoticia' htmlFor="titulo">Titulo:</label>
+        <input
+          className='inputNotica'
+          type="text"
+          id="titulo"
+          value={titulo}
+          onChange={handleTituloChange}
+        />
+      </div>
+      <div>
+        <label className='labelNoticia' htmlFor="image">Cargar Archivo:</label>
+        <input
+          className='inputNotica'
+          type="file"
+          id="image"
+          accept="image/*"
+          onChange={handleImageChange}
+        />
+      </div>
+      <div>
+        <label className='labelNoticia' htmlFor="infoNoticia">Informacion de noticia:</label>
+        <textarea className='textareaNoticia'
+          type="text"
+          id="infoNoticia"
+          value={infoNoticia}
+          onChange={handleInfoChange}
+        />
+      </div>
+      <div>
+        <label className='labelNoticia' htmlFor="categoriaNoticia">Categoria de noticia:</label>
+        <select name="seleccionCategoria" className="seleccionCategoria" value={categoriaNoticia} onChange={handleCategoriaChange}>
+      <option value={0}>Selecciona la categoria</option>
+      <option value={1}>1- Rugby Juvenil</option>
+      <option value={2}>2- Rugby Adultos</option>
+      <option value={3}>3- Hockey Juvenil</option>
+      <option value={4}>4- Hockey Adultos</option>
+    </select>
+      </div>
+      <div>
+        <button className='btnCargarNoticia' type="submit">Enviar</button>
+      </div>
+    </form>
+                <CloseIcon className='closeIconNoticia' onClick={() => setModel(false)} />
+            </div>
       <Row>
         <h1>Ultimas noticias</h1>
       </Row>
       <Row className='rowNoticias'>
-        {noticias.map((noticia, index) => (
+        {noticiasFiltradas.map((noticias, index) => (
           <Col key={index} xs={12} md={4} className='mt-4 mb-4'> 
             <Card className='cardNoticias'>
               <Card.Body className='cardBodyNoticias'>
                 <animated.div style={fadeIn}>
-                  <Card.Title className='cardTitleNoticias'>{noticia.nombre}</Card.Title>
+                  <Card.Title className='cardTitleNoticias'>{noticias.titulo_noticia}</Card.Title>
                   <Card.Subtitle className='cardSubtitleNoticias'>
-                    <p className='text-center'>{noticia.descripcion}</p>
+                    <p className='text-center'>{noticias.descripcion_noticia}</p>
                   </Card.Subtitle>
-                  <Link  to={noticia.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
-                  <Card.Img className='cardImgNoticias' variant='top' src={noticia.foto} />
+                  <Link  to={noticias.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
+                  <Card.Img className='cardImgNoticias' variant='top' src={noticias.foto_noticia} />
                   </Link>
                 </animated.div>
               </Card.Body>
             </Card>
           </Col>
-        ))}
-      </Row>
+          ))}
+      </Row><div>
+      <IoIosAddCircleOutline className='btn-agregarNoticia' onClick={() => openModel()}
+      ></IoIosAddCircleOutline>
+      </div>
     </Container>
   );
 };
