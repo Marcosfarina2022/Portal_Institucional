@@ -3,6 +3,7 @@ import "./LineaDeTiempo.css";
 
 const LineaDeTiempo = () => {
     const [events, setEvents] = useState([
+
         { id: 1, title: 'Fecha constitucion del club', date: 'Abril 1990'},
         { id: 2, title: 'Primeros entrenamientos', date: 'Febrero 1990'},
         { id: 3, title: 'Se consigue predio!', date: 'Marzo 1991'},

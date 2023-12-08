@@ -8,18 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-
-
-
-
-
 const Noticias = (props) => {
-  /*const fadeIn = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 500 },
-  });*/
   const [filtro,setFiltro]= useState('');
   const [modelNoticia, setModel] = useState(false);
   const [noticias, setNoticias] = useState([]);
