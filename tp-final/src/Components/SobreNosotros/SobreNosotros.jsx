@@ -140,10 +140,10 @@ const SobreNosotros = () => {
             </section>
         {/* Sección con tarjetas de miembros del equipo */}
         <section>
-          <Row>
+          <Row className="row-integrante">
             {equipoDesarrollo.map((miembro, index) => (
               <Col key={index} className="card-integrante">
-                <animated.div style={fadeIn}>
+                <animated.div style={fadeIn} className="div-integrantes">
                   {/* Contenido de cada tarjeta de miembro */}
                   <h5 className="titulo-nombre">{miembro.nombre}</h5>
                   <h6 className="descripcion-skills">{miembro.descripcion}</h6>
