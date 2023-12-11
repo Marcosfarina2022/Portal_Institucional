@@ -25,27 +25,9 @@
     opacity: 0;
     transform: translateY(20px);
   }
-<<<<<<< HEAD
-  
-  .cardMiembros{
-    max-width: 40vh;
-    width: 100%;
-    margin: 0 auto;
-    border: 5px solid #3e0067;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .cardMiembros:hover {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-=======
   to {
     opacity: 1;
     transform: translateY(0);
->>>>>>> origin/testing
   }
 }
 
@@ -156,23 +138,6 @@
   .card-integrante {
     flex: 0 0 calc(50% - 20px);
   }
-<<<<<<< HEAD
-  
-  .cardSubtitle {
-    font-size: 16px;
-    color: #6c10c8;
-    margin-bottom: 12px;
-  }
-  
-  .cardLink {
-    color: #570068;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .cardLink:hover {
-    color: #2700b3;
-=======
 
   .card-integrante .cardImg {
     width: 100%;
@@ -186,13 +151,9 @@
   .descripcion-skills {
     font-size: 14px;
     margin-bottom: 8px;
->>>>>>> origin/testing
   }
 
   .link {
     font-size: 14px;
   }
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/testing

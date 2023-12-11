@@ -9,59 +9,6 @@ import imgKevin from '../../Imagenes/imgSobreNosotros/foto-perfil-kevin.svg'
 import "./sobreNosotros.css";
 
 const equipoDesarrollo = [
-<<<<<<< HEAD
-    {
-        nombre: 'Melina Gabriela Figueroa',
-        foto_perfil: imgMelina,
-        linkedin: 'https://www.linkedin.com/in/melinagfigueroa/',
-        descripcion: [
-            'Desarrolladora Full Stack',
-            ' UX/UI Designer',
-        ]
-    },
-    {
-        nombre: 'Marcos Farina',
-        foto_perfil: imgMarcos,
-        linkedin: 'https://www.linkedin.com/in/farina-marcos-1063a271/',
-        descripcion: [
-            'Desarrollador Full Stack',
-            'Tecnico en sistemas',
-            ' Futuro contador'
-        ]
-    },
-    {
-        nombre: 'Fernando Andres Diaz',
-        foto_perfil: imgFernando,
-        linkedin: 'https://www.linkedin.com/in/diaz-fernando/',
-        descripcion: [
-            'Desarrollador Full Stack'
-        ]
-    },
-    {
-        nombre: 'Nicolas Vega',
-        foto_perfil: 'ruta-de-la-imagen-3.jpg',
-        linkedin: 'https://www.linkedin.com/perfil-miembro-2',
-        descripcion: [
-            'Desarrollador Full Stack'
-        ]
-    },
-    {
-        nombre: 'Kevin Santander',
-        foto_perfil: 'ruta-de-la-imagen-4.jpg',
-        linkedin: 'https://www.linkedin.com/perfil-miembro-1',
-        descripcion: [
-            'Desarrollador Full Stack'
-        ]
-    },
-    {
-        nombre: 'Guido',
-        foto_perfil: 'ruta-de-la-imagen-5.jpg',
-        linkedin: 'https://www.linkedin.com/perfil-miembro-2',
-        descripcion: [
-            'Desarrollador Full Stack'
-        ]
-    }
-=======
   {
     nombre: "Guido Simonetti",
     foto_perfil: imgGuido,
@@ -106,7 +53,6 @@ const equipoDesarrollo = [
     linkedin: "https://www.linkedin.com/perfil-miembro-1",
     descripcion: "Desarrollador Full Stack",
   },
->>>>>>> origin/testing
 ];
 
 const SobreNosotros = () => {
@@ -118,50 +64,6 @@ const SobreNosotros = () => {
     });
   
     return (
-<<<<<<< HEAD
-        <Container className='containerSobreNosotros text-center'>
-            <Row>
-                <h1>Equipo de Mentes Dementes</h1>
-                <Col className='text-start'>
-                    <h5>Somos un grupo de desarrollo con experiencia en:</h5>
-                    <ul>
-                        <li>Desarrollo web</li>
-                        <li>Diseño de interfaces de usuario</li>
-                        <li>Programación backend</li>
-                    </ul>
-                </Col>
-            </Row>
-            <Row>
-                {equipoDesarrollo.map((miembro, index) => (
-                    <Col key={index} xs={12} md={4} className='mt-4 mb-4'>
-                        <Card className='cardMiembros'>
-                            <Card.Body className='cardBody'>
-                                <animated.div style={fadeIn}>
-                                    <Card.Title className='cardTitle'>{miembro.nombre}</Card.Title>
-                                    <Card.Subtitle className='cardSubtitle'>
-                                         <ul className='text-start'>
-                                            {miembro.descripcion.map((descripcion, i) => (
-                                                <li key={i}>{descripcion}</li>
-                                            ))}
-                                        </ul>
-                                    </Card.Subtitle>                                    
-                                    <Card.Img className='cardImg' variant='top' src={miembro.foto_perfil} />
-                                    <a
-                                        href={miembro.linkedin}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='cardLink'
-                                    >
-                                        Perfil de LinkedIn
-                                    </a>
-                                </animated.div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
-        </Container>
-=======
       <Container className="containerSobreNosotros">
             {/* Título principal */}
             <h1 className="titulo-principal">Bienvenido a Mentes Dementes</h1>
@@ -266,7 +168,6 @@ const SobreNosotros = () => {
           </Row>
         </section>
       </Container>
->>>>>>> origin/testing
     );
   };
   

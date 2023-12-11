@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-/* Estilo para las tarjetas */
-.cardNoticias {
-  border: none;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  height: 100%; /* Ajusta la altura de las tarjetas */
-}
-
-.rowNoticias{
-  height: auto;
-}
-
-.cardNoticias:hover {
-  transform: translateY(-5px);
-}
-
-/* Estilo para las imágenes en las tarjetas */
-.cardImgNoticias {
-  max-height: 300px; /* Ajusta la altura máxima de las imágenes */
-  object-fit: cover;
-}
-/*.containerNoticias {
-  padding-top: 40px;
-  padding-bottom: 30px;
-}*/
-
-.cardBodyNoticias {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  background-color: rgba(61, 6, 31, 0.183);
-}
-
-.cardTitleNoticias {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.cardSubtitleNoticias {
-  flex-grow: 1;
-=======
 .noticias-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Mostrar 2 tarjetas por fila, puedes ajustar el número según tus necesidades */
@@ -82,5 +38,4 @@ p {
   width: 100%;
   background-color: #f1f1f1;
   padding: 20px;
->>>>>>> origin/testing
 }
