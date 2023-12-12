@@ -7,6 +7,7 @@ import imgGuido from "../../Imagenes/imgSobreNosotros/foto-perfil-guido.svg";
 import imgNico from '../../Imagenes/imgSobreNosotros/foto-perfil-nico.svg';
 import imgKevin from '../../Imagenes/imgSobreNosotros/foto-perfil-kevin.svg';
 import imgFernando from '../../Imagenes/imgSobreNosotros/foto-perfil-fer.svg'
+import imgEma from '../../Imagenes/imgSobreNosotros/foto-perfil-ema.svg'
 import "./sobreNosotros.css";
 
 const equipoDesarrollo = [
@@ -50,9 +51,9 @@ const equipoDesarrollo = [
   },
   {
     nombre: "Emanuel Lucietti",
-    foto_perfil: "ruta-de-la-imagen-.jpg",
+    foto_perfil: imgEma,
     linkedin: "https://www.linkedin.com/perfil-miembro-1",
-    descripcion: "Desarrollador Full Stack.",
+    descripcion: "Desarrollador Full Stack | Estudiante en tecnicatura superior en automatización y robótica",
   },
 ];
 
