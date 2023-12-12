@@ -1,0 +1,76 @@
+/* Estilo base para la caja de comentarios con fondo tipo vidrio */
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333; /* Color de texto */
+  }
+
+  .listaDeComentarios{
+    height: 100%;
+    width: 100%;
+  }
+
+  .list-group{
+    padding-right: 0;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: white;
+  }
+
+  /* Estilo para el encabezado del comentario */
+  .comment-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el texto del comentario */
+  .comment-text {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el autor del comentario */
+  .comment-author {
+    font-style: italic;
+    color: #888;
+  }
+  
+  /* Estilo para el área de entrada de texto del comentario */
+  .comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el botón de enviar el comentario */
+  .comment-submit {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para hacerlo responsive */
+  @media screen and (max-width: 600px) {
+    .comment-box {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  

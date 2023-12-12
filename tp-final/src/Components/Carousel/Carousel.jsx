@@ -1,10 +1,9 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import imagen1 from '../../Imagenes/imagen1.png';
-import imagen2 from '../../Imagenes/imagen2.png';
-import imagen3 from '../../Imagenes/imagen3.png';
 import './Carousel.css';
-
+const imagen1 = 'https://i.ibb.co/n3WCXmV/imagen1.png';
+const imagen2 = 'https://i.ibb.co/9hFQrgR/imagen2.png';
+const imagen3 = 'https://i.ibb.co/Tv7mK7y/imagen3.png';
 const captions = [
   {
     title: 'Te damos la bienvenida a nuestro hermoso club',
@@ -13,7 +12,7 @@ const captions = [
   },
   {
     title: 'Ya conoces los deportes del club?',
-    text: 'Puedes visitar nuestra sección "Disciplinas" en la pestaña de la barra superior.',
+    text: 'Puedes visitar nuestra sección "Noticias" en la pestaña de la barra superior.',
     image: imagen2
   },
   {

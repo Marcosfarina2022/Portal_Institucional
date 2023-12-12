@@ -1,65 +1,66 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import  logoCLA  from "../../Imagenes/LogoCLA2.png";
 import { LinkContainer } from "react-router-bootstrap";
+import { Redirect, useNavigate } from "react-router-dom";
+import './FormLogin.css';
+
 const FormLogin = () => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword,] = useState('');
+  const navigate = useNavigate()
 
-  /**const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (confirPassword === password) {
-      try {
-        const response = await axios.post(
-          "http://localhost:4000/auth/registrarse",
-          { name, username, email, password }
-        );
-        console.log(response.data.message);
-      } catch (error) {
-        console.error("Error en el registro:", error);
-      }
-    } else {
-      alert("Las contraseñas no coinciden");
-    }
-  }; */
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
+  const [error, setError] = useState(null);
+
   const handleInputChange = async (event) => {
     event.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:4000/auth/ingresar', { email, password });
-      alert('Bienvenido');
-      // Manejar la respuesta del backend
-    } catch (error) {
-      if (error.response) {
-        // Error de respuesta del servidor (HTTP 4xx o 5xx)
-        if (error.response.status === 401) {
-          console.error('Las credenciales proporcionadas son incorrectas. Verifica tu correo electrónico y contraseña.');
-        } else if (error.response.status === 403) {
-          console.error('No tienes permisos para acceder a esta función. Ponte en contacto con el administrador si crees que esto es un error.');
-        } else {
-          console.error('Hubo un error en el servidor. Inténtalo de nuevo más tarde o ponte en contacto con el soporte.');
-        }
-      } else if (error.request) {
-        // Error de solicitud (sin respuesta del servidor)
-        console.error('No se pudo conectar al servidor. Verifica tu conexión a Internet y vuelve a intentarlo más tarde.');
-      } else {
-        // Otro tipo de error
-        console.error('Ocurrió un error. Inténtalo de nuevo más tarde.');
-      }
-       
+
+    if ( !email || !password ) {
+      setError("Todos los campos son obligatorios");
+      return;
     }
+
+const data = {
+  email:email,
+  password:password
+}
+      try {
+        const response = await fetch("http://localhost:4000/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          setIsLogin(true)
+          const data = await response.json();
+          console.log(data);
+          navigate("/")
+          // Limpiar errores si la solicitud es exitosa
+          setError(null);
+        } else {
+          setIsLogin(false);
+          alert("usuario o contraseña incorrecta");
+          setError("Error al registrar el usuario");
+        } 
+
+      } catch (error) {
+        console.error("Error en la solicitud:", error);
+        setError("Error en la solicitud");
+      }
+
   };
   
 
-  return(
-
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+  return(<>
+      <Container className='containerLogin'>
           <Col md={6} lg={4} xs={8}>
             <Card className="px-4">
-              <Card.Body>
+              <Card.Body className='cardFormulario'>
                 <div className="mb-3 mt-md-4">
                   <h2 className="fw-bold mb-2 text-center text-uppercase ">
                   <img className="img-registrationForm" src={logoCLA} alt="Logo" />
@@ -79,7 +80,7 @@ const FormLogin = () => {
 
                       <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
                       <div className="d-grid">
-                        <Button className="colorBoton" variant="dark" type="submit">Ingresar</Button>
+                        <Button className="colorBoton" variant="dark" type="submit" >Ingresar</Button>
                       </div>
                     </Form>
                     <div className="mt-3">
@@ -87,7 +88,7 @@ const FormLogin = () => {
                       <p className="mb-0  text-center">
                         ¿No dispones de una cuenta? {''}
                         <a href="{''}" className="fw-bold colorLink">
-                          Registrase
+                          Registrarse
                         </a>
                       </p>
                       </LinkContainer>
@@ -97,10 +98,8 @@ const FormLogin = () => {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
       </Container>
-    </div>
-      
+      </>  
   )
 }
 

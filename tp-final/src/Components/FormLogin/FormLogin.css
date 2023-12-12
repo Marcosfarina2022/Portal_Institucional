@@ -3,10 +3,14 @@
     box-shadow: 3px 3px rgba(245, 245, 245, 0.692), -1em 0 .4em rgba(0, 0, 0, 0.418);
 }
 
-.card-body {
-    background-color: white;
-}
 
 a .colorLink{
     color: rgba(93, 14, 84, 0.766);
+}
+
+.containerLogin{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
