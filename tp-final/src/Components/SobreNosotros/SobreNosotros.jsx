@@ -4,8 +4,9 @@ import { animated, useSpring } from "@react-spring/web";
 import imgMelina from "../../Imagenes/imgSobreNosotros/foto-perfil-melina.svg";
 import imgMarcos from "../../Imagenes/imgSobreNosotros/foto-perfil-marcos.svg";
 import imgGuido from "../../Imagenes/imgSobreNosotros/foto-perfil-guido.svg";
-import imgNico from '../../Imagenes/imgSobreNosotros/foto-perfil-nico.svg'
-import imgKevin from '../../Imagenes/imgSobreNosotros/foto-perfil-kevin.svg'
+import imgNico from '../../Imagenes/imgSobreNosotros/foto-perfil-nico.svg';
+import imgKevin from '../../Imagenes/imgSobreNosotros/foto-perfil-kevin.svg';
+import imgFernando from '../../Imagenes/imgSobreNosotros/foto-perfil-fer.svg'
 import "./sobreNosotros.css";
 
 const equipoDesarrollo = [
@@ -31,7 +32,7 @@ const equipoDesarrollo = [
 
   {
     nombre: "Fernando Andres Diaz",
-    foto_perfil: 'imgFernando',
+    foto_perfil: imgFernando,
     linkedin: "https://www.linkedin.com/in/diaz-fernando/",
     descripcion: "Desarrollador Full Stack.",
   },
