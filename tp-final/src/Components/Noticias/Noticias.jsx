@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { useSpring, animated } from 'react-spring';
-import { Link } from 'react-router-dom';
-import noticia1 from '../../Imagenes/imgNoticias/1.svg';
-import noticia2 from '../../Imagenes/imgNoticias/2.svg';
-import noticia3 from '../../Imagenes/imgNoticias/3.svg';
-import noticia4 from '../../Imagenes/imgNoticias/3.svg';
-import './noticias.css';
-=======
 import { Container, Row, Col, Card } from 'react-bootstrap';
 //import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
@@ -38,7 +27,6 @@ const [image, setImage] = useState(null);
     const file = e.target.files[0];
     setImage(file);
   };
->>>>>>> origin/main
 
   const handleTituloChange = (e) => {
     setTitulo(e.target.value);
@@ -52,38 +40,6 @@ const [image, setImage] = useState(null);
     const categoriaSeleccionada = e.target.value;
     setCategoriaNoticia(parseInt(categoriaSeleccionada));
 
-<<<<<<< HEAD
-  return (
-    <Container className='containerSobreNosotros text-center'>
-      <Row>
-        <h1>Te damos la Bienvenida a la sección noticias</h1>
-        <Col className='text-start'>
-          <h5>Aquí podras encontrar la ultima info del club</h5>
-        </Col>
-      </Row>
-      <Row>
-        {noticias.map((noticia, index) => (
-          <Col key={index} xs={12} md={4} className='mt-4 mb-4'>
-            <Card className='cardMiembros'>
-              <Card.Body className='cardBody'>
-                <animated.div style={fadeIn}>
-                  <Card.Title className='cardTitle'>{noticia.nombre}</Card.Title>
-                  <Card.Subtitle className='cardSubtitle'>
-                    <ul className='text-start'>
-                      {noticia.descripcion.map((descripcion, i) => (
-                        <li key={i}>{descripcion}</li>
-                      ))}
-                    </ul>
-                  </Card.Subtitle>
-                  <Card.Img className='cardImg' variant='top' src={noticia.foto} />
-                  <Link
-                    to={noticia.linkNoticia}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='cardLink'
-                  >
-                    Ver más
-=======
     // Puedes realizar otras acciones basadas en la categoría seleccionada aquí, si es necesario
     console.log(`Categoría seleccionada: ${categoriaSeleccionada}`);
   };
@@ -217,7 +173,6 @@ const handleSubmit = async (e) => {
                   </Card.Subtitle>
                   <Link  to={noticias.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
                   <Card.Img className='cardImgNoticias' variant='top' src={noticias.foto_noticia} />
->>>>>>> origin/main
                   </Link>
                 </animated.div>
               </Card.Body>
@@ -232,8 +187,4 @@ const handleSubmit = async (e) => {
   );
 };
 
-<<<<<<< HEAD
 export default Noticias;
-=======
-export default Noticias;
->>>>>>> origin/main

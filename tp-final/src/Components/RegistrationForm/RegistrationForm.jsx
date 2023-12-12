@@ -56,27 +56,6 @@ const RegistrationForm = () => {
       }
     };
 
-<<<<<<< HEAD
-                      <Form.Group
-                        className="mb-3"
-                        controlId="formBasicCheckbox"
-                      ></Form.Group>
-                      <div className="d-grid">
-                        <Button variant="primary" type="submit">
-                          Registrase
-                        </Button>
-                      </div>
-                    </Form>
-                    <div className="mt-3">
-                      <LinkContainer to="/Ingresar">
-                        <p className="mb-0  text-center">
-                          ¿Ya dispones de un usuario?{" "}
-                          <a href="{''}" className="text-primary fw-bold">
-                            Ingresar
-                          </a>
-                        </p>
-                      </LinkContainer>
-=======
     return (
       <>
         {error && <div className="error-message">{error}</div>}
@@ -176,7 +155,6 @@ const RegistrationForm = () => {
                           </p>
                         </LinkContainer>
                       </div>
->>>>>>> origin/main
                     </div>
                   </div>
                 </Card.Body>
