@@ -129,3 +129,24 @@
   color: #f771a5;
 }
 
+.caja-noticia {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #ffffff; /* Color de texto */
+}
+.caja-noticia p{
+  text-align: left;
+}
+

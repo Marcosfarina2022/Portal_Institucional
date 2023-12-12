@@ -22,6 +22,8 @@ const [image, setImage] = useState(null);
   const [titulo, setTitulo] = useState('');
   const [infoNoticia, setInfoNoticia] = useState('');
   const [categoriaNoticia, setCategoriaNoticia] = useState(0);
+  const [model, setModel2] = useState(false);
+  const [tempImgSrc, setTempImgSrc] = useState('');
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -109,6 +111,11 @@ const handleSubmit = async (e) => {
     config: { duration: 500 }, // Ajusta la duración de la animación
   });
 
+  const getImg = (imgSrc) => {
+    setTempImgSrc(imgSrc);
+    setModel2(true);
+};
+
   return (
     <Container className='containerNoticias text-center fluid'>
       <div className={modelNoticia ? 'modelNoticia open' : 'modelNoticia'}>
@@ -171,9 +178,7 @@ const handleSubmit = async (e) => {
                   <Card.Subtitle className='cardSubtitleNoticias'>
                     <p className='text-center'>{noticias.descripcion_noticia}</p>
                   </Card.Subtitle>
-                  <Link  to={noticias.linkNoticia}target='_blank'rel='noopener noreferrer'className='cardLink'>
-                  <Card.Img className='cardImgNoticias' variant='top' src={noticias.foto_noticia} />
-                  </Link>
+                  <Card.Img onClick={() => getImg(noticias.foto_noticia)} className='cardImgNoticias' variant='top' src={noticias.foto_noticia} /> 
                 </animated.div>
               </Card.Body>
             </Card>
@@ -183,6 +188,13 @@ const handleSubmit = async (e) => {
       <IoIosAddCircleOutline className='btn-agregarNoticia' onClick={() => openModel()}
       ></IoIosAddCircleOutline>
       </div>
+      <div className={model ? 'model open' : 'model'}>
+                <img src={tempImgSrc} />
+                <div className='caja-noticia'>
+                  <h3>Titulo Noticia</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus doloribus explicabo nulla numquam dolore rem, esse cum blanditiis eaque illum qui mollitia impedit, magnam sit odio excepturi asperiores voluptatibus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam facere non aliquid quod vel porro obcaecati velit adipisci veritatis repudiandae debitis reprehenderit, quia eaque dolorem assumenda consequuntur, sint quae!</p></div>
+                <CloseIcon onClick={() => setModel2(false)} />
+            </div>
     </Container>
   );
 };
